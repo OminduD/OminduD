@@ -1,5 +1,7 @@
 <div align="center">
-  <img src="https://github.com/OminduD.png" width="150" height="150" style="border-radius: 50%; border: 3px solid #82aaff;" alt="Omindu's Profile Picture"/>
+  <a href="https://github.com/OminduD">
+    <img src="https://avatars.githubusercontent.com/OminduD?size=150" width="150" height="150" alt="Omindu's Profile Picture"/>
+  </a>
   
   <br/><br/>
   
