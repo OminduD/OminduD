@@ -1,4 +1,8 @@
 <div align="center">
+  <img src="https://avatars.githubusercontent.com/u/OminduD?v=4" width="150" height="150" style="border-radius: 50%; border: 3px solid #82aaff;" alt="Omindu's Profile Picture"/>
+  
+  <br/><br/>
+  
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=32&duration=2800&pause=1000&color=82AAFF&center=true&vCenter=true&width=440&lines=Hey+%F0%9F%91%8B+I'm+Omindu!;Coding+Geek+%F0%9F%92%BB;Open+Source+Enthusiast" alt="Typing SVG" />
   
   <br/>
@@ -6,11 +10,11 @@
   <a href="https://linkedin.com/in/omindud">
     <img src="https://img.shields.io/badge/LINKEDIN-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
   </a>
-  <a href="https://www.youtube.com/@OminduD">
-    <img src="https://img.shields.io/badge/YOUTUBE-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube" />
-  </a>
   <a href="https://twitter.com/OminduD">
     <img src="https://img.shields.io/badge/TWITTER-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter" />
+  </a>
+  <a href="https://kaggle.com/omindud">
+    <img src="https://img.shields.io/badge/KAGGLE-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white" alt="Kaggle" />
   </a>
   
   <br/>
