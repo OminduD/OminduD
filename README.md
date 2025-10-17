@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://avatars.githubusercontent.com/u/OminduD?v=4" width="150" height="150" style="border-radius: 50%; border: 3px solid #82aaff;" alt="Omindu's Profile Picture"/>
+  <img src="https://github.com/OminduD.png" width="150" height="150" style="border-radius: 50%; border: 3px solid #82aaff;" alt="Omindu's Profile Picture"/>
   
   <br/><br/>
   
@@ -23,14 +23,6 @@
 </div>
 
 <br/>
-
-<h1 align="center">
-  <img src="./assets/wave.gif" width="40px" height="40px" /> Hey, I'm Omindu! <img src="./assets/wave.gif" width="40px" height="40px" />
-</h1>
-
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?lines=CS+Student+%26+Open+Source+Nerd;Linux+Geek+%7C+Arch+%7C+Neovim;Building+Secure+%26+Scalable+Tools&center=true&width=720&height=60&color=82aaff&vCenter=true" alt="typing" />
-</p>
 
 <p align="center">
   <i>Crafting code that's clean, fast, and secure — one commit at a time.</i>
@@ -138,12 +130,12 @@
   <a href="https://kaggle.com/omindud" target="_blank">
     <img src="https://img.shields.io/static/v1?message=Kaggle&logo=kaggle&label=&color=82aaff&logoColor=white&labelColor=1a1b27&style=for-the-badge" height="35" alt="kaggle logo" />
   </a>
-</p>
-
-<p align="center">
   <a href="https://stackoverflow.com/users/27091856/omindud" target="_blank">
     <img src="https://img.shields.io/static/v1?message=Stack%20Overflow&logo=stackoverflow&label=&color=82aaff&logoColor=white&labelColor=1a1b27&style=for-the-badge" height="35" alt="stackoverflow logo" />
   </a>
+</p>
+
+<p align="center">
   <a href="https://dev.to/omindud" target="_blank">
     <img src="https://img.shields.io/static/v1?message=Dev.to&logo=dev.to&label=&color=82aaff&logoColor=white&labelColor=1a1b27&style=for-the-badge" height="35" alt="devto logo" />
   </a>
