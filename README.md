@@ -53,7 +53,7 @@
 |---|---|---:|
 | 🔐 [CipherPop](https://github.com/OminduD/CipherPop) | Cross-platform programmable encryption/decryption tool | ![Stars](https://img.shields.io/github/stars/OminduD/CipherPop?color=82aaff&style=flat-square) ![Forks](https://img.shields.io/github/forks/OminduD/CipherPop?color=82aaff&style=flat-square) |
 | 🛠 [arch-sandbox](https://github.com/OminduD/arch-sandbox) | Containerized Arch Linux environment for safe testing | ![Stars](https://img.shields.io/github/stars/OminduD/arch-sandbox?color=82aaff&style=flat-square) ![Language](https://img.shields.io/github/languages/top/OminduD/arch-sandbox?color=82aaff&style=flat-square) |
-| 🧠 [student_stress_ML](https://github.com/OminduD/student_stress_ML) | Machine learning model for predicting student stress levels | ![Stars](https://img.shields.io/github/stars/OminduD/student_stress_ML?color=82aaff&style=flat-square) ![Language](https://img.shields.io/github/languages/top/OminduD/student_stress_ML?color=82aaff&style=flat-square) |
+| 🧠 [student_stress_ML](https://github.com/OminduD/student_streess_ML) | Machine learning model for predicting student stress levels | ![Stars](https://img.shields.io/github/stars/OminduD/student_stress_ML?color=82aaff&style=flat-square) ![Language](https://img.shields.io/github/languages/top/OminduD/student_stress_ML?color=82aaff&style=flat-square) |
 | 🔄 [Converter](https://github.com/OminduD/Converter) | Multi-purpose file and data converter utility | ![Stars](https://img.shields.io/github/stars/OminduD/Converter?color=82aaff&style=flat-square) ![Language](https://img.shields.io/github/languages/top/OminduD/Converter?color=82aaff&style=flat-square) |
 
 </div>
