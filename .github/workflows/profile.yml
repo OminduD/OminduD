@@ -2,14 +2,24 @@ name: Update Profile README
 
 on:
   schedule:
-    - cron: "0 */6 * * *"   # every 6 hours
-  workflow_dispatch:        # manual trigger
+    - cron: "0 */6 * * *"   # Run every 6 hours
+  workflow_dispatch:        # Allow manual trigger
+  push:
+    branches: ["main"]      # Run on push to main branch
+
+permissions:
+  contents: write           # Required to commit changes
 
 jobs:
-  build:
+  update-metrics:
     runs-on: ubuntu-latest
+    timeout-minutes: 10     # Prevent workflow from running too long
+    
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0    # Fetch all history for better metrics
 
       - name: Update README with Metrics
         uses: lowlighter/metrics@latest
@@ -22,3 +32,4 @@ jobs:
           plugin_repositories: yes
           plugin_languages: yes
           plugin_followup: yes
+          config_timezone: UTC
