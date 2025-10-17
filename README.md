@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://github.com/OminduD">
-    <img src="https://avatars.githubusercontent.com/OminduD?size=150" width="150" height="150" alt="Omindu's Profile Picture"/>
+    <img src="https://images.weserv.nl/?url=avatars.githubusercontent.com/OminduD?v=4&h=150&w=150&fit=cover&mask=circle&maxage=7d" width="150" height="150" alt="Omindu's Profile Picture"/>
   </a>
   
   <br/><br/>
