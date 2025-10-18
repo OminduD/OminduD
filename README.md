@@ -79,9 +79,18 @@
     <img src="https://github-readme-stats.vercel.app/api?username=OminduD&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" height="170" alt="stats" loading="lazy" />
   </a>
   <a href="https://github.com/OminduD">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=OminduD&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" height="170" alt="languages" loading="lazy" />
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=OminduD&layout=compact&theme=tokyonight&hide_border=true&langs_count=8&count_private=true&include_all_commits=true&exclude_repo=&card_width=320" height="170" alt="languages" loading="lazy" />
   </a>
 </div>
+
+<!-- Alternative: Overall Language Stats (automatically updated) -->
+<!--
+<div align="center">
+  <a href="https://github.com/OminduD">
+    <img src="https://raw.githubusercontent.com/OminduD/OminduD/output/metrics.plugin.languages.svg" alt="Overall Language Usage" loading="lazy" />
+  </a>
+</div>
+-->
 
 <div align="center">
   <a href="https://github.com/OminduD">
