@@ -18,14 +18,6 @@ jobs:
         with:
           fetch-depth: 0 # Fetch all history for accurate stats
 
-      - name: Generate language stats
-        uses: jamesgeorge007/github-activity-readme@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          COMMIT_MSG: 'Update language statistics'
-          MAX_LINES: 10
-
       - name: Update README with WakaTime stats (optional)
         uses: anmol098/waka-readme-stats@master
         with:
