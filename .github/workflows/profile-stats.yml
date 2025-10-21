@@ -52,3 +52,4 @@ jobs:
           branch: output
           create_branch: true
           file_pattern: 'dist/*.svg'
+          push_options: '--force'
