@@ -32,7 +32,5 @@ jobs:
           plugin_languages_categories: programming
           plugin_languages_recent_load: 1000
           plugin_languages_recent_days: 365
-          output_action: none
-          filename: README.md
-          markdown: TEMPLATE.md
-          config_output: markdown
+          output_action: gist
+          filename: language-stats.svg
