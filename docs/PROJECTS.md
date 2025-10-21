@@ -442,57 +442,161 @@ Statistical analysis and reporting project focused on data-driven insights and c
 ## 🎓 Learning & Tutorials
 
 ### 📖 [desktop-tutorial](https://github.com/OminduD/desktop-tutorial) *(Private)*
+
 **GitHub Desktop tutorial repository**
 
-- **Status:** Archive
+<div align="center">
+
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
+
+![Private](https://img.shields.io/badge/Status-Private-red?style=flat-square) ![Archive](https://img.shields.io/badge/Type-Tutorial-blue?style=flat-square)
+
+</div>
+
+**📚 Learning Topics:**
+- 🎯 GitHub Desktop basics
+- 🔀 Version control fundamentals
+- 📝 Commit best practices
+- 🌿 Branch management
+
+**📊 Project Stats:**
+- **Status:** 📦 Archive
 - **Last Updated:** April 2022
 
-Tutorial materials and exercises for learning GitHub Desktop.
+Tutorial materials and exercises for learning GitHub Desktop and version control basics.
 
 ---
 
 ### 🧪 [TPVerification](https://github.com/OminduD/TPVerification) *(Private)*
+
 **Verification system**
 
-- **Tech Stack:** JavaScript
-- **Status:** Archive
+<div align="center">
+
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
+
+![Private](https://img.shields.io/badge/Status-Private-red?style=flat-square) ![Archive](https://img.shields.io/badge/Type-Archive-gray?style=flat-square)
+
+</div>
+
+**🎯 Key Features:**
+- ✅ Data verification
+- 🔐 Security checks
+- 📊 Validation logic
+- 🛠️ Custom rules
+
+**📊 Project Stats:**
+- **Status:** 📦 Archive
 - **Last Updated:** February 2024
 
-JavaScript-based verification system project.
+**💻 Tech Stack:** JavaScript, Node.js
+
+JavaScript-based verification system project exploring validation logic and security practices.
 
 ---
 
 ## 📱 Profile & Documentation
 
 ### 👤 [OminduD](https://github.com/OminduD/OminduD)
+
 **GitHub Profile README**
 
-- **Status:** Active
+<div align="center">
+
+![Markdown](https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
+
+![Profile](https://img.shields.io/badge/Type-Profile-blueviolet?style=flat-square) ![Active](https://img.shields.io/badge/Status-Active-success?style=flat-square)
+
+</div>
+
+**🎯 Features:**
+- 📊 Live GitHub stats
+- 🏆 Achievement trophies
+- 📈 Contribution graphs
+- 🎨 Animated elements
+- 🔗 Social links
+
+**📊 Project Stats:**
+- **Status:** 🟢 Active & Maintained
 - **Last Updated:** October 2025
 
-My GitHub profile repository showcasing my work, stats, and interests.
+**💻 Tech Stack:** Markdown, GitHub Actions, SVG
+
+My GitHub profile repository showcasing my work, stats, and interests. Features dynamic content and automated updates.
 
 ---
 
 ### 🚀 [my-first-repo](https://github.com/OminduD/my-first-repo)
+
 **First GitHub repository**
 
-- **Status:** Archive
+<div align="center">
+
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
+![Milestone](https://img.shields.io/badge/Type-Milestone-gold?style=for-the-badge)
+
+![Archive](https://img.shields.io/badge/Status-Archive-gray?style=flat-square) ![First Repo](https://img.shields.io/badge/First_Repo-🎉-success?style=flat-square)
+
+</div>
+
+**💭 Significance:**
+- 🎉 First repository ever!
+- 📚 Learning journey start
+- 🌱 Growth milestone
+- 💫 Where it all began
+
+**📊 Project Stats:**
+- **Status:** 📦 Archive (Preserved)
 - **Last Updated:** June 2025
 
-The very first repository I created on GitHub - where it all began!
+The very first repository I created on GitHub - where it all began! A reminder of how far I've come in my coding journey.
 
 ---
 
 ## 📊 Project Statistics
 
-| Category | Count |
-|----------|-------|
-| **Total Projects** | 18 |
-| **Public Projects** | 6 |
-| **Private Projects** | 12 |
-| **Active Projects** | 10+ |
-| **Programming Languages** | Python, Go, C, C#, TypeScript, JavaScript, HTML |
+<div align="center">
+
+### 📈 Overview
+
+| Category | Count | Percentage |
+|----------|-------|------------|
+| **Total Projects** | ![18](https://img.shields.io/badge/Total-18-82aaff?style=flat-square) | 100% |
+| **Public Projects** | ![6](https://img.shields.io/badge/Public-6-success?style=flat-square) | 33% |
+| **Private Projects** | ![12](https://img.shields.io/badge/Private-12-red?style=flat-square) | 67% |
+| **Active Projects** | ![10+](https://img.shields.io/badge/Active-10+-success?style=flat-square) | 55%+ |
+| **Archived Projects** | ![6](https://img.shields.io/badge/Archive-6-gray?style=flat-square) | 33% |
+
+### 🗂️ By Category
+
+| Category | Projects | Key Technologies |
+|----------|----------|------------------|
+| 🔐 **Security & Crypto** | 1 | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) |
+| 🤖 **AI & ML** | 3 | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) ![Jupyter](https://img.shields.io/badge/-Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white) |
+| 🎮 **Game Dev** | 2 | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) ![C](https://img.shields.io/badge/-C-00599C?style=flat-square&logo=c&logoColor=white) |
+| 🌐 **Web & Extensions** | 2 | ![TypeScript](https://img.shields.io/badge/-TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white) ![HTML](https://img.shields.io/badge/-HTML5-E34F26?style=flat-square&logo=html5&logoColor=white) |
+| 🛠️ **Utilities** | 4 | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) ![Go](https://img.shields.io/badge/-Go-00ADD8?style=flat-square&logo=go&logoColor=white) |
+| 💬 **Communication** | 1 | ![C#](https://img.shields.io/badge/-C%23-239120?style=flat-square&logo=c-sharp&logoColor=white) |
+| 🎓 **Learning** | 3 | ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black) |
+| 📱 **Profile & Docs** | 2 | ![Markdown](https://img.shields.io/badge/-Markdown-000000?style=flat-square&logo=markdown&logoColor=white) |
+
+### 💻 Programming Languages Used
+
+</div>
+
+| Language | Projects | Usage |
+|----------|----------|-------|
+| ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) | 10 | ████████████░░░░░░░░ 60% |
+| ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) | 1 | ██░░░░░░░░░░░░░░░░░░ 10% |
+| ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white) | 1 | ██░░░░░░░░░░░░░░░░░░ 10% |
+| ![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white) | 1 | ██░░░░░░░░░░░░░░░░░░ 10% |
+| ![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white) | 1 | ██░░░░░░░░░░░░░░░░░░ 10% |
+| ![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white) | 1 | ██░░░░░░░░░░░░░░░░░░ 10% |
+| ![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) | 1 | ██░░░░░░░░░░░░░░░░░░ 10% |
+| ![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white) | 3 | ████░░░░░░░░░░░░░░░░ 20% |
 
 ---
 
@@ -506,23 +610,53 @@ The very first repository I created on GitHub - where it all began!
 
 ## 📈 Project Timeline
 
+<div align="center">
+
+```mermaid
+gantt
+    title My Coding Journey
+    dateFormat YYYY
+    section Foundation
+    First Steps (GitHub Desktop)    :2022, 1y
+    section Python Era
+    Converters & Utilities          :2023, 1y
+    section Growth
+    Games & Web Projects            :2024, 1y
+    section Advanced
+    ML, Systems & Security Tools    :2025, 1y
 ```
-2022 ━━━━ First steps with GitHub Desktop
-2023 ━━━━ Python utilities & converters
-2024 ━━━━ Game dev & web projects
-2025 ━━━━ ML, systems programming & crypto tools
-```
+
+### 🚀 Evolution Path
+
+| Year | Focus Areas | Key Projects |
+|------|-------------|-------------|
+| **2022** 🌱 | Git & Version Control | `desktop-tutorial` |
+| **2023** 📚 | Python Fundamentals | `Converter`, `folderloop`, `request` |
+| **2024** 🎮 | Games & Web Dev | `monkey_zone`, `chatbotbasic`, `TPVerification` |
+| **2025** 🚀 | ML, Systems, Crypto | `CipherPop`, `arch-sandbox`, `student_stress_ML`, `Ionex-Tab` |
+
+</div>
 
 ---
 
 ## 🎯 Areas of Focus
 
-- 🔐 **Security & Cryptography** - Building secure encryption tools
-- 🤖 **Machine Learning** - Predictive models and data analysis
-- 🎮 **Game Development** - Interactive experiences in C and Python
-- 🐧 **Systems Programming** - Low-level tools and containerization
-- 🌐 **Web Development** - Browser extensions and web applications
-- 🛠 **DevOps Tools** - Automation and environment management
+<div align="center">
+
+| Focus Area | Technologies | Projects |
+|------------|-------------|----------|
+| 🔐 **Security & Cryptography** | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) ![Crypto](https://img.shields.io/badge/-Cryptography-FF6B6B?style=flat-square) | CipherPop |
+| 🤖 **Machine Learning** | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) ![Jupyter](https://img.shields.io/badge/-Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white) ![scikit-learn](https://img.shields.io/badge/-sklearn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white) | student_stress_ML, Risk |
+| 🎮 **Game Development** | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) ![C](https://img.shields.io/badge/-C-00599C?style=flat-square&logo=c&logoColor=white) | monkey_zone, MazeRunner |
+| 🐧 **Systems Programming** | ![Go](https://img.shields.io/badge/-Go-00ADD8?style=flat-square&logo=go&logoColor=white) ![Docker](https://img.shields.io/badge/-Docker-2496ED?style=flat-square&logo=docker&logoColor=white) ![Shell](https://img.shields.io/badge/-Shell-4EAA25?style=flat-square&logo=gnu-bash&logoColor=white) | arch-sandbox |
+| 🌐 **Web Development** | ![TypeScript](https://img.shields.io/badge/-TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white) ![HTML](https://img.shields.io/badge/-HTML5-E34F26?style=flat-square&logo=html5&logoColor=white) ![CSS](https://img.shields.io/badge/-CSS3-1572B6?style=flat-square&logo=css3&logoColor=white) | Ionex-Tab, MyFirstProject |
+| 🛠 **DevOps & Tools** | ![Docker](https://img.shields.io/badge/-Docker-2496ED?style=flat-square&logo=docker&logoColor=white) ![Git](https://img.shields.io/badge/-Git-F05032?style=flat-square&logo=git&logoColor=white) | arch-sandbox, folderloop |
+
+### 🌟 Current Focus (2025)
+
+![ML](https://img.shields.io/badge/Machine_Learning-Active-success?style=for-the-badge) ![Security](https://img.shields.io/badge/Security-Active-success?style=for-the-badge) ![Systems](https://img.shields.io/badge/Systems_Programming-Active-success?style=for-the-badge)
+
+</div>
 
 ---
 
