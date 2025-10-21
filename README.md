@@ -87,12 +87,6 @@
   </a>
 </div>
 
-<div align="center">
-  <a href="https://github.com/OminduD">
-    <img src="https://github-readme-activity-graph.vercel.app/graph?username=OminduD&custom_title=Contribution%20Activity%20Graph&bg_color=1a1b27&color=82aaff&line=c792ea&point=ff6ac1&area_color=82aaff&area=true&hide_border=true&theme=tokyo-night" alt="contribution graph" loading="lazy" />
-  </a>
-</div>
-
 ---
 
 <h2 align="center">
