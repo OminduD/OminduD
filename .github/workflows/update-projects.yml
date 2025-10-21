@@ -17,7 +17,7 @@ jobs:
   update-projects:
     runs-on: ubuntu-latest
     timeout-minutes: 15
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -51,12 +51,12 @@ jobs:
           # Get environment variables
           token = os.environ.get('GITHUB_TOKEN')
           username = os.environ.get('GITHUB_USERNAME', 'OminduD')
-          
+
           headers = {
               'Authorization': f'token {token}',
               'Accept': 'application/vnd.github.v3+json'
           }
-          
+
           # Fetch all repositories
           repos = []
           page = 1
@@ -66,53 +66,53 @@ jobs:
               if response.status_code != 200:
                   print(f"Error fetching repos: {response.status_code}")
                   break
-              
+
               data = response.json()
               if not data:
                   break
-              
+
               repos.extend(data)
               page += 1
-          
+
           print(f"Found {len(repos)} repositories")
-          
+
           # Update repository counts in PROJECTS.md
           with open('docs/PROJECTS.md', 'r', encoding='utf-8') as f:
               content = f.read()
-          
+
           # Count repositories
           public_count = sum(1 for r in repos if not r['private'])
           private_count = sum(1 for r in repos if r['private'])
           total_count = len(repos)
-          
+
           print(f"Public: {public_count}, Private: {private_count}, Total: {total_count}")
-          
+
           # Update the statistics section with actual counts
           import re
-          
+
           # Update project statistics
           stats_pattern = r'\| \*\*Total Repositories\*\* \|.*?\| 100% \|'
           stats_replacement = f'| **Total Repositories** | ![Total](https://img.shields.io/badge/Total-{total_count}-82aaff?style=flat-square) | 100% |'
           content = re.sub(stats_pattern, stats_replacement, content)
-          
+
           # Calculate percentages
           public_pct = round((public_count / total_count * 100)) if total_count > 0 else 0
           private_pct = round((private_count / total_count * 100)) if total_count > 0 else 0
-          
+
           public_pattern = r'\| \*\*Public Projects\*\* \|.*?\| ~?\d+% \|'
           public_replacement = f'| **Public Projects** | ![Public](https://img.shields.io/badge/Public-{public_count}-success?style=flat-square) | ~{public_pct}% |'
           content = re.sub(public_pattern, public_replacement, content)
-          
+
           private_pattern = r'\| \*\*Private Projects\*\* \|.*?\| ~?\d+% \|'
           private_replacement = f'| **Private Projects** | ![Private](https://img.shields.io/badge/Private-{private_count}-red?style=flat-square) | ~{private_pct}% |'
           content = re.sub(private_pattern, private_replacement, content)
-          
+
           # Write updated content
           with open('docs/PROJECTS.md', 'w', encoding='utf-8') as f:
               f.write(content)
-          
+
           print("✅ PROJECTS.md updated successfully!")
-          
+
           # Create a summary file
           summary = {
               'updated_at': datetime.utcnow().isoformat(),
@@ -132,10 +132,10 @@ jobs:
                   for repo in repos
               ]
           }
-          
+
           with open('.github/project-summary.json', 'w', encoding='utf-8') as f:
               json.dump(summary, f, indent=2)
-          
+
           print("✅ Project summary created!")
           EOF
 
