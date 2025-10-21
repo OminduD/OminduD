@@ -23,15 +23,12 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Generate Snake contribution graph
-        uses: Platane/snk/svg-only@v3
+      - name: Generate Pacman contribution graph
+        uses: abozanona/pacman-contribution-graph@v1.2.1
         with:
           github_user_name: OminduD
-          outputs: |
-            output/pacman-contribution-graph.svg
-            output/pacman-contribution-graph-dark.svg?palette=github-dark
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          output_file_path: output/pacman-contribution-graph.svg
 
       - name: Push graphs to output branch
         uses: crazy-max/ghaction-github-pages@v4
