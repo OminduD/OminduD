@@ -5,31 +5,44 @@ on:
     - cron: "0 */6 * * *"   # Run every 6 hours
   workflow_dispatch:        # Allow manual trigger
   push:
-    branches: ["main"]      # Run on push to main branch
+    branches: ["main"]
+    paths:
+      - '.github/workflows/profile.yml'
 
 permissions:
-  contents: write           # Required to commit changes
+  contents: write
 
 jobs:
   update-metrics:
     runs-on: ubuntu-latest
-    timeout-minutes: 10     # Prevent workflow from running too long
+    timeout-minutes: 15
     
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0    # Fetch all history for better metrics
+          fetch-depth: 0
 
-      - name: Update README with Metrics
+      - name: Generate GitHub metrics
         uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          user: OminduD
           base: header, activity, community, repositories, metadata
           plugin_lines: yes
+          plugin_lines_sections: base
           plugin_stars: yes
           plugin_activity: yes
+          plugin_activity_limit: 5
           plugin_repositories: yes
+          plugin_repositories_order: featured, pinned, starred, random
           plugin_languages: yes
+          plugin_languages_limit: 8
           plugin_followup: yes
+          plugin_followup_sections: repositories
+          repositories_batch: 100
           config_timezone: UTC
+          output_action: commit
+          filename: github-metrics.svg
+          committer_branch: output
+          committer_message: "🤖 Update GitHub metrics"

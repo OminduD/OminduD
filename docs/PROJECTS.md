@@ -4,7 +4,7 @@
 
 *A comprehensive collection of all projects I've worked on, organized by category and technology.*
 
-![Total Projects](https://img.shields.io/badge/Total_Projects-18-82aaff?style=for-the-badge) ![Languages](https://img.shields.io/badge/Languages-7+-82aaff?style=for-the-badge) ![Active Projects](https://img.shields.io/badge/Active-10+-success?style=for-the-badge)
+![Total Projects](https://img.shields.io/badge/dynamic/json?url=https://api.github.com/users/OminduD&query=$.public_repos&suffix=%20public&label=Public%20Projects&color=82aaff&style=for-the-badge) ![Total Repos](https://img.shields.io/badge/dynamic/json?url=https://api.github.com/users/OminduD&query=$.total_private_repos&suffix=%20total&label=All%20Repositories&color=82aaff&style=for-the-badge) ![Active Projects](https://img.shields.io/badge/Active-10+-success?style=for-the-badge)
 
 </div>
 
@@ -32,7 +32,8 @@
 **📊 Project Stats:**
 - **Topics:** `cryptography` `encryption` `decryption` `cipher` `crypto-tools` `python`
 - **Status:** 🟢 Active
-- **Last Updated:** February 2025
+- **Created:** ![Created](https://img.shields.io/github/created-at/OminduD/CipherPop?style=flat-square&color=82aaff)
+- **Last Updated:** ![Updated](https://img.shields.io/github/last-commit/OminduD/CipherPop?style=flat-square&color=82aaff)
 - **License:** MIT
 
 **💻 Tech Stack:** Python, Cryptography Libraries
@@ -104,13 +105,14 @@ Machine learning project focused on analyzing and predicting student stress leve
 
 ---
 
-### 🔄 [Converter](https://github.com/OminduD/Converter)
+### 🔄 [Converter](https://github.com/OminduD/Converter) 🎉 **First Real Project!**
 
 **Multi-purpose file and data converter utility**
 
 <div align="center">
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![First Project](https://img.shields.io/badge/🎉_First_Real_Project-June_2023-gold?style=for-the-badge)
 
 ![Stars](https://img.shields.io/github/stars/OminduD/Converter?color=82aaff&style=flat-square) ![Language](https://img.shields.io/github/languages/top/OminduD/Converter?color=82aaff&style=flat-square) ![Forks](https://img.shields.io/github/forks/OminduD/Converter?color=82aaff&style=flat-square)
 
@@ -124,11 +126,12 @@ Machine learning project focused on analyzing and predicting student stress leve
 
 **📊 Project Stats:**
 - **Status:** 🟢 Active
-- **Last Updated:** June 2023
+- **Created:** ![Created](https://img.shields.io/github/created-at/OminduD/Converter?style=flat-square&color=82aaff) **(My actual first real project! 🚀)**
+- **Last Updated:** ![Updated](https://img.shields.io/github/last-commit/OminduD/Converter?style=flat-square&color=82aaff)
 
 **💻 Tech Stack:** Python
 
-Versatile converter tool for transforming various file formats and data types with ease. Designed for simplicity and efficiency.
+Versatile converter tool for transforming various file formats and data types with ease. Designed for simplicity and efficiency. **This is where my real coding journey began!**
 
 ---
 
@@ -155,7 +158,8 @@ Versatile converter tool for transforming various file formats and data types wi
 
 **📊 Project Stats:**
 - **Status:** 🟢 Active
-- **Last Updated:** February 2025
+- **Created:** ![Created](https://img.shields.io/github/created-at/OminduD/monkey_zone?style=flat-square&color=82aaff)
+- **Last Updated:** ![Updated](https://img.shields.io/github/last-commit/OminduD/monkey_zone?style=flat-square&color=82aaff)
 - **License:** Unlicense
 
 **💻 Tech Stack:** Python, Pygame
@@ -185,6 +189,7 @@ An interactive game built with Python, showcasing game development concepts and 
 
 **📊 Project Stats:**
 - **Status:** 🟢 Active
+- **Created:** September 2025
 - **Last Updated:** September 2025
 
 **💻 Tech Stack:** C, Algorithms, Data Structures
@@ -217,6 +222,7 @@ Low-level implementation of maze generation and solving algorithms in C. Demonst
 
 **📊 Project Stats:**
 - **Status:** 🟢 Active
+- **Created:** October 2025
 - **Last Updated:** October 2025
 - **License:** GPL-3.0
 
@@ -239,14 +245,15 @@ Modern browser extension built with TypeScript for enhanced tab management and p
 
 </div>
 
-**🎯 Learning Focus:**
-- 📚 HTML fundamentals
+**📚 Learning Topics:**
+- 🎯 HTML fundamentals
 - 🎨 Basic styling with CSS
 - 🌐 Web page structure
 - 💡 Foundation building
 
 **📊 Project Stats:**
 - **Status:** 📦 Archive
+- **Created:** June 2025
 - **Last Updated:** June 2025
 
 **💻 Tech Stack:** HTML, CSS
@@ -279,6 +286,7 @@ My first foray into web development, learning the fundamentals of HTML and CSS. 
 
 **📊 Project Stats:**
 - **Status:** 🟢 Active
+- **Created:** October 2025
 - **Last Updated:** October 2025
 
 **💻 Tech Stack:** Python, Jupyter Notebook, NumPy, Pandas
@@ -308,6 +316,7 @@ Data analysis and risk assessment project using machine learning techniques. Foc
 
 **📊 Project Stats:**
 - **Status:** 📦 Archive
+- **Created:** February 2024
 - **Last Updated:** February 2024
 
 **💻 Tech Stack:** Python, NLTK
@@ -339,6 +348,7 @@ Foundational chatbot project exploring natural language processing and conversat
 
 **📊 Project Stats:**
 - **Status:** 🟢 Active
+- **Created:** June 2023
 - **Last Updated:** February 2025
 
 **💻 Tech Stack:** Python, OS Libraries
@@ -368,6 +378,7 @@ Tool for efficiently traversing and processing folder structures. Perfect for ba
 
 **📊 Project Stats:**
 - **Status:** 📦 Archive
+- **Created:** June 2023
 - **Last Updated:** June 2023
 
 **💻 Tech Stack:** Python, Requests Library
@@ -400,6 +411,7 @@ Custom HTTP request handler for various web interactions. Built to understand ne
 
 **📊 Project Stats:**
 - **Status:** 📦 Archive
+- **Created:** February 2025
 - **Last Updated:** February 2025
 
 **💻 Tech Stack:** C#, Discord.NET, .NET Framework
@@ -443,7 +455,7 @@ Statistical analysis and reporting project focused on data-driven insights and c
 
 ### 📖 [desktop-tutorial](https://github.com/OminduD/desktop-tutorial) *(Private)*
 
-**GitHub Desktop tutorial repository**
+**GitHub Desktop auto-generated tutorial repository**
 
 <div align="center">
 
@@ -462,9 +474,10 @@ Statistical analysis and reporting project focused on data-driven insights and c
 
 **📊 Project Stats:**
 - **Status:** 📦 Archive
+- **Created:** April 2022 (Auto-generated by GitHub Desktop)
 - **Last Updated:** April 2022
 
-Tutorial materials and exercises for learning GitHub Desktop and version control basics.
+Auto-generated tutorial repository created by GitHub Desktop for learning version control basics.
 
 ---
 
@@ -489,6 +502,7 @@ Tutorial materials and exercises for learning GitHub Desktop and version control
 
 **📊 Project Stats:**
 - **Status:** 📦 Archive
+- **Created:** February 2024
 - **Last Updated:** February 2024
 
 **💻 Tech Stack:** JavaScript, Node.js
@@ -521,7 +535,8 @@ JavaScript-based verification system project exploring validation logic and secu
 
 **📊 Project Stats:**
 - **Status:** 🟢 Active & Maintained
-- **Last Updated:** October 2025
+- **Created:** ![Created](https://img.shields.io/github/created-at/OminduD/OminduD?style=flat-square&color=82aaff)
+- **Last Updated:** ![Updated](https://img.shields.io/github/last-commit/OminduD/OminduD?style=flat-square&color=82aaff)
 
 **💻 Tech Stack:** Markdown, GitHub Actions, SVG
 
@@ -531,28 +546,27 @@ My GitHub profile repository showcasing my work, stats, and interests. Features 
 
 ### 🚀 [my-first-repo](https://github.com/OminduD/my-first-repo)
 
-**First GitHub repository**
+**Learning milestone repository**
 
 <div align="center">
 
 ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
-![Milestone](https://img.shields.io/badge/Type-Milestone-gold?style=for-the-badge)
+![Milestone](https://img.shields.io/badge/Type-Learning-gold?style=for-the-badge)
 
-![Archive](https://img.shields.io/badge/Status-Archive-gray?style=flat-square) ![First Repo](https://img.shields.io/badge/First_Repo-🎉-success?style=flat-square)
+![Archive](https://img.shields.io/badge/Status-Archive-gray?style=flat-square) ![Learning Repo](https://img.shields.io/badge/Learning_Milestone-�-success?style=flat-square)
 
 </div>
 
 **💭 Significance:**
-- 🎉 First repository ever!
-- 📚 Learning journey start
+- 📚 Learning repository
 - 🌱 Growth milestone
-- 💫 Where it all began
+- 💫 Part of my journey
 
 **📊 Project Stats:**
 - **Status:** 📦 Archive (Preserved)
-- **Last Updated:** June 2025
+- **Created:** June 2025
 
-The very first repository I created on GitHub - where it all began! A reminder of how far I've come in my coding journey.
+A repository created during my learning journey. *Note: My actual first real project was **Converter** (June 2023), which started my real development journey!*
 
 ---
 
@@ -564,9 +578,9 @@ The very first repository I created on GitHub - where it all began! A reminder o
 
 | Category | Count | Percentage |
 |----------|-------|------------|
-| **Total Projects** | ![18](https://img.shields.io/badge/Total-18-82aaff?style=flat-square) | 100% |
-| **Public Projects** | ![6](https://img.shields.io/badge/Public-6-success?style=flat-square) | 33% |
-| **Private Projects** | ![12](https://img.shields.io/badge/Private-12-red?style=flat-square) | 67% |
+| **Total Repositories** | ![Total](https://img.shields.io/badge/dynamic/json?url=https://api.github.com/users/OminduD&query=$.public_repos%2B$.total_private_repos&label=Total&color=82aaff&style=flat-square) | 100% |
+| **Public Projects** | ![Public](https://img.shields.io/badge/dynamic/json?url=https://api.github.com/users/OminduD&query=$.public_repos&label=Public&color=success&style=flat-square) | ~39% |
+| **Private Projects** | ![Private](https://img.shields.io/badge/dynamic/json?url=https://api.github.com/users/OminduD&query=$.total_private_repos&label=Private&color=red&style=flat-square) | ~61% |
 | **Active Projects** | ![10+](https://img.shields.io/badge/Active-10+-success?style=flat-square) | 55%+ |
 | **Archived Projects** | ![6](https://img.shields.io/badge/Archive-6-gray?style=flat-square) | 33% |
 
@@ -587,16 +601,20 @@ The very first repository I created on GitHub - where it all began! A reminder o
 
 </div>
 
-| Language | Projects | Usage |
-|----------|----------|-------|
-| ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) | 10 | ████████████░░░░░░░░ 60% |
-| ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) | 1 | ██░░░░░░░░░░░░░░░░░░ 10% |
-| ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white) | 1 | ██░░░░░░░░░░░░░░░░░░ 10% |
-| ![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white) | 1 | ██░░░░░░░░░░░░░░░░░░ 10% |
-| ![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white) | 1 | ██░░░░░░░░░░░░░░░░░░ 10% |
-| ![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white) | 1 | ██░░░░░░░░░░░░░░░░░░ 10% |
-| ![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) | 1 | ██░░░░░░░░░░░░░░░░░░ 10% |
-| ![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white) | 3 | ████░░░░░░░░░░░░░░░░ 20% |
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=OminduD&layout=compact&theme=tokyonight&hide_border=true&langs_count=10&count_private=true&include_all_commits=true&card_width=500" alt="Top Languages" loading="lazy" />
+</p>
+
+| Language | Projects | Primary Use |
+|----------|----------|-------------|
+| ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) | 10+ | ML, Automation, Tools |
+| ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) | 1+ | Web Development |
+| ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white) | 1+ | Browser Extensions |
+| ![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white) | 1+ | Systems Programming |
+| ![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white) | 1+ | Algorithms, Systems |
+| ![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white) | 1+ | Automation Tools |
+| ![HTML/CSS](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) | 1+ | Web Development |
+| ![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white) | 3+ | Data Science, ML |
 
 ---
 
@@ -617,23 +635,23 @@ gantt
     title My Coding Journey
     dateFormat YYYY
     section Foundation
-    First Steps (GitHub Desktop)    :2022, 1y
-    section Python Era
-    Converters & Utilities          :2023, 1y
+    GitHub Setup & Learning         :2022, 1y
+    section Real Start
+    First Real Project (Converter)  :2023, 1y
     section Growth
-    Games & Web Projects            :2024, 1y
+    Games & Web Development         :2024, 1y
     section Advanced
-    ML, Systems & Security Tools    :2025, 1y
+    ML, Systems & Security          :2025, 1y
 ```
 
 ### 🚀 Evolution Path
 
 | Year | Focus Areas | Key Projects |
 |------|-------------|-------------|
-| **2022** 🌱 | Git & Version Control | `desktop-tutorial` |
-| **2023** 📚 | Python Fundamentals | `Converter`, `folderloop`, `request` |
+| **2022** 🌱 | Git & Version Control | `desktop-tutorial` (GitHub tutorial) |
+| **2023** � | Python Fundamentals | **`Converter` (First Real Project!)**, `folderloop`, `request` |
 | **2024** 🎮 | Games & Web Dev | `monkey_zone`, `chatbotbasic`, `TPVerification` |
-| **2025** 🚀 | ML, Systems, Crypto | `CipherPop`, `arch-sandbox`, `student_stress_ML`, `Ionex-Tab` |
+| **2025** � | ML, Systems, Crypto | `CipherPop`, `arch-sandbox`, `student_stress_ML`, `Ionex-Tab` |
 
 </div>
 
