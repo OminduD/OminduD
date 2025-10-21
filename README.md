@@ -94,7 +94,11 @@
 </h2>
 
 <div align="center">
-  <img alt="Pacman eating contributions" src="https://raw.githubusercontent.com/OminduD/OminduD/output/pacman-contribution-graph.svg">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/OminduD/OminduD/output/pacman-contribution-graph-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/OminduD/OminduD/output/pacman-contribution-graph.svg">
+    <img alt="Pacman eating contributions" src="https://raw.githubusercontent.com/OminduD/OminduD/output/pacman-contribution-graph-dark.svg">
+  </picture>
 </div>
 
 ---
