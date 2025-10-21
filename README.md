@@ -44,23 +44,6 @@
 ---
 
 <h2 align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&duration=3000&pause=1000&color=82AAFF&center=true&vCenter=true&width=435&lines=🚀+Featured+Projects" alt="Featured Projects" />
-</h2>
-
-<div align="center">
-
-| Project | Description | Stats |
-|---|---|---:|
-| 🔐 [CipherPop](https://github.com/OminduD/CipherPop) | Cross-platform programmable encryption/decryption tool | ![Stars](https://img.shields.io/github/stars/OminduD/CipherPop?color=82aaff&style=flat-square) ![Forks](https://img.shields.io/github/forks/OminduD/CipherPop?color=82aaff&style=flat-square) |
-| 🛠 [arch-sandbox](https://github.com/OminduD/arch-sandbox) | Containerized Arch Linux environment for safe testing | ![Stars](https://img.shields.io/github/stars/OminduD/arch-sandbox?color=82aaff&style=flat-square) ![Language](https://img.shields.io/github/languages/top/OminduD/arch-sandbox?color=82aaff&style=flat-square) |
-| 🧠 [student_stress_ML](https://github.com/OminduD/student_streess_ML) | Machine learning model for predicting student stress levels | ![Stars](https://img.shields.io/github/stars/OminduD/student_streess_ML?color=82aaff&style=flat-square) ![Language](https://img.shields.io/github/languages/top/OminduD/student_streess_ML?color=82aaff&style=flat-square) |
-| 🔄 [Converter](https://github.com/OminduD/Converter) | Multi-purpose file and data converter utility | ![Stars](https://img.shields.io/github/stars/OminduD/Converter?color=82aaff&style=flat-square) ![Language](https://img.shields.io/github/languages/top/OminduD/Converter?color=82aaff&style=flat-square) |
-
-</div>
-
----
-
-<h2 align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&duration=3000&pause=1000&color=82AAFF&center=true&vCenter=true&width=435&lines=🧰+Tech+Stack" alt="Tech Stack" />
 </h2>
 
