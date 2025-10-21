@@ -100,6 +100,12 @@
   </picture>
 </div>
 
+<br/>
+
+<div align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=OminduD&theme=tokyo-night&bg_color=1a1b27&color=82aaff&line=82aaff&point=70a5fd&area=true&hide_border=true" alt="Contribution Graph" />
+</div>
+
 ---
 
 <h2 align="center">
