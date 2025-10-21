@@ -94,7 +94,7 @@
 </h2>
 
 <div align="center">
-  <img alt="Pacman eating contributions" src="https://raw.githubusercontent.com/OminduD/OminduD/output/pacman-contribution-graph.svg">
+  <img alt="Pacman eating contributions" src="https://raw.githubusercontent.com/OminduD/OminduD/output/github-contribution-grid-snake.svg">
 </div>
 
 ---

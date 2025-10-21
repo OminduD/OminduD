@@ -24,17 +24,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Generate Snake Game from contributions
-        uses: Platane/snk/svg-only@v3
-        with:
-          github_user_name: OminduD
-          outputs: |
-            dist/pacman-contribution-graph.svg
-            dist/pacman-contribution-graph-dark.svg?palette=github-dark
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        continue-on-error: true
-
       - name: Generate language stats
         uses: lowlighter/metrics@latest
         with:
@@ -52,19 +41,6 @@ jobs:
           plugin_languages_recent_days: 365
           repositories_batch: 100
           output_action: commit
-          filename: dist/language-stats.svg
+          filename: language-stats.svg
           committer_branch: output
-          committer_message: "Update language statistics"
-        continue-on-error: true
-
-      - name: Push changes to output branch
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "🤖 Update contribution graphs and language statistics"
-          branch: output
-          create_branch: true
-          file_pattern: 'dist/*.svg'
-          push_options: '--force'
-          skip_fetch: true
-          skip_checkout: true
-        continue-on-error: true
+          committer_message: "🤖 Update language statistics"

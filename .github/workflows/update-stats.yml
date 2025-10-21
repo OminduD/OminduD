@@ -40,6 +40,6 @@ jobs:
           plugin_languages_recent_days: 365
           repositories_batch: 100
           output_action: commit
-          filename: metrics.plugin.languages.svg
+          filename: language-stats.svg
           committer_branch: output
           committer_message: "🤖 Update language statistics"

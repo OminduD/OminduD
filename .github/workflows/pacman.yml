@@ -24,17 +24,16 @@ jobs:
           fetch-depth: 0
 
       - name: Generate Pacman contribution graph
-        uses: abozanona/pacman-contribution-graph@v1.2.1
+        uses: yihong0618/github-readme-pacman@main
         with:
           github_user_name: OminduD
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          output_file_path: output/pacman-contribution-graph.svg
 
       - name: Push graphs to output branch
         uses: crazy-max/ghaction-github-pages@v4
         with:
           target_branch: output
-          build_dir: output
+          build_dir: .
           commit_message: "🤖 Update Pacman contribution graph"
           keep_history: false
         env:
