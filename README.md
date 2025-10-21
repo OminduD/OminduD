@@ -151,3 +151,13 @@
   📝 <a href="./docs/LEARNING.md">What I'm Learning</a> • 
   📚 <a href="./docs/PROJECTS.md">View All Projects</a>
 </p>
+Current runner version: '2.329.0'
+Runner Image Provisioner
+Operating System
+Runner Image
+GITHUB_TOKEN Permissions
+Secret source: Actions
+Prepare workflow directory
+Prepare all required actions
+Getting action download info
+Error: Unable to resolve action yihong0618/github-readme-pacman, repository not found
