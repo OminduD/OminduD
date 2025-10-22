@@ -134,7 +134,7 @@
   <a href="https://dev.to/omindud" target="_blank">
     <img src="https://img.shields.io/static/v1?message=Dev.to&logo=dev.to&label=&color=82aaff&logoColor=white&labelColor=1a1b27&style=for-the-badge" height="35" alt="devto logo" />
   </a>
-  <a href="https://www.reddit.com/user/Omindu_D" target="_blank">
+  <a href="https://www.reddit.com/user/ominduDulneth" target="_blank">
     <img src="https://img.shields.io/static/v1?message=Reddit&logo=reddit&label=&color=82aaff&logoColor=white&labelColor=1a1b27&style=for-the-badge" height="35" alt="reddit logo" />
   </a>
   <a href="https://www.hackerrank.com/profile/omindud" target="_blank">
