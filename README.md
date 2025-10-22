@@ -154,7 +154,7 @@
 <p align="center">
   <i>"Code, break, fix, repeat — until it's elegant and secure."</i>
 </p>
-
+---
 <p align="center">
   📂 <a href="https://github.com/OminduD?tab=repositories">Explore My Repositories</a> • 
   📝 <a href="./docs/LEARNING.md">What I'm Learning</a> • 
