@@ -105,6 +105,40 @@
 ---
 
 <h2 align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&duration=3000&pause=1000&color=82AAFF&center=true&vCenter=true&width=435&lines=🚀+Space+Shooter+Game" alt="Space Shooter Game" />
+</h2>
+
+<div align="center">
+  <p><i>Click on the image below to play the Space Shooter game! 🎮</i></p>
+  
+  [![Space Shooter Game](https://img.shields.io/badge/🚀_PLAY_SPACE_SHOOTER-82AAFF?style=for-the-badge&labelColor=1a1b27)](https://omindud.github.io/space-shooter-game/)
+  
+  <br/>
+  
+  <table>
+    <tr>
+      <td align="center">
+        <img src="https://img.shields.io/badge/Controls-82aaff?style=flat-square&labelColor=1a1b27" alt="Controls"/>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <b>Arrow Keys</b> or <b>WASD</b> - Move Ship<br/>
+        <b>Space</b> - Fire Lasers<br/>
+        <b>P</b> - Pause Game
+      </td>
+    </tr>
+  </table>
+  
+  <br/>
+  
+  <img src="https://img.shields.io/badge/High_Score-0-82aaff?style=for-the-badge&labelColor=1a1b27" alt="High Score"/>
+  <img src="https://img.shields.io/badge/Status-Ready_to_Play-00ff88?style=for-the-badge&labelColor=1a1b27" alt="Status"/>
+</div>
+
+---
+
+<h2 align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&duration=3000&pause=1000&color=82AAFF&center=true&vCenter=true&width=435&lines=🌐+Connect+With+Me" alt="Connect With Me" />
 </h2>
 
