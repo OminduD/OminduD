@@ -125,7 +125,7 @@
     <img src="https://img.shields.io/static/v1?message=Stack%20Overflow&logo=stackoverflow&label=&color=82aaff&logoColor=white&labelColor=1a1b27&style=for-the-badge" height="35" alt="stackoverflow logo" />
   </a>
 </p>
-
+![My GitHub Game](game.gif)
 <p align="center">
   <a href="https://dev.to/omindud" target="_blank">
     <img src="https://img.shields.io/static/v1?message=Dev.to&logo=dev.to&label=&color=82aaff&logoColor=white&labelColor=1a1b27&style=for-the-badge" height="35" alt="devto logo" />
