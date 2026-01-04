@@ -105,19 +105,11 @@
 ---
 
 <h2 align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&duration=3000&pause=1000&color=82AAFF&center=true&vCenter=true&width=435&lines=🛸+Space+Shooter" alt="Space Shooter" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&duration=3000&pause=1000&color=82AAFF&center=true&vCenter=true&width=435&lines=🛸+Space+Shooter+Game" alt="Space Shooter Game" />
 </h2>
 
 <div align="center">
-  <p>
-    A small arcade-style <b>Space Shooter</b> game.
-    <br/>
-    Source & credits: <a href="https://github.com/czl9707/gh-space-shooter">czl9707/gh-space-shooter</a>
-  </p>
-  
-  <a href="https://github.com/czl9707/gh-space-shooter">
-    <img src="https://img.shields.io/badge/SOURCE-REPO-82aaff?style=for-the-badge&logo=github&logoColor=white" alt="Source Repo" />
-  </a>
+  <img src="game.gif" alt="My GitHub Space Shooter Game" />
 </div>
 
 <h2 align="center">
@@ -141,7 +133,6 @@
     <img src="https://img.shields.io/static/v1?message=Stack%20Overflow&logo=stackoverflow&label=&color=82aaff&logoColor=white&labelColor=1a1b27&style=for-the-badge" height="35" alt="stackoverflow logo" />
   </a>
 </p>
-![My GitHub Game](game.gif)
 <p align="center">
   <a href="https://dev.to/omindud" target="_blank">
     <img src="https://img.shields.io/static/v1?message=Dev.to&logo=dev.to&label=&color=82aaff&logoColor=white&labelColor=1a1b27&style=for-the-badge" height="35" alt="devto logo" />
