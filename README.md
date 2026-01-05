@@ -59,26 +59,22 @@
 
 <div align="center">
   <a href="https://github.com/OminduD">
-    <img src="https://github-readme-stats.vercel.app/api?username=OminduD&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true" height="170" alt="stats" loading="lazy" />
+    <img src="https://github-readme-stats.vercel.app/api?username=OminduD&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true&rank_icon=github" height="180" alt="GitHub Stats" loading="lazy" />
   </a>
   <a href="https://github.com/OminduD">
-    <img src="./language-stats.svg" height="170" alt="Top Languages Used" loading="lazy" />
-  </a>
-</div>
-
-
-
-
-
-<div align="center">
-  <a href="https://github.com/OminduD">
-    <img src="https://github-readme-streak-stats.herokuapp.com/?user=OminduD&theme=tokyonight&hide_border=true" alt="streak stats" loading="lazy" />
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=OminduD&theme=tokyonight&hide_border=true&layout=donut&langs_count=10" height="180" alt="Top Languages" loading="lazy" />
   </a>
 </div>
 
 <div align="center">
   <a href="https://github.com/OminduD">
-    <img src="./achievements.svg" alt="GitHub Trophies" loading="lazy" />
+    <img src="https://github-readme-streak-stats.herokuapp.com/?user=OminduD&theme=tokyonight&hide_border=true" alt="Streak Stats" loading="lazy" />
+  </a>
+</div>
+
+<div align="center">
+  <a href="https://github.com/OminduD">
+    <img src="https://github-profile-trophy.vercel.app/?username=OminduD&theme=tokyonight&no-frame=true&no-bg=true&column=-1" alt="GitHub Trophies" loading="lazy" />
   </a>
 </div>
 
