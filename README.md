@@ -62,8 +62,15 @@
     <img src="https://github-readme-stats.vercel.app/api?username=OminduD&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true&rank_icon=github" height="180" alt="GitHub Stats" loading="lazy" />
   </a>
   <a href="https://github.com/OminduD">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=OminduD&theme=tokyonight&hide_border=true&layout=donut&langs_count=10" height="180" alt="Top Languages" loading="lazy" />
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=OminduD&theme=tokyonight&hide_border=true&layout=compact&langs_count=8&size_weight=0.5&count_weight=0.5" height="180" alt="Top Languages" loading="lazy" />
   </a>
+</div>
+
+<br/>
+
+<div align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=OminduD&theme=tokyonight" alt="Repos per Language" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=OminduD&theme=tokyonight" alt="Most Commit Language" />
 </div>
 
 <div align="center">
