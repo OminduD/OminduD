@@ -83,7 +83,7 @@
 </div>
 
 ---
-
+<!--
 <h2 align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&duration=3000&pause=1000&color=82AAFF&center=true&vCenter=true&width=435&lines=🎮+Pacman+Contribution+Graph" alt="Pacman Contribution Graph" />
 </h2>
@@ -98,11 +98,7 @@
 
 <br/>
 
-<div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=OminduD&theme=tokyo-night&bg_color=1a1b27&color=82aaff&line=82aaff&point=70a5fd&area=true&hide_border=true" alt="Contribution Graph" />
-</div>
-
----
+-->
 
 <h2 align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&duration=3000&pause=1000&color=82AAFF&center=true&vCenter=true&width=435&lines=🛸+Space+Shooter+Game" alt="Space Shooter Game" />
@@ -111,6 +107,14 @@
 <div align="center">
   <img src="game.gif" alt="My GitHub Space Shooter Game" />
 </div>
+
+---
+
+<div align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=OminduD&theme=tokyo-night&bg_color=1a1b27&color=82aaff&line=82aaff&point=70a5fd&area=true&hide_border=true" alt="Contribution Graph" />
+</div>
+
+---
 
 <h2 align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&duration=3000&pause=1000&color=82AAFF&center=true&vCenter=true&width=435&lines=🌐+Connect+With+Me" alt="Connect With Me" />
