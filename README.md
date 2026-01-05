@@ -62,7 +62,7 @@
     <img src="https://github-readme-stats.vercel.app/api?username=OminduD&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true" height="170" alt="stats" loading="lazy" />
   </a>
   <a href="https://github.com/OminduD">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=OminduD&layout=compact&theme=tokyonight&hide_border=true&langs_count=10&count_private=true&include_all_commits=true&card_width=320" height="170" alt="languages" loading="lazy" />
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=OminduD&layout=compact&theme=tokyonight&hide_border=true&langs_count=10" height="170" alt="languages" loading="lazy" />
   </a>
 </div>
 
@@ -78,7 +78,7 @@
 
 <div align="center">
   <a href="https://github.com/OminduD">
-    <img src="https://github-profile-trophy.vercel.app/?username=OminduD&theme=tokyonight&row=1&column=4&margin-w=8&margin-h=8&no-frame=true&no-bg=true" alt="trophy" loading="lazy" />
+    <img src="https://github-profile-trophy.vercel.app/?username=OminduD&theme=tokyonight&row=1&column=6&margin-w=15&margin-h=15&no-frame=true&no-bg=true" alt="trophy" loading="lazy" />
   </a>
 </div>
 
