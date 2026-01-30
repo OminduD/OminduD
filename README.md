@@ -86,7 +86,7 @@
 </div>
 
 ---
-
+<!--
 <h2 align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&duration=3000&pause=1000&color=82AAFF&center=true&vCenter=true&width=435&lines=🎮+Pacman+Contribution+Graph" alt="Pacman Contribution Graph" />
 </h2>
@@ -97,14 +97,14 @@
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/OminduD/OminduD/output/pacman-contribution-graph.svg">
     <img alt="Pacman eating contributions" src="https://raw.githubusercontent.com/OminduD/OminduD/output/pacman-contribution-graph-dark.svg">
   </picture>
-</div>
+</div>-->
 
 <br/>
 
 
-<!--
+
 <h2 align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&duration=3000&pause=1000&color=82AAFF&center=true&vCenter=true&width=435&lines=🛸+Space+Shooter+Game" alt="Space Shooter Game" />-->
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&duration=3000&pause=1000&color=82AAFF&center=true&vCenter=true&width=435&lines=🛸+Space+Shooter+Game" alt="Space Shooter Game" />
 </h2>
 
 <div align="center">
