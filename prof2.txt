@@ -25,10 +25,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
           
-      - name: Commit updated SVGs
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "chore(metrics): update profile 3D graphics"
 
       - name: Generate LeetCode card
         continue-on-error: true
@@ -66,6 +62,7 @@ jobs:
           filename: metrics-stackoverflow.svg
 
 
+
       - name: Generate User Account Overview
         continue-on-error: true
         uses: lowlighter/metrics@latest
@@ -76,6 +73,7 @@ jobs:
           template: classic
           theme: dark
           config_timezone: UTC
+          output_action: none
           filename: metrics-overview.svg
 
       - name: Generate Repository License Overview
@@ -89,4 +87,10 @@ jobs:
           template: classic
           theme: dark
           config_timezone: UTC
+          output_action: none
           filename: metrics-licenses.svg
+
+      - name: Commit updated SVGs
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore(metrics): update profile 3D graphics"

@@ -1,0 +1,15 @@
+  commits_authoring:
+    description: Identifiers that has been used for authoring commits
+  committer_token:
+    description: GitHub Token used to commit metrics
+  committer_branch:
+  committer_message:
+  committer_gist:
+      registry](https://github.com/lowlighter/metrics/pkgs/container/metrics)
+  # 📅 Isometric commit calendar
+  plugin_gists:
+    description: Enable gists plugin
+# On the official action, it'll use the docker image published on GitHub registry when using a released version, allowing faster runs
+          # Use registry with pre-built images
+            echo "Using pre-built version $METRICS_TAG, will pull docker image from GitHub registry"
+              echo "Failed to fetch docker image from GitHub registry, will rebuild it locally"

@@ -75,7 +75,6 @@ jobs:
           base: header, activity, community, repositories, metadata
           template: classic
           theme: dark
-          config_timezone: UTC
           filename: metrics-overview.svg
 
       - name: Generate Repository License Overview
@@ -88,5 +87,4 @@ jobs:
           plugin_licenses: yes
           template: classic
           theme: dark
-          config_timezone: UTC
           filename: metrics-licenses.svg
