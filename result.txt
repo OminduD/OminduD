@@ -1,2 +1,0 @@
-stars 404: False
-repos 404: True

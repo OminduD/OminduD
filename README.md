@@ -1,5 +1,6 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=00ff00&height=250&section=header&text=Hello,%20I'm%20Omindu!&fontSize=70&fontAlignY=35&desc=Systems%20Engineer%20%7C%20Security%20%7C%20Open%20Source&descAlignY=55&descSize=20&animation=fadeIn" alt="Header" />
+  <h1><img src="./assets/wave.gif" width="35" valign="middle" /> Hello, I'm Omindu!</h1>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=00ff00&height=180&section=header&desc=Systems%20Engineer%20%7C%20Security%20%7C%20Open%20Source&descAlignY=55&descSize=20&animation=fadeIn" alt="Header" />
 </div>
 
 <div align="center">
@@ -52,7 +53,7 @@
 <div align="center">
   <!-- Dynamic Trophies (Centered properly) -->
   <a href="https://github.com/ryo-ma/github-profile-trophy">
-    <img src="https://github-profile-trophy.vercel.app/?username=OminduD&theme=hacker&no-frame=1&no-bg=1&margin-w=15" alt="Trophies" />
+    <img src="https://github-profile-trophy.vercel.app/?username=OminduD&theme=matrix&no-frame=1&no-bg=1&margin-w=15" alt="Trophies" />
   </a>
 </div>
 
