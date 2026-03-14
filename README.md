@@ -100,7 +100,7 @@
 
 <div align="center">
   <!-- GitHub Action Generated 3D Map -->
-  <img src="./profile-3d-contrib/profile-night-view.svg" alt="3D Isometric Commit Calendar" width="98%" />
+  <img src="./profile-3d-contrib/profile-night-green.svg" alt="3D Isometric Commit Calendar" width="98%" />
   <br/><br/>
   <!-- Reliable static world map -->
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/World_map_-_low_resolution.svg/1280px-World_map_-_low_resolution.svg.png" alt="World Map" width="98%" />
