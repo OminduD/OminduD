@@ -87,14 +87,12 @@
 
 <br/>
 
-<h2 align="center"><font color="#7aa2f7">🗺️ 3D Contribution Landscape</font></h2>
+<h2 align="center"><font color="#7aa2f7">🗺️ 3D Contribution Landscape & World Map</font></h2>
 
 <div align="center">
   <!-- GitHub Action Generated 3D Map -->
   <img src="./profile-3d-contrib/profile-night-view.svg" alt="3D Isometric Commit Calendar" width="98%" />
-  <br/><br/>
-  <!-- GitHub Action Generated World Map -->
-  <img src="./world-map.svg" alt="Followers World Map" width="98%" />
+
 </div>
 
 ---
