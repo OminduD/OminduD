@@ -1,0 +1,16 @@
+--- .github/workflows/profile.yml
++++ .github/workflows/profile.yml
+@@ -341,2 +341,13 @@
+ 
++      - name: Generate github contribution grid snake animation
++        uses: Platane/snk/svg-only@v3
++        with:
++          github_user_name: OminduD
++          outputs: |
++            github-snake.svg
++            github-snake-dark.svg?palette=github-dark
++        env:
++          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
++
+       - name: Commit updated SVGs
+         uses: stefanzweifel/git-auto-commit-action@v5

@@ -25,7 +25,7 @@
 </p>
 
 <div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=700&size=22&duration=2800&pause=700&color=7AA2F7&center=true&vCenter=true&random=false&width=780&lines=Systems+Programming+%7C+Security+%7C+Open+Source;Building+fast,+clean,+reliable+developer+tools;Arch+Linux+%2B+Hyprland+%2B+Terminal+first+workflow" alt="Typing Intro" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=700&size=22&duration=2800&pause=700&color=7AA2F7&center=true&vCenter=true&random=false&width=780&lines=System+Engineering+%7C+Security+Research+%7C+Open+Source;Building+fast,+clean,+reliable+developer+tools;Arch+Linux+%2B+Hyprland+%2B+Terminal+first+workflow" alt="Typing Intro" />
 </div>
 
 <div align="center">
@@ -64,21 +64,28 @@
 
 ---
 
-<h2 align="center"><font color="#7aa2f7">📊 GitHub Stats (Metrics)</font></h2>
-
-<p align="center">
-  <i>Auto-generated every 6 hours via GitHub Actions for stable rendering.</i>
-</p>
+<h2 align="center"><font color="#7aa2f7">🚀 GitHub Dashboard</font></h2>
 
 <div align="center">
-  <img src="./github-metrics.svg" alt="Core Metrics" width="98%" />
+  <a href="https://github.com/ryo-ma/github-profile-trophy">
+    <img src="https://github-profile-trophy.vercel.app/?username=OminduD&theme=tokyonight&row=1&column=7&no-frame=true&no-bg=true" alt="Omindu's Trophies" />
+  </a>
 </div>
 
 <br/>
 
 <div align="center">
-  <img src="https://metrics.lecoq.io/OminduD?template=classic&base=&plugin_stargazers=1&plugin_stargazers_days=14&plugin_stargazers_charts_type=chartist&config_timezone=UTC&theme=tokyonight" alt="Stargazers" width="48%" />
-  <img src="https://metrics.lecoq.io/OminduD?template=classic&base=&plugin_isocalendar=1&plugin_isocalendar_duration=full-year&config_timezone=UTC&theme=tokyonight" alt="Isometric Commit Calendar" width="48%" />
+  <!-- Instant stats from github-readme-stats (reliable & fast) -->
+  <img src="https://github-readme-stats.vercel.app/api?username=OminduD&show_icons=true&theme=tokyonight&bg_color=1a1b26&hide_border=true&title_color=7aa2f7&icon_color=73daca" alt="GitHub Stats" width="48%" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=OminduD&theme=tokyonight&background=1a1b26&hide_border=true&fire=73daca&ring=bb9af7" alt="GitHub Streak" width="48%" />
+</div>
+
+<br/>
+
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=OminduD&layout=compact&theme=tokyonight&bg_color=1a1b26&hide_border=true&title_color=7aa2f7" alt="Top Languages" width="48%" />
+  <!-- Core metrics generated locally by the Action -->
+  <img src="./github-metrics.svg" alt="Core Metrics" width="48%" />
 </div>
 
 <br/>
@@ -97,29 +104,13 @@
 <br/>
 
 <div align="center">
-  <img src="https://metrics.lecoq.io/OminduD?template=classic&base=&plugin_habits=1&plugin_habits_facts=1&plugin_habits_charts=1&config_timezone=UTC&theme=tokyonight" alt="Coding Habits and Activity" width="48%" />
+  <img src="./metrics-habits.svg" alt="Coding Habits" width="48%" />
   <img src="./metrics-starlists.svg" alt="Star Lists" width="48%" />
 </div>
 
-<br/>
-
-<div align="center">
-  <img src="https://metrics.lecoq.io/OminduD?template=classic&base=&plugin_stars=1&plugin_stars_limit=6&config_timezone=UTC&theme=tokyonight" alt="Recently Starred Repositories" width="48%" />
-  <img src="https://metrics.lecoq.io/OminduD?template=classic&base=&plugin_followup=1&plugin_followup_sections=repositories%2Cuser&config_timezone=UTC&theme=tokyonight" alt="Follow Up Metrics" width="48%" />
-</div>
-
-<br/>
-
-<div align="center">
-  <img src="./metrics-leetcode.svg" alt="LeetCode Metrics" width="48%" />
-  <img src="./metrics-stackoverflow.svg" alt="Stack Overflow Metrics" width="48%" />
-</div>
-
-<br/>
-
-<div align="center">
-  <img src="https://metrics.lecoq.io/OminduD?template=classic&base=&plugin_reactions=1&plugin_reactions_limit=100&plugin_reactions_details=percentage&config_timezone=UTC&theme=tokyonight" alt="Comment Reactions" width="98%" />
-</div>
+<p align="center">
+  <i>Note: If some cards above say "Preparing metrics...", just head over to your <a href="https://github.com/OminduD/OminduD/actions">Actions tab</a> and trigger the "Update Profile README" action manually to load your real code stats.</i>
+</p>
 
 ---
 
@@ -129,12 +120,13 @@
   <img src="./game.gif" alt="Space Shooter Animation" width="98%" />
 </div>
 
-<!--
 <div align="center">
-  <img src="https://raw.githubusercontent.com/OminduD/OminduD/output/pacman-contribution-graph-dark.svg" alt="Pacman Contribution Graph" width="48%" />
-  <img src="https://raw.githubusercontent.com/OminduD/OminduD/output/pacman-contribution-graph.svg" alt="Pacman Contribution Graph Light" width="48%" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="github-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="github-snake.svg" />
+    <img alt="github contribution grid snake animation" src="github-snake.svg" />
+  </picture>
 </div>
--->
 
 <div align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=7aa2f7&height=100&section=footer" alt="Footer" />
