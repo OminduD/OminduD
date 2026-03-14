@@ -25,7 +25,6 @@
   <br/><br/>
   <a href="https://github.com/OminduD?tab=followers"><img src="https://img.shields.io/github/followers/OminduD?label=Followers&style=for-the-badge&color=000000&logo=github&labelColor=00ff00&logoColor=000000" alt="Followers" /></a>
   <a href="https://github.com/OminduD"><img src="https://img.shields.io/github/stars/OminduD?label=Total%20Stars&style=for-the-badge&color=000000&logo=star&labelColor=00c800&logoColor=000000" alt="Stars" /></a>
-  <a href="https://github.com/OminduD?tab=repositories"><img src="https://img.shields.io/github/repos/OminduD?label=Public%20Repos&style=for-the-badge&color=000000&logo=books&labelColor=00fa9a&logoColor=000000" alt="Public Repositories" /></a>
   <img src="https://komarev.com/ghpvc/?username=OminduD&label=Profile%20Views&color=000000&style=for-the-badge&labelColor=00ff00&logoColor=000000" alt="visitor badge"/>
 </p>
 
