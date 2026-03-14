@@ -77,11 +77,11 @@
       </td>
     </tr>
     <tr>
-      <td width="50%" align="center" valign="top">
-        <img src="https://leetcard.jacoblin.cool/OminduD?theme=hacker&font=JetBrains%20Mono&ext=activity" alt="LeetCode Stats" width="100%" />
+      <td width="50%" align="center" valign="middle">
+        <img src="https://leetcard.jacoblin.cool/OminduD?theme=dark&font=JetBrains%20Mono&ext=activity" alt="LeetCode Stats" width="100%" />
       </td>
-      <td width="50%" align="center" valign="top">
-        <img src="https://github-readme-stackoverflow.vercel.app/?userID=27091856&theme=hacker&bg_color=000000&hide_border=true&title_color=00ff00" alt="StackOverflow Stats" width="100%" />
+      <td width="50%" align="center" valign="middle">
+        <img src="https://github-readme-stackoverflow.vercel.app/?userID=27091856&theme=dark&bg_color=000000&hide_border=true&title_color=00ff00&text_color=32cd32&icon_color=00fa9a" alt="StackOverflow Stats" height="150" />
       </td>
     </tr>
   </table>
