@@ -25,10 +25,6 @@
 </p>
 
 <div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&pause=900&color=7AA2F7&center=true&vCenter=true&random=false&width=700&lines=Building+secure+tools+for+real+problems;Systems+programming+%7C+Automation+%7C+Open+Source;Arch+Linux+%2B+Hyprland+%7C+Code+all+day" alt="Typing Intro" />
-</div>
-
-<div align="center">
   <img src="https://komarev.com/ghpvc/?username=OminduD&label=Profile%20Visitors&color=7aa2f7&style=flat-square" alt="visitor badge"/>
 </div>
 
@@ -61,25 +57,18 @@
 <h2 align="center"><font color="#7aa2f7">📊 GitHub Stats (Metrics)</font></h2>
 
 <p align="center">
-  <i>Auto-generated every 6 hours via GitHub Actions.</i>
+  <i>Auto-generated every 6 hours via GitHub Actions for stable rendering.</i>
 </p>
 
 <div align="center">
-  <img src="./github-metrics.svg" alt="Core Metrics" />
+  <img src="./github-metrics.svg" alt="Core Metrics" width="98%" />
 </div>
 
 <br/>
 
 <div align="center">
-  <img src="./language-stats.svg" alt="Languages Metrics" width="48%" />
-  <img src="./metrics-habits.svg" alt="Coding Habits" width="48%" />
-</div>
-
-<br/>
-
-<div align="center">
+  <img src="./metrics-stargazers.svg" alt="Stargazers" width="48%" />
   <img src="./metrics-isocalendar.svg" alt="Isometric Commit Calendar" width="48%" />
-  <img src="./metrics-stargazers.svg" alt="Stargazers Evolution" width="48%" />
 </div>
 
 <br/>
@@ -92,42 +81,23 @@
 <br/>
 
 <div align="center">
+  <img src="./metrics-habits.svg" alt="Coding Habits and Activity" width="48%" />
   <img src="./metrics-starlists.svg" alt="Star Lists" width="48%" />
-  <img src="./metrics-stars.svg" alt="Recently Starred Repositories" width="48%" />
 </div>
 
 <br/>
 
 <div align="center">
-  <img src="./metrics-leetcode.svg" alt="LeetCode" width="48%" />
-  <img src="./metrics-stackoverflow.svg" alt="Stack Overflow" width="48%" />
+  <img src="./metrics-leetcode.svg" alt="LeetCode Metrics" width="48%" />
+  <img src="./metrics-stackoverflow.svg" alt="Stack Overflow Metrics" width="48%" />
 </div>
-
-<br/>
-
-<div align="center">
-  <img src="./metrics-followup.svg" alt="Issues and PR Follow-up" width="48%" />
-  <img src="./metrics-reactions.svg" alt="Comment Reactions" width="48%" />
-</div>
-
-<br/>
-
-<div align="center">
-  <img src="./achievements.svg" alt="Achievements" />
-</div>
-
-<p align="center">
-  <sub>
-    For live LeetCode and Stack Overflow cards, set repository variables: <b>LEETCODE_USER</b> and <b>STACKOVERFLOW_USER_ID</b>.
-  </sub>
-</p>
 
 ---
 
 <h2 align="center"><font color="#7aa2f7">🎬 Animated Zone</font></h2>
 
 <div align="center">
-  <img src="./game.gif" alt="Space Shooter Animation" width="95%" />
+  <img src="./game.gif" alt="Space Shooter Animation" width="98%" />
 </div>
 
 <!--

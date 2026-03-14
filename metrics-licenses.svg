@@ -1,13 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 220" role="img" aria-label="Repository licenses placeholder">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-label="Repository licenses placeholder">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#1a1b27"/>
+      <stop offset="0%" stop-color="#1a1b26"/>
       <stop offset="100%" stop-color="#24283b"/>
     </linearGradient>
   </defs>
-  <rect width="860" height="220" rx="16" fill="url(#bg)"/>
-  <text x="28" y="56" fill="#7aa2f7" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700">📜 Repository Licenses</text>
-  <text x="28" y="102" fill="#c0caf5" font-family="Segoe UI, Arial, sans-serif" font-size="18">This card will auto-refresh from GitHub Actions.</text>
-  <text x="28" y="136" fill="#9aa5ce" font-family="Segoe UI, Arial, sans-serif" font-size="15">Plugin: licenses • Template: repository</text>
-  <text x="28" y="170" fill="#9aa5ce" font-family="Segoe UI, Arial, sans-serif" font-size="15">If it stays like this, run workflow: Update Profile README</text>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <text x="60" y="120" fill="#7aa2f7" font-size="48" font-family="Segoe UI, Arial">📜 Repository Licenses</text>
+  <text x="60" y="200" fill="#c0caf5" font-size="30" font-family="Segoe UI, Arial">Preparing metrics card...</text>
+  <text x="60" y="255" fill="#9aa5ce" font-size="24" font-family="Segoe UI, Arial">This file will be auto-updated by GitHub Actions.</text>
 </svg>
