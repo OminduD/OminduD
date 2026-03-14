@@ -1,7 +1,0 @@
-total 28
-drwxr-xr-x 2 omindu omindu 4096 Mar 14 18:13 .
-drwxr-xr-x 3 omindu omindu 4096 Mar 14 16:30 ..
--rw-r--r-- 1 omindu omindu  720 Mar 14 16:30 pacman.yml
--rw-r--r-- 1 omindu omindu 1951 Mar 14 19:42 profile.yml
--rw-r--r-- 1 omindu omindu  441 Mar 14 16:30 update-game.yml
--rw-r--r-- 1 omindu omindu 6066 Mar 14 16:30 update-projects.yml
