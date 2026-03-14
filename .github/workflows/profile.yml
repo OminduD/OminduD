@@ -73,7 +73,7 @@ jobs:
           token: ${{ secrets.METRICS_TOKEN || github.token }}
           user: OminduD
           base: header, activity, community, repositories, metadata
-          template: classic
+          template: terminal
           config_timezone: UTC
           filename: metrics-overview.svg
 
@@ -89,6 +89,6 @@ jobs:
           plugin_licenses_setup: bash -c '[[ -f package.json ]] && npm ci || true'
           plugin_licenses_legal: yes
           plugin_licenses_ratio: yes
-          template: repository
+          template: terminal
           config_timezone: UTC
           filename: metrics-licenses.svg
