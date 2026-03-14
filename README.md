@@ -34,10 +34,10 @@
 
 <div align="center">
   <p><b>Core Languages</b></p>
-  <img src="https://skillicons.dev/icons?i=python,js,go,css,ts,c,rust&perline=10" alt="Core Languages" />
+  <img src="https://skillicons.dev/icons?i=python,js,go,css,ts,c,rust,ruby,perl,cpp,html&perline=11" alt="Core Languages" />
   <br/><br/>
   <p><b>Backend, DevOps & Cloud</b></p>
-  <img src="https://skillicons.dev/icons?i=linux,arch,ubuntu,docker,aws,kubernetes,nginx,bash&perline=10" alt="DevOps" />
+  <img src="https://skillicons.dev/icons?i=linux,arch,docker,aws,kubernetes,nginx,bash&perline=10" alt="DevOps" />
   <br/><br/>
   <p><b>Tools & Environment</b></p>
   <img src="https://skillicons.dev/icons?i=git,github,neovim,vscode,postman,mysql,postgres,sqlite&perline=10" alt="Tools" />
