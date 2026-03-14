@@ -61,6 +61,19 @@ jobs:
           output_action: none
           filename: metrics-stackoverflow.svg
 
+
+      - name: Generate World Map
+        uses: lowlighter/metrics@latest
+        continue-on-error: true
+        with:
+          filename: world-map.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          base: ""
+          plugin_stargazers: yes
+          plugin_stargazers_worldmap: yes
+          plugin_stargazers_worldmap_sample: 0
+          config_timezone: UTC
+
       - name: Commit updated SVGs
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
