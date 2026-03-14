@@ -52,7 +52,7 @@
 <div align="center">
   <!-- Dynamic Trophies (Centered properly) -->
   <a href="https://github.com/ryo-ma/github-profile-trophy">
-    <img src="https://github-profile-trophy.vercel.app/?username=OminduD&theme=tokyonight&no-frame=true&no-bg=true&margin-w=15&row=1&column=7" alt="Trophies" />
+    <img src="https://github-profile-trophy.vercel.app/?username=OminduD&theme=tokyonight&no-frame=1&no-bg=1&margin-w=15" alt="Trophies" />
   </a>
 </div>
 
@@ -75,8 +75,7 @@
 
 <div align="center">
   <img src="https://leetcard.jacoblin.cool/OminduD?theme=tokyonight&font=JetBrains%20Mono&ext=activity" alt="LeetCode Stats" width="48%" />
-  <!-- Replace YOUR_ID_HERE with your stackoverflow numeric ID, e.g. 1234567 -->
-  <img src="https://github-readme-stackoverflow.vercel.app/?userID=YOUR_ID_HERE&theme=tokyonight&bg_color=1a1b26&hide_border=true&title_color=7aa2f7" alt="StackOverflow Stats" width="48%" />
+  <img src="https://github-readme-stackoverflow.vercel.app/?userID=27091856&theme=tokyonight&bg_color=1a1b26&hide_border=true&title_color=7aa2f7" alt="StackOverflow Stats" width="48%" />
 </div>
 
 <br/>
