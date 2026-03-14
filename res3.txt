@@ -1,0 +1,12 @@
+HTTP/2 200 
+age: 0
+cache-control: max-age=86400
+content-type: image/svg+xml; charset=utf-8
+date: Sat, 14 Mar 2026 15:28:04 GMT
+etag: W/"1e4c-hbtSBEmBW4/SS2xaqN5Z06Ict3o"
+server: Vercel
+strict-transport-security: max-age=63072000; includeSubDomains; preload
+x-vercel-cache: MISS
+x-vercel-id: sin1::sfo1::6qndj-1773502083244-5337603a43b9
+content-length: 7756
+

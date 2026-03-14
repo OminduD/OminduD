@@ -1,0 +1,10 @@
+HTTP/2 503 
+cache-control: public, max-age=0, must-revalidate
+content-type: text/plain; charset=utf-8
+date: Sat, 14 Mar 2026 15:28:36 GMT
+server: Vercel
+strict-transport-security: max-age=63072000; includeSubDomains; preload
+x-vercel-error: DEPLOYMENT_PAUSED
+x-vercel-id: sin1::t8z46-1773502116740-fa7825a22010
+content-length: 99
+

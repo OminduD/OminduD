@@ -1,6 +1,5 @@
 <div align="center">
-  <h1><img src="./assets/wave.gif" width="35" valign="middle" /> Hello, I'm Omindu!</h1>
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=00ff00&height=180&section=header&desc=Systems%20Engineer%20%7C%20Security%20%7C%20Open%20Source&descAlignY=55&descSize=20&animation=fadeIn" alt="Header" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=00ff00&height=250&section=header&text=Hello,%20I'm%20Omindu!&fontSize=70&fontAlignY=35&desc=Systems%20Engineer%20%7C%20Security%20%7C%20Open%20Source&descAlignY=55&descSize=20&animation=fadeIn" alt="Header" />
 </div>
 
 <div align="center">
@@ -51,9 +50,12 @@
 
 <div align="center">
   <!-- Dynamic Trophies (Centered properly) -->
+  <!-- Trophies are temporarily hidden because the provider (github-profile-trophy.vercel.app) is down globally -->
+  <!--
   <a href="https://github.com/ryo-ma/github-profile-trophy">
     <img src="https://github-profile-trophy.vercel.app/?username=OminduD&theme=matrix&no-frame=1&no-bg=1&margin-w=15" alt="Trophies" />
   </a>
+  -->
 </div>
 
 <br/>
@@ -62,7 +64,7 @@
   <table width="100%" border="0" cellspacing="0" cellpadding="0">
     <tr>
       <td width="50%" align="center" valign="top">
-        <img src="https://github-readme-stats.vercel.app/api?username=OminduD&show_icons=true&theme=hacker&bg_color=000000&hide_border=true&title_color=00ff00&icon_color=00fa9a&text_color=32cd32" alt="GitHub Stats" width="100%" />
+        <img src="https://github-readme-stats.vercel.app/api?username=OminduD&show_icons=true&theme=dark&bg_color=000000&hide_border=true&title_color=00ff00&icon_color=00fa9a&text_color=32cd32" alt="GitHub Stats" width="100%" />
       </td>
       <td width="50%" align="center" valign="top">
         <img src="https://github-readme-streak-stats.herokuapp.com/?user=OminduD&theme=hacker&background=000000&hide_border=true&fire=00fa9a&ring=00c800&currStreakNum=00ff00&sideLabels=32cd32&dates=32cd32" alt="GitHub Streak" width="100%" />
@@ -70,10 +72,10 @@
     </tr>
     <tr>
       <td width="50%" align="center" valign="top">
-        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=OminduD&layout=compact&theme=hacker&bg_color=000000&hide_border=true&title_color=00ff00&text_color=32cd32" alt="Top Languages" width="100%" />
+        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=OminduD&layout=compact&theme=dark&bg_color=000000&hide_border=true&title_color=00ff00&text_color=32cd32" alt="Top Languages" width="100%" />
       </td>
       <td width="50%" align="center" valign="top">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=OminduD&repo=OminduD&theme=hacker&bg_color=000000&hide_border=true&title_color=00ff00&text_color=32cd32&icon_color=00fa9a" alt="Pinned Repo" width="100%" />
+        <img src="https://github-readme-stats.vercel.app/api/pin/?username=OminduD&repo=OminduD&theme=dark&bg_color=000000&hide_border=true&title_color=00ff00&text_color=32cd32&icon_color=00fa9a" alt="Pinned Repo" width="100%" />
       </td>
     </tr>
     <tr>
