@@ -25,6 +25,42 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
           
+
+      - name: Generate LeetCode card
+        continue-on-error: true
+        if: ${{ vars.LEETCODE_USER != '' }}
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN || github.token }}
+          user: OminduD
+          base: ""
+          plugin_leetcode: yes
+          plugin_leetcode_user: ${{ vars.LEETCODE_USER }}
+          plugin_leetcode_sections: solved, skills
+          template: classic
+          theme: tokyonight
+          config_timezone: UTC
+          output_action: none
+          filename: metrics-leetcode.svg
+
+      - name: Generate Stack Overflow card
+        continue-on-error: true
+        if: ${{ vars.STACKOVERFLOW_USER_ID != '' }}
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN || github.token }}
+          user: OminduD
+          base: ""
+          plugin_stackoverflow: yes
+          plugin_stackoverflow_user: ${{ vars.STACKOVERFLOW_USER_ID }}
+          plugin_stackoverflow_sections: answers-top
+          plugin_stackoverflow_limit: 2
+          template: classic
+          theme: tokyonight
+          config_timezone: UTC
+          output_action: none
+          filename: metrics-stackoverflow.svg
+
       - name: Commit updated SVGs
         uses: stefanzweifel/git-auto-commit-action@v5
         with:

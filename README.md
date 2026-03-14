@@ -52,7 +52,7 @@
 <div align="center">
   <!-- Dynamic Trophies (Centered properly) -->
   <a href="https://github.com/ryo-ma/github-profile-trophy">
-    <img src="https://github-profile-trophy.vercel.app/?username=OminduD&theme=tokyonight&no-frame=true&no-bg=true&margin-w=15" alt="Trophies" />
+    <img src="https://github-profile-trophy.vercel.app/?username=OminduDhttps://github-profile-trophy.vercel.app/?username=OminduD&theme=tokyonight&no-frame=true&no-bg=true&margin-w=15theme=tokyonighthttps://github-profile-trophy.vercel.app/?username=OminduD&theme=tokyonight&no-frame=true&no-bg=true&margin-w=15no-frame=truehttps://github-profile-trophy.vercel.app/?username=OminduD&theme=tokyonight&no-frame=true&no-bg=true&margin-w=15no-bg=truehttps://github-profile-trophy.vercel.app/?username=OminduD&theme=tokyonight&no-frame=true&no-bg=true&margin-w=15row=1https://github-profile-trophy.vercel.app/?username=OminduD&theme=tokyonight&no-frame=true&no-bg=true&margin-w=15column=7" alt="Trophies" />
   </a>
 </div>
 
