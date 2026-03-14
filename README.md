@@ -28,6 +28,12 @@
   <img src="https://komarev.com/ghpvc/?username=OminduD&label=Profile%20Visitors&color=7aa2f7&style=flat-square" alt="visitor badge"/>
 </div>
 
+<p align="center">
+  <img src="https://img.shields.io/github/followers/OminduD?label=Followers&style=for-the-badge&color=7aa2f7&logo=github" alt="Followers" />
+  <img src="https://img.shields.io/github/stars/OminduD?label=Total%20Stars&style=for-the-badge&color=bb9af7&logo=github" alt="Stars" />
+  <img src="https://img.shields.io/github/repos/OminduD?label=Public%20Repos&style=for-the-badge&color=73daca&logo=github" alt="Public Repositories" />
+</p>
+
 ---
 
 <table align="center" style="border: none; background-color: transparent;">
@@ -74,6 +80,12 @@
 <br/>
 
 <div align="center">
+  <img src="./metrics-stargazers-worldmap.svg" alt="Stargazers World Map" width="98%" />
+</div>
+
+<br/>
+
+<div align="center">
   <img src="./metrics-topics.svg" alt="Starred Topics" width="48%" />
   <img src="./metrics-licenses.svg" alt="Repository Licenses" width="48%" />
 </div>
@@ -88,8 +100,21 @@
 <br/>
 
 <div align="center">
+  <img src="./metrics-stars.svg" alt="Recently Starred Repositories" width="48%" />
+  <img src="./metrics-followup.svg" alt="Follow Up Metrics" width="48%" />
+</div>
+
+<br/>
+
+<div align="center">
   <img src="./metrics-leetcode.svg" alt="LeetCode Metrics" width="48%" />
   <img src="./metrics-stackoverflow.svg" alt="Stack Overflow Metrics" width="48%" />
+</div>
+
+<br/>
+
+<div align="center">
+  <img src="./metrics-reactions.svg" alt="Comment Reactions" width="98%" />
 </div>
 
 ---

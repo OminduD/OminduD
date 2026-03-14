@@ -172,12 +172,14 @@ jobs:
           filename: metrics-starlists.svg
 
       - name: Generate LeetCode card
+        if: ${{ vars.LEETCODE_USER != '' }}
         uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN || github.token }}
           user: OminduD
           base: ""
           plugin_leetcode: yes
+          plugin_leetcode_user: ${{ vars.LEETCODE_USER }}
           plugin_leetcode_sections: solved, skills, recent
           plugin_leetcode_limit_skills: 10
           plugin_leetcode_limit_recent: 3
@@ -186,6 +188,24 @@ jobs:
           config_timezone: UTC
           output_action: none
           filename: metrics-leetcode.svg
+
+      - name: Ensure LeetCode fallback card exists
+        if: ${{ vars.LEETCODE_USER == '' }}
+        run: |
+          cat > metrics-leetcode.svg <<'EOF'
+          <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-label="LeetCode metrics placeholder">
+            <defs>
+              <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#1a1b26"/>
+                <stop offset="100%" stop-color="#24283b"/>
+              </linearGradient>
+            </defs>
+            <rect width="1200" height="600" fill="url(#bg)"/>
+            <text x="60" y="120" fill="#7aa2f7" font-size="48" font-family="Segoe UI, Arial">🗳️ LeetCode Metrics</text>
+            <text x="60" y="200" fill="#c0caf5" font-size="30" font-family="Segoe UI, Arial">Set repository variable LEETCODE_USER to enable this card.</text>
+            <text x="60" y="255" fill="#9aa5ce" font-size="24" font-family="Segoe UI, Arial">Workflow will auto-replace this placeholder on next run.</text>
+          </svg>
+          EOF
 
       - name: Generate Stack Overflow card
         if: ${{ vars.STACKOVERFLOW_USER_ID != '' }}
@@ -220,6 +240,56 @@ jobs:
           config_timezone: UTC
           output_action: none
           filename: metrics-stargazers.svg
+
+      - name: Generate stargazers world map card
+        if: ${{ secrets.GOOGLE_MAP_TOKEN != '' }}
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN || github.token }}
+          user: OminduD
+          base: ""
+          plugin_stargazers: yes
+          plugin_stargazers_charts: no
+          plugin_stargazers_worldmap: yes
+          plugin_stargazers_worldmap_token: ${{ secrets.GOOGLE_MAP_TOKEN }}
+          plugin_stargazers_worldmap_sample: 200
+          template: classic
+          theme: tokyonight
+          config_timezone: UTC
+          output_action: none
+          filename: metrics-stargazers-worldmap.svg
+
+      - name: Ensure stargazers world map fallback exists
+        if: ${{ secrets.GOOGLE_MAP_TOKEN == '' }}
+        run: |
+          cat > metrics-stargazers-worldmap.svg <<'EOF'
+          <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-label="Stargazers worldmap placeholder">
+            <defs>
+              <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#1a1b26"/>
+                <stop offset="100%" stop-color="#24283b"/>
+              </linearGradient>
+            </defs>
+            <rect width="1200" height="600" fill="url(#bg)"/>
+            <text x="60" y="120" fill="#7aa2f7" font-size="48" font-family="Segoe UI, Arial">🌍 Stargazers World Map</text>
+            <text x="60" y="200" fill="#c0caf5" font-size="30" font-family="Segoe UI, Arial">Set secret GOOGLE_MAP_TOKEN to enable this card.</text>
+            <text x="60" y="255" fill="#9aa5ce" font-size="24" font-family="Segoe UI, Arial">Workflow will auto-replace this placeholder on next run.</text>
+          </svg>
+          EOF
+
+      - name: Generate recently starred repositories card
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN || github.token }}
+          user: OminduD
+          base: ""
+          plugin_stars: yes
+          plugin_stars_limit: 6
+          template: classic
+          theme: tokyonight
+          config_timezone: UTC
+          output_action: none
+          filename: metrics-stars.svg
 
       - name: Generate reactions card
         uses: lowlighter/metrics@latest
