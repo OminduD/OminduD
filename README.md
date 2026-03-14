@@ -1,98 +1,100 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=260&section=header&text=Omindu%20Dhananjaya&fontSize=58&fontColor=cad3f5&animation=fadeIn&fontAlignY=38&desc=Systems%20Programming%20%7C%20Security%20%7C%20Open%20Source&descAlignY=58&descSize=18&color=0:1a1b26,50:24283b,100:7aa2f7" alt="Tokyo Night Header" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=7aa2f7&height=250&section=header&text=Hello,%20I'm%20Omindu!&fontSize=70&fontAlignY=35&desc=Coding%20Geek%20%7C%20Open%20Source%20Enthusiast&descAlignY=55&descSize=20&animation=fadeIn" alt="Header" />
+</div>
+
+<div align="center">
+  <a href="https://github.com/OminduD">
+    <img src="https://images.weserv.nl/?url=avatars.githubusercontent.com/OminduD?v=4&h=120&w=120&fit=cover&mask=circle&maxage=7d" width="120" height="120" alt="Omindu Profile Picture" style="margin-top:-60px; border-radius: 50%; border: 4px solid #1a1b26;" />
+  </a>
 </div>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=20&duration=2500&pause=900&color=7AA2F7&center=true&vCenter=true&repeat=true&width=920&lines=Building+clean+and+secure+software;Systems+programming+enthusiast;CLI+tools+and+automation+lover;Arch+Linux+%2B+Hyprland+daily+driver" alt="Typing Intro" />
-</p>
-
-<p align="center">
-  <a href="https://github.com/OminduD?tab=followers">
-    <img src="https://img.shields.io/github/followers/OminduD?style=for-the-badge&color=7aa2f7&labelColor=1a1b26&logo=github&logoColor=cad3f5" alt="Followers" />
-  </a>
-  <a href="https://github.com/OminduD">
-    <img src="https://img.shields.io/github/stars/OminduD?affiliations=OWNER%2CCOLLABORATOR&style=for-the-badge&color=bb9af7&labelColor=1a1b26&logo=apachespark&logoColor=cad3f5" alt="Stars" />
-  </a>
-  <img src="https://komarev.com/ghpvc/?username=OminduD&style=for-the-badge&color=7aa2f7&label=PROFILE+VIEWS" alt="Profile Views" />
-</p>
-
-<p align="center">
   <a href="https://linkedin.com/in/omindud">
-    <img src="https://img.shields.io/badge/LinkedIn-7aa2f7?style=for-the-badge&logo=linkedin&logoColor=ffffff" alt="LinkedIn" />
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white&color=7aa2f7" alt="LinkedIn" />
   </a>
   <a href="https://twitter.com/OminduD">
-    <img src="https://img.shields.io/badge/Twitter-7aa2f7?style=for-the-badge&logo=x&logoColor=ffffff" alt="Twitter" />
+    <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white&color=7aa2f7" alt="Twitter" />
   </a>
   <a href="https://kaggle.com/omindud">
-    <img src="https://img.shields.io/badge/Kaggle-7aa2f7?style=for-the-badge&logo=kaggle&logoColor=ffffff" alt="Kaggle" />
+    <img src="https://img.shields.io/badge/Kaggle-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white&color=7aa2f7" alt="Kaggle" />
   </a>
 </p>
+
+<p align="center">
+  <i><strong style="color: #bb9af7;">Crafting code that's clean, fast, and secure — one commit at a time.</strong></i>
+</p>
+
+<div align="center">
+  <img src="https://komarev.com/ghpvc/?username=OminduD&label=Profile%20Visitors&color=7aa2f7&style=flat-square" alt="visitor badge"/>
+</div>
 
 ---
 
-<table>
+<table align="center" style="border: none; background-color: transparent;">
   <tr>
-    <td valign="top" width="55%">
-
-### About Me
-
-- Computer Science undergrad focused on systems and security.
-- Building CLI tools, automation workflows, and privacy-first software.
-- Exploring compilers, language internals, and low-level architecture.
-- Loves Linux customization, terminal tooling, and clean code design.
-
-### Current Focus
-
-- Rust and Go for high-performance tooling.
-- Safer automation pipelines and shell productivity.
-- Open source contributions with practical developer value.
-
-  </td>
-    <td valign="top" width="45%">
-
-### Tech Arsenal
-
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=rust,go,python,bash,ts,js,nodejs,linux,docker,git,neovim,vscode,aws,arch&perline=7" alt="Tech Stack" />
-</p>
-
-  </td>
+    <td width="50%" valign="top">
+      <h3 align="left"><font color="#7aa2f7">⚡ About Me</font></h3>
+      <ul align="left">
+        <li>🎓 Computer Science undergrad obsessed with <b>systems programming</b> and <b>secure code</b>.</li>
+        <li>💻 Building <b>CLI tools</b>, <b>automation scripts</b>, and <b>privacy-first software</b>.</li>
+        <li>🧠 Exploring <b>compilers</b>, <b>language internals</b>, and <b>low-level systems</b>.</li>
+        <li>🐧 <b>Arch Linux + Hyprland</b> enthusiast — tweaking my setup is my cardio!</li>
+      </ul>
+    </td>
+    <td width="50%" valign="top" align="center">
+      <h3 align="center"><font color="#7aa2f7">🛠️ Tech Stack</font></h3>
+      <p align="center">
+        <a href="https://skillicons.dev">
+          <img src="https://skillicons.dev/icons?i=python,go,rust,bash,js,ts,linux,git,neovim,vscode,docker,arch,aws,nodejs&perline=5" alt="Tech Stack" />
+        </a>
+      </p>
+    </td>
   </tr>
 </table>
 
 ---
 
-## Tokyo Night Analytics
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=OminduD&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true&rank_icon=github" alt="GitHub Stats" height="170" />
-  <img src="https://streak-stats.demolab.com?user=OminduD&theme=tokyonight&hide_border=true" alt="GitHub Streak" height="170" />
-</p>
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=OminduD&layout=compact&theme=tokyonight&hide_border=true&langs_count=10" alt="Top Languages" height="170" />
-</p>
-
----
-
-## Metrics Dashboard
-
-<p align="center">
-  <img src="https://metrics.lecoq.io/OminduD?template=classic&base=header%2Cactivity%2Ccommunity%2Crepositories%2Cmetadata&theme=tokyonight&config_timezone=Asia%2FColombo" alt="Metrics Overview" />
-</p>
-
-<p align="center">
-  <img width="49%" src="https://metrics.lecoq.io/OminduD?template=classic&base=&plugin_languages=yes&plugin_languages_details=bytes-size%2Cpercentage&plugin_languages_limit=8&theme=tokyonight&config_timezone=Asia%2FColombo" alt="Metrics Languages" />
-  <img width="49%" src="https://metrics.lecoq.io/OminduD?template=classic&base=&plugin_habits=yes&plugin_habits_facts=yes&plugin_habits_charts=yes&theme=tokyonight&config_timezone=Asia%2FColombo" alt="Metrics Habits" />
-</p>
-
-<p align="center">
-  <img width="49%" src="https://metrics.lecoq.io/OminduD?template=classic&base=&plugin_achievements=yes&plugin_achievements_display=compact&plugin_achievements_threshold=C&theme=tokyonight&config_timezone=Asia%2FColombo" alt="Metrics Achievements" />
-  <img width="49%" src="https://metrics.lecoq.io/OminduD?template=classic&base=&plugin_topics=yes&plugin_topics_mode=icons&plugin_topics_limit=15&theme=tokyonight&config_timezone=Asia%2FColombo" alt="Metrics Topics" />
-</p>
-
----
+<h2 align="center"><font color="#7aa2f7">📊 GitHub Stats (Metrics)</font></h2>
 
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=110&section=footer&color=0:1a1b26,50:24283b,100:7aa2f7" alt="Tokyo Night Footer" />
+  <!-- Core metrics card -->
+  <img src="https://metrics.lecoq.io/OminduD?template=classic&base=header%2C%20activity%2C%20community%2C%20repositories%2C%20metadata&theme=tokyonight&config_timezone=UTC" alt="Metrics" />
+</div>
+
+<br/>
+
+<div align="center">
+  <img src="https://metrics.lecoq.io/OminduD?template=classic&base=&plugin_languages=yes&plugin_languages_details=bytes-size%2Cpercentage&plugin_languages_limit=8&theme=tokyonight&config_timezone=UTC" alt="Languages Metrics" width="48%" />
+  <img src="https://metrics.lecoq.io/OminduD?template=classic&base=&plugin_habits=yes&plugin_habits_charts=yes&plugin_habits_facts=yes&theme=tokyonight&config_timezone=UTC" alt="Coding Habits" width="48%" />
+</div>
+
+<br/>
+
+<div align="center">
+  <img src="https://metrics.lecoq.io/OminduD?template=classic&base=&plugin_isocalendar=yes&plugin_isocalendar_duration=full-year&theme=tokyonight&config_timezone=UTC" alt="Isometric Commit Calendar" width="48%" />
+  <img src="https://metrics.lecoq.io/OminduD?template=classic&base=&plugin_followup=yes&plugin_followup_sections=repositories%2Cuser&theme=tokyonight&config_timezone=UTC" alt="Issues and PR Follow-up" width="48%" />
+</div>
+
+<br/>
+
+<div align="center">
+  <img src="https://metrics.lecoq.io/OminduD?template=classic&base=&plugin_stargazers=yes&plugin_stargazers_days=14&plugin_stargazers_charts_type=chartist&theme=tokyonight&config_timezone=UTC" alt="Stargazers Evolution" width="48%" />
+  <img src="https://metrics.lecoq.io/OminduD?template=classic&base=&plugin_lines=yes&theme=tokyonight&config_timezone=UTC" alt="Lines Changed" width="48%" />
+</div>
+
+<br/>
+
+<div align="center">
+  <img src="https://metrics.lecoq.io/OminduD?template=classic&base=&plugin_reactions=yes&plugin_reactions_limit=100&plugin_reactions_details=percentage&theme=tokyonight&config_timezone=UTC" alt="Comment Reactions" width="48%" />
+  <img src="https://metrics.lecoq.io/OminduD?template=classic&base=&plugin_stars=yes&plugin_stars_limit=4&theme=tokyonight&config_timezone=UTC" alt="Recently Starred Repositories" width="48%" />
+</div>
+
+<br/>
+
+<div align="center">
+  <img src="https://metrics.lecoq.io/OminduD?template=classic&base=&plugin_achievements=yes&plugin_achievements_display=compact&plugin_achievements_threshold=C&theme=tokyonight&config_timezone=UTC" alt="Achievements" />
+</div>
+
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=7aa2f7&height=100&section=footer" alt="Footer" />
 </div>
