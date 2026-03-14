@@ -19,23 +19,13 @@ jobs:
         with:
           fetch-depth: 0
           
-      - name: Generate github contribution grid snake animation
-        uses: Platane/snk/svg-only@v3
-        with:
-          github_user_name: OminduD
-          outputs: |
-            github-snake.svg
-            github-snake-dark.svg?palette=github-dark
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
       - name: Generate 3D contribution map
         uses: yoshi389111/github-profile-3d-contrib@0.7.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          USERNAME: OminduD
+          USERNAME: ${{ github.repository_owner }}
           
       - name: Commit updated SVGs
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore(metrics): update profile graphics"
+          commit_message: "chore(metrics): update profile 3D graphics"
