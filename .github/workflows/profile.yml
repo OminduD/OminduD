@@ -79,6 +79,7 @@ jobs:
           filename: achievements.svg
 
       - name: Generate contribution isocalendar
+        continue-on-error: true
         uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN || github.token }}
@@ -93,6 +94,7 @@ jobs:
           filename: metrics-isocalendar.svg
 
       - name: Generate habits card
+        continue-on-error: true
         uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN || github.token }}
@@ -108,6 +110,7 @@ jobs:
           filename: metrics-habits.svg
 
       - name: Generate follow-up card
+        continue-on-error: true
         uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN || github.token }}
@@ -122,6 +125,7 @@ jobs:
           filename: metrics-followup.svg
 
       - name: Generate starred topics card
+        continue-on-error: true
         uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN || github.token }}
@@ -138,6 +142,7 @@ jobs:
           filename: metrics-topics.svg
 
       - name: Generate repository licenses card
+        continue-on-error: true
         uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN || github.token }}
@@ -155,6 +160,7 @@ jobs:
           filename: metrics-licenses.svg
 
       - name: Generate star lists card
+        continue-on-error: true
         uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN || github.token }}
@@ -173,6 +179,7 @@ jobs:
 
       - name: Generate LeetCode card
         if: ${{ vars.LEETCODE_USER != '' }}
+        continue-on-error: true
         uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN || github.token }}
@@ -209,6 +216,7 @@ jobs:
 
       - name: Generate Stack Overflow card
         if: ${{ vars.STACKOVERFLOW_USER_ID != '' }}
+        continue-on-error: true
         uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN || github.token }}
@@ -227,6 +235,7 @@ jobs:
           filename: metrics-stackoverflow.svg
 
       - name: Generate stargazers card
+        continue-on-error: true
         uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN || github.token }}
@@ -243,6 +252,7 @@ jobs:
 
       - name: Generate stargazers world map card
         if: ${{ secrets.GOOGLE_MAP_TOKEN != '' }}
+        continue-on-error: true
         uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN || github.token }}
@@ -278,6 +288,7 @@ jobs:
           EOF
 
       - name: Generate recently starred repositories card
+        continue-on-error: true
         uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN || github.token }}
@@ -292,6 +303,7 @@ jobs:
           filename: metrics-stars.svg
 
       - name: Generate reactions card
+        continue-on-error: true
         uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN || github.token }}

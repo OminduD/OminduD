@@ -25,6 +25,10 @@
 </p>
 
 <div align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=700&size=22&duration=2800&pause=700&color=7AA2F7&center=true&vCenter=true&random=false&width=780&lines=Systems+Programming+%7C+Security+%7C+Open+Source;Building+fast,+clean,+reliable+developer+tools;Arch+Linux+%2B+Hyprland+%2B+Terminal+first+workflow" alt="Typing Intro" />
+</div>
+
+<div align="center">
   <img src="https://komarev.com/ghpvc/?username=OminduD&label=Profile%20Visitors&color=7aa2f7&style=flat-square" alt="visitor badge"/>
 </div>
 
@@ -73,8 +77,8 @@
 <br/>
 
 <div align="center">
-  <img src="./metrics-stargazers.svg" alt="Stargazers" width="48%" />
-  <img src="./metrics-isocalendar.svg" alt="Isometric Commit Calendar" width="48%" />
+  <img src="https://metrics.lecoq.io/OminduD?template=classic&base=&plugin_stargazers=1&plugin_stargazers_days=14&plugin_stargazers_charts_type=chartist&config_timezone=UTC&theme=tokyonight" alt="Stargazers" width="48%" />
+  <img src="https://metrics.lecoq.io/OminduD?template=classic&base=&plugin_isocalendar=1&plugin_isocalendar_duration=full-year&config_timezone=UTC&theme=tokyonight" alt="Isometric Commit Calendar" width="48%" />
 </div>
 
 <br/>
@@ -93,15 +97,15 @@
 <br/>
 
 <div align="center">
-  <img src="./metrics-habits.svg" alt="Coding Habits and Activity" width="48%" />
+  <img src="https://metrics.lecoq.io/OminduD?template=classic&base=&plugin_habits=1&plugin_habits_facts=1&plugin_habits_charts=1&config_timezone=UTC&theme=tokyonight" alt="Coding Habits and Activity" width="48%" />
   <img src="./metrics-starlists.svg" alt="Star Lists" width="48%" />
 </div>
 
 <br/>
 
 <div align="center">
-  <img src="./metrics-stars.svg" alt="Recently Starred Repositories" width="48%" />
-  <img src="./metrics-followup.svg" alt="Follow Up Metrics" width="48%" />
+  <img src="https://metrics.lecoq.io/OminduD?template=classic&base=&plugin_stars=1&plugin_stars_limit=6&config_timezone=UTC&theme=tokyonight" alt="Recently Starred Repositories" width="48%" />
+  <img src="https://metrics.lecoq.io/OminduD?template=classic&base=&plugin_followup=1&plugin_followup_sections=repositories%2Cuser&config_timezone=UTC&theme=tokyonight" alt="Follow Up Metrics" width="48%" />
 </div>
 
 <br/>
@@ -114,7 +118,7 @@
 <br/>
 
 <div align="center">
-  <img src="./metrics-reactions.svg" alt="Comment Reactions" width="98%" />
+  <img src="https://metrics.lecoq.io/OminduD?template=classic&base=&plugin_reactions=1&plugin_reactions_limit=100&plugin_reactions_details=percentage&config_timezone=UTC&theme=tokyonight" alt="Comment Reactions" width="98%" />
 </div>
 
 ---
