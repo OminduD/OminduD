@@ -16,14 +16,16 @@
 
 <br/>
 
-<!-- SOCIAL && CONTACT BADGES -->
+<!-- SOCIAL && REPO BADGES -->
 <p align="center">
   <a href="https://linkedin.com/in/omindud"><img src="https://img.shields.io/badge/LinkedIn-1a1b26?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=7aa2f7&color=1a1b26" alt="LinkedIn" /></a>
   <a href="https://twitter.com/OminduD"><img src="https://img.shields.io/badge/Twitter-1a1b26?style=for-the-badge&logo=x&logoColor=white&labelColor=7aa2f7&color=1a1b26" alt="Twitter" /></a>
   <a href="https://kaggle.com/omindud"><img src="https://img.shields.io/badge/Kaggle-1a1b26?style=for-the-badge&logo=kaggle&logoColor=white&labelColor=7aa2f7&color=1a1b26" alt="Kaggle" /></a>
-  <a href="https://github.com/OminduD?tab=repositories"><img src="https://img.shields.io/badge/Repos-1a1b26?style=for-the-badge&logo=github&logoColor=white&labelColor=7aa2f7&color=1a1b26" alt="Repos" /></a>
   <br/><br/>
-  <img src="https://komarev.com/ghpvc/?username=OminduD&label=Profile%20Views&color=7aa2f7&style=for-the-badge&labelColor=1a1b26" alt="visitor badge"/>
+  <a href="https://github.com/OminduD?tab=followers"><img src="https://img.shields.io/github/followers/OminduD?label=Followers&style=for-the-badge&color=1a1b26&logo=github&labelColor=7aa2f7" alt="Followers" /></a>
+  <a href="https://github.com/OminduD"><img src="https://img.shields.io/github/stars/OminduD?label=Total%20Stars&style=for-the-badge&color=1a1b26&logo=star&labelColor=bb9af7" alt="Stars" /></a>
+  <a href="https://github.com/OminduD?tab=repositories"><img src="https://img.shields.io/github/repos/OminduD?label=Public%20Repos&style=for-the-badge&color=1a1b26&logo=books&labelColor=73daca" alt="Public Repositories" /></a>
+  <img src="https://komarev.com/ghpvc/?username=OminduD&label=Profile%20Views&color=1a1b26&style=for-the-badge&labelColor=7aa2f7" alt="visitor badge"/>
 </p>
 
 ---
@@ -48,16 +50,16 @@
 <h2 align="center"><font color="#7aa2f7">📊 GitHub Dashboard</font></h2>
 
 <div align="center">
-  <!-- Dynamic Trophies -->
+  <!-- Dynamic Trophies (Centered properly) -->
   <a href="https://github.com/ryo-ma/github-profile-trophy">
-    <img src="https://github-profile-trophy.vercel.app/?username=OminduD&theme=tokyonight&row=1&column=7&no-frame=true&no-bg=true&margin-w=15" alt="Trophies" />
+    <img src="https://github-profile-trophy.vercel.app/?username=OminduD&theme=tokyonight&no-frame=true&no-bg=true&margin-w=15" alt="Trophies" />
   </a>
 </div>
 
 <br/>
 
 <div align="center">
-  <!-- Core Stats & Streak (These work instantly without actions) -->
+  <!-- Core Stats & Streak -->
   <img src="https://github-readme-stats.vercel.app/api?username=OminduD&show_icons=true&theme=tokyonight&bg_color=1a1b26&hide_border=true&title_color=7aa2f7&icon_color=73daca&text_color=c0caf5" alt="GitHub Stats" width="48%" />
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=OminduD&theme=tokyonight&background=1a1b26&hide_border=true&fire=73daca&ring=bb9af7&currStreakNum=7aa2f7&sideLabels=c0caf5&dates=9aa5ce" alt="GitHub Streak" width="48%" />
 </div>
@@ -74,6 +76,15 @@
 <div align="center">
   <!-- Beautiful full-width Activity Graph -->
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=OminduD&bg_color=1a1b26&color=7aa2f7&line=bb9af7&point=73daca&area=true&hide_border=true" alt="Activity Graph" width="98%" />
+</div>
+
+<br/>
+
+<h2 align="center"><font color="#7aa2f7">🗺️ 3D Contribution Landscape</font></h2>
+
+<div align="center">
+  <!-- GitHub Action Generated 3D Map -->
+  <img src="./profile-3d-contrib/profile-night-view.svg" alt="3D Isometric Commit Calendar" width="98%" />
 </div>
 
 ---
