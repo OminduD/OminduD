@@ -25,6 +25,10 @@
 </p>
 
 <div align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&pause=900&color=7AA2F7&center=true&vCenter=true&random=false&width=700&lines=Building+secure+tools+for+real+problems;Systems+programming+%7C+Automation+%7C+Open+Source;Arch+Linux+%2B+Hyprland+%7C+Code+all+day" alt="Typing Intro" />
+</div>
+
+<div align="center">
   <img src="https://komarev.com/ghpvc/?username=OminduD&label=Profile%20Visitors&color=7aa2f7&style=flat-square" alt="visitor badge"/>
 </div>
 
@@ -56,43 +60,54 @@
 
 <h2 align="center"><font color="#7aa2f7">📊 GitHub Stats (Metrics)</font></h2>
 
+<p align="center">
+  <i>Auto-generated every 6 hours via GitHub Actions.</i>
+</p>
+
 <div align="center">
-  <!-- Core metrics card -->
-  <img src="https://metrics.lecoq.io/OminduD?template=classic&base=header%2C%20activity%2C%20community%2C%20repositories%2C%20metadata&theme=tokyonight&config_timezone=UTC" alt="Metrics" />
+  <img src="./github-metrics.svg" alt="Core Metrics" />
 </div>
 
 <br/>
 
 <div align="center">
-  <img src="https://metrics.lecoq.io/OminduD?template=classic&base=&plugin_languages=yes&plugin_languages_details=bytes-size%2Cpercentage&plugin_languages_limit=8&theme=tokyonight&config_timezone=UTC" alt="Languages Metrics" width="48%" />
-  <img src="https://metrics.lecoq.io/OminduD?template=classic&base=&plugin_habits=yes&plugin_habits_charts=yes&plugin_habits_facts=yes&theme=tokyonight&config_timezone=UTC" alt="Coding Habits" width="48%" />
+  <img src="./language-stats.svg" alt="Languages Metrics" width="48%" />
+  <img src="./metrics-habits.svg" alt="Coding Habits" width="48%" />
 </div>
 
 <br/>
 
 <div align="center">
-  <img src="https://metrics.lecoq.io/OminduD?template=classic&base=&plugin_isocalendar=yes&plugin_isocalendar_duration=full-year&theme=tokyonight&config_timezone=UTC" alt="Isometric Commit Calendar" width="48%" />
-  <img src="https://metrics.lecoq.io/OminduD?template=classic&base=&plugin_followup=yes&plugin_followup_sections=repositories%2Cuser&theme=tokyonight&config_timezone=UTC" alt="Issues and PR Follow-up" width="48%" />
+  <img src="./metrics-isocalendar.svg" alt="Isometric Commit Calendar" width="48%" />
+  <img src="./metrics-followup.svg" alt="Issues and PR Follow-up" width="48%" />
 </div>
 
 <br/>
 
 <div align="center">
-  <img src="https://metrics.lecoq.io/OminduD?template=classic&base=&plugin_stargazers=yes&plugin_stargazers_days=14&plugin_stargazers_charts_type=chartist&theme=tokyonight&config_timezone=UTC" alt="Stargazers Evolution" width="48%" />
-  <img src="https://metrics.lecoq.io/OminduD?template=classic&base=&plugin_lines=yes&theme=tokyonight&config_timezone=UTC" alt="Lines Changed" width="48%" />
+  <img src="./metrics-stargazers.svg" alt="Stargazers Evolution" width="48%" />
+  <img src="./achievements.svg" alt="Achievements" width="48%" />
 </div>
 
 <br/>
 
 <div align="center">
-  <img src="https://metrics.lecoq.io/OminduD?template=classic&base=&plugin_reactions=yes&plugin_reactions_limit=100&plugin_reactions_details=percentage&theme=tokyonight&config_timezone=UTC" alt="Comment Reactions" width="48%" />
-  <img src="https://metrics.lecoq.io/OminduD?template=classic&base=&plugin_stars=yes&plugin_stars_limit=4&theme=tokyonight&config_timezone=UTC" alt="Recently Starred Repositories" width="48%" />
+  <img src="./metrics-reactions.svg" alt="Comment Reactions" />
+</div>
+
+---
+
+<h2 align="center"><font color="#7aa2f7">🎬 Animated Zone</font></h2>
+
+<div align="center">
+  <img src="./game.gif" alt="Space Shooter Animation" width="48%" />
+  <img src="https://raw.githubusercontent.com/OminduD/OminduD/output/pacman-contribution-graph-dark.svg" alt="Pacman Contribution Graph" width="48%" />
 </div>
 
 <br/>
 
 <div align="center">
-  <img src="https://metrics.lecoq.io/OminduD?template=classic&base=&plugin_achievements=yes&plugin_achievements_display=compact&plugin_achievements_threshold=C&theme=tokyonight&config_timezone=UTC" alt="Achievements" />
+  <img src="https://raw.githubusercontent.com/OminduD/OminduD/output/pacman-contribution-graph.svg" alt="Pacman Contribution Graph Light" width="98%" />
 </div>
 
 <div align="center">
