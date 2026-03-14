@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 220" role="img" aria-label="Star lists placeholder">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a1b27"/>
+      <stop offset="100%" stop-color="#24283b"/>
+    </linearGradient>
+  </defs>
+  <rect width="860" height="220" rx="16" fill="url(#bg)"/>
+  <text x="28" y="56" fill="#7aa2f7" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700">💫 Star Lists</text>
+  <text x="28" y="102" fill="#c0caf5" font-family="Segoe UI, Arial, sans-serif" font-size="18">This card will auto-refresh from GitHub Actions.</text>
+  <text x="28" y="136" fill="#9aa5ce" font-family="Segoe UI, Arial, sans-serif" font-size="15">Plugin: starlists • Theme: tokyonight</text>
+  <text x="28" y="170" fill="#9aa5ce" font-family="Segoe UI, Arial, sans-serif" font-size="15">If it stays like this, run workflow: Update Profile README</text>
+</svg>

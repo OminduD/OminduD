@@ -129,12 +129,109 @@ jobs:
           base: ""
           plugin_stargazers: yes
           plugin_stargazers_days: 14
-          plugin_stargazers_charts_type: chartist
+          plugin_stargazers_charts_type: graph
           template: classic
           theme: tokyonight
           config_timezone: UTC
           output_action: none
           filename: metrics-stargazers.svg
+
+      - name: Generate starred topics card
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN || github.token }}
+          user: OminduD
+          base: ""
+          plugin_topics: yes
+          plugin_topics_mode: icons
+          plugin_topics_sort: starred
+          plugin_topics_limit: 20
+          template: classic
+          theme: tokyonight
+          config_timezone: UTC
+          output_action: none
+          filename: metrics-topics.svg
+
+      - name: Generate recently starred repositories card
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN || github.token }}
+          user: OminduD
+          base: ""
+          plugin_stars: yes
+          plugin_stars_limit: 6
+          template: classic
+          theme: tokyonight
+          config_timezone: UTC
+          output_action: none
+          filename: metrics-stars.svg
+
+      - name: Generate star lists card
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN || github.token }}
+          user: OminduD
+          base: ""
+          plugin_starlists: yes
+          plugin_starlists_limit: 3
+          plugin_starlists_limit_repositories: 4
+          template: classic
+          theme: tokyonight
+          config_timezone: UTC
+          output_action: none
+          filename: metrics-starlists.svg
+
+      - name: Generate repository licenses card
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN || github.token }}
+          user: OminduD
+          base: ""
+          template: repository
+          repo: OminduD/OminduD
+          plugin_licenses: yes
+          plugin_licenses_legal: yes
+          plugin_licenses_ratio: yes
+          theme: tokyonight
+          config_timezone: UTC
+          output_action: none
+          filename: metrics-licenses.svg
+
+      - name: Generate LeetCode card
+        if: ${{ vars.LEETCODE_USER != '' }}
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN || github.token }}
+          user: OminduD
+          base: ""
+          plugin_leetcode: yes
+          plugin_leetcode_user: ${{ vars.LEETCODE_USER }}
+          plugin_leetcode_sections: solved, skills, recent
+          plugin_leetcode_limit_skills: 8
+          plugin_leetcode_limit_recent: 3
+          template: classic
+          theme: tokyonight
+          config_timezone: UTC
+          output_action: none
+          filename: metrics-leetcode.svg
+
+      - name: Generate Stack Overflow card
+        if: ${{ vars.STACKOVERFLOW_USER_ID != '' }}
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN || github.token }}
+          user: OminduD
+          base: ""
+          plugin_stackoverflow: yes
+          plugin_stackoverflow_user: ${{ vars.STACKOVERFLOW_USER_ID }}
+          plugin_stackoverflow_sections: answers-top, questions-recent
+          plugin_stackoverflow_limit: 3
+          plugin_stackoverflow_lines: 4
+          template: classic
+          theme: tokyonight
+          config_timezone: UTC
+          output_action: none
+          filename: metrics-stackoverflow.svg
 
       - name: Generate reactions card
         uses: lowlighter/metrics@latest

@@ -79,36 +79,63 @@
 
 <div align="center">
   <img src="./metrics-isocalendar.svg" alt="Isometric Commit Calendar" width="48%" />
-  <img src="./metrics-followup.svg" alt="Issues and PR Follow-up" width="48%" />
-</div>
-
-<br/>
-
-<div align="center">
   <img src="./metrics-stargazers.svg" alt="Stargazers Evolution" width="48%" />
-  <img src="./achievements.svg" alt="Achievements" width="48%" />
 </div>
 
 <br/>
 
 <div align="center">
-  <img src="./metrics-reactions.svg" alt="Comment Reactions" />
+  <img src="./metrics-topics.svg" alt="Starred Topics" width="48%" />
+  <img src="./metrics-licenses.svg" alt="Repository Licenses" width="48%" />
 </div>
+
+<br/>
+
+<div align="center">
+  <img src="./metrics-starlists.svg" alt="Star Lists" width="48%" />
+  <img src="./metrics-stars.svg" alt="Recently Starred Repositories" width="48%" />
+</div>
+
+<br/>
+
+<div align="center">
+  <img src="./metrics-leetcode.svg" alt="LeetCode" width="48%" />
+  <img src="./metrics-stackoverflow.svg" alt="Stack Overflow" width="48%" />
+</div>
+
+<br/>
+
+<div align="center">
+  <img src="./metrics-followup.svg" alt="Issues and PR Follow-up" width="48%" />
+  <img src="./metrics-reactions.svg" alt="Comment Reactions" width="48%" />
+</div>
+
+<br/>
+
+<div align="center">
+  <img src="./achievements.svg" alt="Achievements" />
+</div>
+
+<p align="center">
+  <sub>
+    For live LeetCode and Stack Overflow cards, set repository variables: <b>LEETCODE_USER</b> and <b>STACKOVERFLOW_USER_ID</b>.
+  </sub>
+</p>
 
 ---
 
 <h2 align="center"><font color="#7aa2f7">🎬 Animated Zone</font></h2>
 
 <div align="center">
-  <img src="./game.gif" alt="Space Shooter Animation" width="48%" />
-  <img src="https://raw.githubusercontent.com/OminduD/OminduD/output/pacman-contribution-graph-dark.svg" alt="Pacman Contribution Graph" width="48%" />
+  <img src="./game.gif" alt="Space Shooter Animation" width="95%" />
 </div>
 
-<br/>
-
+<!--
 <div align="center">
-  <img src="https://raw.githubusercontent.com/OminduD/OminduD/output/pacman-contribution-graph.svg" alt="Pacman Contribution Graph Light" width="98%" />
+  <img src="https://raw.githubusercontent.com/OminduD/OminduD/output/pacman-contribution-graph-dark.svg" alt="Pacman Contribution Graph" width="48%" />
+  <img src="https://raw.githubusercontent.com/OminduD/OminduD/output/pacman-contribution-graph.svg" alt="Pacman Contribution Graph Light" width="48%" />
 </div>
+-->
 
 <div align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=7aa2f7&height=100&section=footer" alt="Footer" />
