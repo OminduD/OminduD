@@ -1,0 +1,2 @@
+./world-map.svg
+./metrics-stargazers-worldmap.svg
