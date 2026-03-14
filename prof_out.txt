@@ -63,33 +63,6 @@ jobs:
 
 
 
-      - name: Generate User Account Overview
-        continue-on-error: true
-        uses: lowlighter/metrics@latest
-        with:
-          token: ${{ secrets.METRICS_TOKEN || github.token }}
-          user: OminduD
-          base: header, activity, community, repositories, metadata
-          template: classic
-          theme: dark
-          config_timezone: UTC
-          output_action: none
-          filename: metrics-overview.svg
-
-      - name: Generate Repository License Overview
-        continue-on-error: true
-        uses: lowlighter/metrics@latest
-        with:
-          token: ${{ secrets.METRICS_TOKEN || github.token }}
-          user: OminduD
-          base: ""
-          plugin_licenses: yes
-          template: classic
-          theme: dark
-          config_timezone: UTC
-          output_action: none
-          filename: metrics-licenses.svg
-
       - name: Commit updated SVGs
         uses: stefanzweifel/git-auto-commit-action@v5
         with:

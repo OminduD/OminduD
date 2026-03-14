@@ -34,7 +34,7 @@
 
 <div align="center">
   <p><b>Core Languages</b></p>
-  <img src="https://skillicons.dev/icons?i=c,cpp,rust,go,python,java,js,ts&perline=10" alt="Core Languages" />
+  <img src="https://skillicons.dev/icons?i=python,js,go,css,ts,c,rust&perline=10" alt="Core Languages" />
   <br/><br/>
   <p><b>Backend, DevOps & Cloud</b></p>
   <img src="https://skillicons.dev/icons?i=linux,arch,ubuntu,docker,aws,kubernetes,nginx,bash&perline=10" alt="DevOps" />
@@ -84,6 +84,14 @@
       </td>
       <td width="50%" align="center" valign="middle">
         <img src="https://github-readme-stackoverflow.vercel.app/?userID=27091856&theme=dark&bg_color=000000&hide_border=true&title_color=00ff00&text_color=32cd32&icon_color=00fa9a" alt="StackOverflow Stats" height="150" />
+      </td>
+    </tr>
+    <tr>
+      <td width="50%" align="center" valign="middle">
+        <img src="metrics-overview.svg" alt="Account Overview" width="100%" />
+      </td>
+      <td width="50%" align="center" valign="middle">
+        <img src="metrics-licenses.svg" alt="License Overview" width="100%" />
       </td>
     </tr>
   </table>

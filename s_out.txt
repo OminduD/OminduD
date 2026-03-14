@@ -1,0 +1,3 @@
+37:  <img src="https://skillicons.dev/icons?i=c,cpp,rust,go,python,java,js,ts&perline=10" alt="Core Languages" />
+40:  <img src="https://skillicons.dev/icons?i=linux,arch,ubuntu,docker,aws,kubernetes,nginx,bash&perline=10" alt="DevOps" />
+43:  <img src="https://skillicons.dev/icons?i=git,github,neovim,vscode,postman,mysql,postgres,sqlite&perline=10" alt="Tools" />
