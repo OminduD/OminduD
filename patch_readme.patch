@@ -1,0 +1,11 @@
+--- README.md
++++ README.md
+@@ -107,7 +107,6 @@
+ 
+ <br/>
+ 
+-<div align="center">
+-  <img src="./metrics-stargazers-worldmap.svg" alt="Stargazers World Map" width="98%" />
+-</div>
+-
+-<br/>
