@@ -319,26 +319,4 @@
   </tr>
 </table>
 
----
 
-<div align="center">
-
-## <font color="#00ff00">&gt;_ SYSTEM ALIGNMENT METRICS</font>
-
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=OminduD&layout=compact&theme=hacker&bg_color=000000&hide_border=true&title_color=00ff00&text_color=32cd32&card_width=600" alt="Top Languages" loading="lazy" />
-
-<br/><br/>
-
-<a href="../README.md">
-  <img src="https://img.shields.io/badge/◀_RETURN_TO_MAIN_TERMINAL-000000?style=for-the-badge&labelColor=00ff00&color=000000" />
-</a>
-&nbsp;
-<a href="./LEARNING.md">
-  <img src="https://img.shields.io/badge/📚_VIEW_LEARNING_STACK-000000?style=for-the-badge&labelColor=00c800&color=000000" />
-</a>
-
-<br/><br/>
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=00ff00&height=100&section=footer" alt="Footer" />
-
-</div>
