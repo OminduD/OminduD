@@ -79,7 +79,7 @@
     </tr>
     <tr>
       <td width="50%" align="center" valign="top">
-        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=OminduD&layout=compact&theme=dark&bg_color=000000&hide_border=true&title_color=00ff00&text_color=32cd32&langs_count=8&cache_seconds=1800" alt="Top Languages" width="100%" />
+        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=OminduD&layout=compact&theme=dark&bg_color=000000&hide_border=true&title_color=00ff00&text_color=32cd32&langs_count=10&cache_seconds=1800" alt="Top Languages" width="100%" />
       </td>
       <td width="50%" align="center" valign="top">
         <img src="https://github-readme-stats.vercel.app/api/pin/?username=OminduD&repo=pulse&theme=dark&bg_color=000000&hide_border=true&title_color=00ff00&text_color=32cd32&icon_color=00fa9a&cache_seconds=1800" alt="Pinned Repo" width="100%" />
