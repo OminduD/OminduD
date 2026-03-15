@@ -98,14 +98,6 @@ jobs:
           plugin_licenses_setup: bash -c '[[ -f package.json ]] && npm ci || true'
           plugin_licenses_legal: yes
           plugin_licenses_ratio: yes
-          template: terminal
+          template: classic
           config_timezone: UTC
           filename: metrics-licenses.svg
-          extras_css: |
-            pre { background: #000000 !important; color: #00ff00 !important; }
-            .header { background: #111111 !important; }
-            .title { color: #00ff00 !important; }
-            .ps1-path { color: #00ff00 !important; }
-            .ps1-location { color: #00c800 !important; }
-            .banner, footer { color: #00c800 !important; }
-            .diff { color: #00ff00 !important; }
