@@ -27,6 +27,8 @@
   <img src="https://komarev.com/ghpvc/?username=OminduD&label=Profile%20Views&color=000000&style=for-the-badge&labelColor=00ff00&logoColor=000000" alt="visitor badge"/>
   <br/><br/>
   <a href="./docs/PROJECTS.md"><img src="https://img.shields.io/badge/EXECUTE_FILE:-PROJECTS.md-000000?style=for-the-badge&logo=visualstudiocode&labelColor=00ff00&color=000000" alt="View Projects" /></a>
+  &nbsp;
+  <a href="./docs/LEARNING.md"><img src="https://img.shields.io/badge/EXECUTE_FILE:-LEARNING.md-000000?style=for-the-badge&logo=visualstudiocode&labelColor=00c800&color=000000" alt="View Learning" /></a>
 </p>
 
 ---

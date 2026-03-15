@@ -1,10 +1,8 @@
 <div align="center">
 
-# 📚 <font color="#00ff00">_LEARNING STACK_</font>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=00ff00&height=180&section=header&text=ROOT%2FLEARNING&fontSize=55&fontAlignY=38&fontColor=000000&desc=Compiling%20Knowledge%20Base...&descAlignY=60&descSize=18&animation=fadeIn" alt="Header" />
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=00ff00&height=150&section=header&text=ROOT/LEARNING&fontSize=50&fontAlignY=40&desc=Compiling%20Knowledge%20Base...&descAlignY=60&descSize=20&animation=fadeIn" alt="Header" />
-
-<img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=700&size=20&duration=3000&pause=1000&color=00ff00&center=true&vCenter=true&random=false&width=780&lines=Loading+language+modules...;Rust+%E2%80%94+primary+focus;Go+%E2%80%94+loaded;C%2B%2B+%E2%80%94+loaded;Knowledge+base+initialized." alt="Typing Intro" />
+<img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=700&size=18&duration=2500&pause=800&color=00ff00&center=true&vCenter=true&random=false&width=780&lines=%5BSYS%5D+Loading+language+runtimes...;%5B+OK+%5D+Rust+%E2%80%94+PRIMARY+%5Bactive+study%5D;%5B+OK+%5D+Go+%E2%80%94+ACTIVE+%5Bbuilding+projects%5D;%5B+OK+%5D+C%2B%2B+%E2%80%94+ACTIVE+%5Bsystems+%26+games%5D;%5B+OK+%5D+Knowledge+base+initialized." alt="Boot sequence" />
 
 <br/>
 
@@ -12,26 +10,55 @@
 [![Go](https://img.shields.io/badge/GO-ACTIVE-000000?style=for-the-badge&logo=go&logoColor=00ff00&labelColor=000000)](https://go.dev/)
 [![C++](https://img.shields.io/badge/C++-ACTIVE-000000?style=for-the-badge&logo=c%2B%2B&logoColor=00ff00&labelColor=000000)](https://en.cppreference.com/)
 
+<br/>
+
+<table width="80%" style="background-color: #0d0d0d; border: 1px solid #333;">
+  <tr>
+    <td align="center" style="padding: 10px; border: 1px solid #333;"><font color="#00ff00">🦀 Rust</font></td>
+    <td align="center" style="padding: 10px; border: 1px solid #333;"><font color="#00ff00">████████░░</font></td>
+    <td align="center" style="padding: 10px; border: 1px solid #333;"><code>PRIMARY</code> — Systems, CLI, TUI, async</td>
+  </tr>
+  <tr>
+    <td align="center" style="padding: 10px; border: 1px solid #333;"><font color="#00ff00">🐹 Go</font></td>
+    <td align="center" style="padding: 10px; border: 1px solid #333;"><font color="#00c800">██████░░░░</font></td>
+    <td align="center" style="padding: 10px; border: 1px solid #333;"><code>ACTIVE</code>&nbsp; — Backends, DevOps, CLI</td>
+  </tr>
+  <tr>
+    <td align="center" style="padding: 10px; border: 1px solid #333;"><font color="#00ff00">⚙️ C++</font></td>
+    <td align="center" style="padding: 10px; border: 1px solid #333;"><font color="#009900">█████░░░░░</font></td>
+    <td align="center" style="padding: 10px; border: 1px solid #333;"><code>ACTIVE</code>&nbsp; — Low-level, performance, games</td>
+  </tr>
+</table>
+
 </div>
 
 ---
 
+<div align="center">
+<img src="https://img.shields.io/badge/▶──────────────────────────────────────────────────────▶-000000?style=for-the-badge&labelColor=de3f24&color=000000" />
+
 ## <font color="#00ff00">&gt;_ [PRIMARY] RUST 🦀</font>
 
-> **Best for:** systems programming, CLI tools, WebAssembly, high-performance services, anything that needs to be fast and safe.
+<i>Systems programming, CLI tools, WebAssembly, high-performance async services.</i>
+</div>
 
-<table width="100%" style="background-color: #0d0d0d; border: 1px solid #00ff00;">
+<br/>
+
+<table width="100%" style="background-color: #0d0d0d; border: 2px solid #de3f24;">
   <tr>
-    <td valign="top" style="border: 1px solid #00ff00; padding: 15px;">
+    <td valign="top" style="border: 1px solid #de3f24; padding: 18px;">
       <b><font color="#00ff00">Core Concepts</font></b>
-      <br/>► Ownership, borrowing & lifetimes
-      <br/>► <code>Result&lt;T, E&gt;</code> and <code>Option&lt;T&gt;</code> — no nulls
-      <br/>► Traits (like interfaces, but composable)
-      <br/>► Zero-cost abstractions
-      <br/>► <code>async/await</code> with Tokio for concurrency
+      <br/>► <b>Ownership & borrowing</b> — memory safety without a GC
+      <br/>► <b>Lifetimes</b> — compiler-enforced reference validity
+      <br/>► <code>Result&lt;T, E&gt;</code> and <code>Option&lt;T&gt;</code> — explicit error & null handling
+      <br/>► <b>Traits</b> — composable, zero-cost interfaces
+      <br/>► <b>Zero-cost abstractions</b> — high-level code, zero runtime overhead
+      <br/>► <code>async/await</code> with <b>Tokio</b> — non-blocking concurrency
     </td>
   </tr>
 </table>
+
+<br/>
 
 **Snippets**
 
@@ -39,71 +66,105 @@
 // Ownership & borrowing
 fn greet(s: &str) { println!("Hello, {s}!"); }
 let name = String::from("Omindu");
-greet(&name); // borrow, name still valid
+greet(&name); // borrow — name still valid
 
-// Result handling
-fn parse_int(s: &str) -> Result<i32, std::num::ParseIntError> {
-    s.trim().parse()
-}
-match parse_int("42") {
-    Ok(n)  => println!("Got: {n}"),
-    Err(e) => println!("Err: {e}"),
+// Result & the ? operator
+fn read_file(path: &str) -> Result<String, std::io::Error> {
+    std::fs::read_to_string(path)  // ? propagates error automatically
 }
 
 // Traits
-trait Greet {
-    fn hello(&self) -> String;
+trait Describe {
+    fn describe(&self) -> String;
 }
-struct Bot { name: String }
-impl Greet for Bot {
-    fn hello(&self) -> String { format!("I am {}", self.name) }
+struct Tool { name: String, lang: String }
+impl Describe for Tool {
+    fn describe(&self) -> String {
+        format!("{} written in {}", self.name, self.lang)
+    }
 }
 
-// Async (Tokio)
+// Async with Tokio
 #[tokio::main]
 async fn main() {
-    let result = fetch_data().await;
+    let body = reqwest::get("https://api.github.com/users/OminduD")
+        .await.unwrap()
+        .text().await.unwrap();
+    println!("{body}");
 }
+
+// Iterators & closures (zero-cost)
+let sum: i32 = (1..=10).filter(|x| x % 2 == 0).map(|x| x * x).sum();
 ```
 
-**Project Ideas**
-- CLI tool with `clap` — file watcher, port scanner
-- Async HTTP client/server with `axum` or `actix-web`
-- TUI app with `ratatui` (extend `pulse`!)
-- Custom memory allocator or data structure
+<table width="100%" style="background-color: #0d0d0d; border: 1px solid #333;">
+  <tr>
+    <th align="left" style="border: 1px solid #333; padding: 8px;"><font color="#00ff00">Crate</font></th>
+    <th align="left" style="border: 1px solid #333; padding: 8px;"><font color="#00ff00">Purpose</font></th>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #333; padding: 8px;"><code>tokio</code></td>
+    <td style="border: 1px solid #333; padding: 8px;">Async runtime</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #333; padding: 8px;"><code>serde</code></td>
+    <td style="border: 1px solid #333; padding: 8px;">Serialization / deserialization</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #333; padding: 8px;"><code>clap</code></td>
+    <td style="border: 1px solid #333; padding: 8px;">CLI argument parsing</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #333; padding: 8px;"><code>ratatui</code></td>
+    <td style="border: 1px solid #333; padding: 8px;">Terminal UI — used in <b>pulse</b></td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #333; padding: 8px;"><code>axum</code></td>
+    <td style="border: 1px solid #333; padding: 8px;">Async web framework</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #333; padding: 8px;"><code>rayon</code></td>
+    <td style="border: 1px solid #333; padding: 8px;">Data parallelism</td>
+  </tr>
+</table>
 
-**Key Crates**
-| Crate | Use |
-|---|---|
-| `tokio` | Async runtime |
-| `serde` | Serialization |
-| `clap` | CLI argument parsing |
-| `ratatui` | Terminal UI |
-| `axum` | Web framework |
-| `rayon` | Data parallelism |
+<br/>
+
+**Project Ideas**
+- Extend [`pulse`](https://github.com/OminduD/pulse) — add network stats, disk I/O panels
+- CLI file watcher / port scanner with `clap` + `tokio`
+- Async REST API with `axum` + `serde_json`
+- Custom memory allocator or lock-free data structure
 
 **Links**
-- [The Rust Book](https://doc.rust-lang.org/book/)
-- [Rust by Example](https://doc.rust-lang.org/rust-by-example/)
-- [Awesome Rust](https://github.com/rust-unofficial/awesome-rust)
+- [The Rust Book](https://doc.rust-lang.org/book/) · [Rust by Example](https://doc.rust-lang.org/rust-by-example/) · [Rustlings](https://github.com/rust-lang/rustlings) · [Awesome Rust](https://github.com/rust-unofficial/awesome-rust)
 
 ---
 
-## <font color="#00ff00">&gt;_ GO (GOLANG) 🚀</font>
+<div align="center">
+<img src="https://img.shields.io/badge/▶──────────────────────────────────────────────────────▶-000000?style=for-the-badge&labelColor=00add8&color=000000" />
 
-> **Best for:** fast binaries, networking, server backends, CLIs, DevOps tooling.
+## <font color="#00ff00">&gt;_ GO (GOLANG) 🐹</font>
 
-<table width="100%" style="background-color: #0d0d0d; border: 1px solid #00ff00;">
+<i>Fast binaries, networking, server backends, CLIs, DevOps tooling.</i>
+</div>
+
+<br/>
+
+<table width="100%" style="background-color: #0d0d0d; border: 2px solid #00add8;">
   <tr>
-    <td valign="top" style="border: 1px solid #00ff00; padding: 15px;">
+    <td valign="top" style="border: 1px solid #00add8; padding: 18px;">
       <b><font color="#00ff00">Core Concepts</font></b>
-      <br/>► Goroutines & channels — cheap concurrency
-      <br/>► Error-first returns (<code>error</code> as last return value)
-      <br/>► Interfaces are implicit — duck typing
-      <br/>► Simple module system (<code>go.mod</code>)
+      <br/>► <b>Goroutines & channels</b> — cheap, built-in concurrency
+      <br/>► <b>Error-first returns</b> — <code>error</code> as last return value, always explicit
+      <br/>► <b>Implicit interfaces</b> — duck typing, no <code>implements</code> keyword
+      <br/>► <b>Simple module system</b> — <code>go.mod</code> + <code>go.sum</code>
+      <br/>► <b>Fast compilation</b> — single static binary output
     </td>
   </tr>
 </table>
+
+<br/>
 
 **Snippets**
 
@@ -113,7 +174,7 @@ ch := make(chan int)
 go func() { ch <- 42 }()
 fmt.Println(<-ch)
 
-// Error handling
+// Error handling pattern
 func divide(a, b float64) (float64, error) {
     if b == 0 {
         return 0, fmt.Errorf("division by zero")
@@ -121,92 +182,100 @@ func divide(a, b float64) (float64, error) {
     return a / b, nil
 }
 
-// Interface
+// Implicit interface
 type Stringer interface { String() string }
 type Point struct{ X, Y int }
 func (p Point) String() string { return fmt.Sprintf("(%d, %d)", p.X, p.Y) }
+
+// Context for cancellation
+ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
+defer cancel()
+req, _ := http.NewRequestWithContext(ctx, "GET", "https://api.github.com", nil)
 ```
 
 **Project Ideas**
-- REST API with `net/http` or `gin`
-- CLI tool (extend `arch-sandbox`!)
-- Static file server with middleware
+- Extend [`arch-sandbox`](https://github.com/OminduD/arch-sandbox) — add snapshot diffing, network namespaces
+- REST API with `gin` or `chi` + middleware chain
+- Static file server with rate limiting
 
 **Links**
-- [go.dev](https://go.dev/)
-- [Go by Example](https://gobyexample.com/)
-- [Effective Go](https://go.dev/doc/effective_go)
+- [go.dev](https://go.dev/) · [Go by Example](https://gobyexample.com/) · [Effective Go](https://go.dev/doc/effective_go)
 
 ---
 
+<div align="center">
+<img src="https://img.shields.io/badge/▶──────────────────────────────────────────────────────▶-000000?style=for-the-badge&labelColor=00599c&color=000000" />
+
 ## <font color="#00ff00">&gt;_ C++ ⚙️</font>
 
-> **Best for:** performance-critical systems, game engines, native tooling, OS-level programming.
+<i>Performance-critical systems, game engines, native tooling, OS-level programming.</i>
+</div>
 
-<table width="100%" style="background-color: #0d0d0d; border: 1px solid #00ff00;">
+<br/>
+
+<table width="100%" style="background-color: #0d0d0d; border: 2px solid #00599c;">
   <tr>
-    <td valign="top" style="border: 1px solid #00ff00; padding: 15px;">
+    <td valign="top" style="border: 1px solid #00599c; padding: 18px;">
       <b><font color="#00ff00">Core Concepts</font></b>
-      <br/>► RAII — resource cleanup through destructors
-      <br/>► Smart pointers: <code>unique_ptr</code>, <code>shared_ptr</code>
-      <br/>► Templates & the STL
-      <br/>► Move semantics (<code>std::move</code>)
-      <br/>► Modern C++20: ranges, concepts, coroutines
+      <br/>► <b>RAII</b> — resource cleanup tied to object lifetime via destructors
+      <br/>► <b>Smart pointers</b> — <code>unique_ptr</code>, <code>shared_ptr</code>, <code>weak_ptr</code>
+      <br/>► <b>Templates & STL</b> — generic programming with zero overhead
+      <br/>► <b>Move semantics</b> — <code>std::move</code>, rvalue references, no copies
+      <br/>► <b>Modern C++20</b> — ranges, concepts, coroutines, modules
     </td>
   </tr>
 </table>
 
+<br/>
+
 **Snippets**
 
 ```cpp
-// Smart pointer (RAII)
+// Smart pointer (RAII — no manual delete)
 auto buf = std::make_unique<int[]>(1024);
 
-// Move semantics
+// Move semantics (transfer ownership, no copy)
 std::vector<int> a{1, 2, 3};
-std::vector<int> b = std::move(a); // a is now empty
+std::vector<int> b = std::move(a); // a is empty, no allocation
 
-// Template
-template<typename T>
+// Template with concept (C++20)
+template<std::integral T>
 T clamp(T val, T lo, T hi) {
     return std::max(lo, std::min(val, hi));
 }
 
-// Range-based loop
-std::vector<std::string> langs{"Rust", "Go", "C++"};
-for (const auto& l : langs) std::cout << l << "\n";
+// Range-based loop with structured bindings (C++17)
+std::map<std::string, int> scores{{"Rust", 95}, {"Go", 80}, {"C++", 85}};
+for (const auto& [lang, score] : scores)
+    std::cout << lang << ": " << score << "\n";
+
+// Lambda + algorithm
+std::vector<int> nums{5, 2, 8, 1, 9};
+std::sort(nums.begin(), nums.end(), [](int a, int b){ return a > b; });
 ```
 
 **Project Ideas**
-- Memory pool / custom allocator
-- Command-line parser with file processor
-- Simple interpreter or expression evaluator
-- Extend `MazeRunner` with more game mechanics
+- Extend [`MazeRunner`](https://github.com/OminduD/MazeRunner) — dynamic floor generation, save states
+- Memory pool / custom allocator from scratch
+- Simple expression evaluator / interpreter
+- Command-line tool with file I/O and argument parsing
 
 **Links**
-- [cppreference](https://en.cppreference.com/)
-- [C++ Core Guidelines](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines)
-- [Learn C++](https://www.learncpp.com/)
+- [cppreference](https://en.cppreference.com/) · [C++ Core Guidelines](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines) · [Learn C++](https://www.learncpp.com/)
 
 ---
 
 <div align="center">
 
-## <font color="#00ff00">&gt;_ FOCUS MAP</font>
+<a href="../README.md">
+  <img src="https://img.shields.io/badge/◀_RETURN_TO_MAIN_TERMINAL-000000?style=for-the-badge&labelColor=00ff00&color=000000" />
+</a>
+&nbsp;
+<a href="./PROJECTS.md">
+  <img src="https://img.shields.io/badge/🗃_VIEW_PROJECTS-000000?style=for-the-badge&labelColor=00c800&color=000000" />
+</a>
 
-| Language | Focus Level | Use Case |
-|---|---|---|
-| 🦀 Rust | `████████░░` Primary | Systems, CLI, TUI, async services |
-| 🐹 Go | `██████░░░░` Active | Backends, DevOps tooling, CLI |
-| ⚙️ C++ | `█████░░░░░` Active | Low-level, performance, game dev |
-
-<br/>
-
-<button style="background-color: transparent; border: none;">
-  <a href="../README.md">
-    <img src="https://img.shields.io/badge/RETURN_TO_MAIN_TERMINAL-000000?style=for-the-badge&labelColor=00ff00&color=000000" />
-  </a>
-</button>
+<br/><br/>
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=00ff00&height=100&section=footer" alt="Footer" />
 
