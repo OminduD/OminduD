@@ -71,18 +71,18 @@
   <table width="100%" border="0" cellspacing="0" cellpadding="0">
     <tr>
       <td width="50%" align="center" valign="top">
-        <img src="https://github-readme-stats.vercel.app/api?username=OminduD&show_icons=true&theme=dark&bg_color=000000&hide_border=true&title_color=00ff00&icon_color=00fa9a&text_color=32cd32" alt="GitHub Stats" width="100%" />
+        <img src="https://github-readme-stats.vercel.app/api?username=OminduD&show_icons=true&theme=dark&bg_color=000000&hide_border=true&title_color=00ff00&icon_color=00fa9a&text_color=32cd32&count_private=true&include_all_commits=true&cache_seconds=1800" alt="GitHub Stats" width="100%" />
       </td>
       <td width="50%" align="center" valign="top">
-        <img src="https://github-readme-streak-stats.herokuapp.com/?user=OminduD&theme=hacker&background=000000&hide_border=true&fire=00fa9a&ring=00c800&currStreakNum=00ff00&sideLabels=32cd32&dates=32cd32" alt="GitHub Streak" width="100%" />
+        <img src="https://streak-stats.demolab.com/?user=OminduD&theme=dark&background=000000&hide_border=true&fire=00fa9a&ring=00c800&currStreakNum=00ff00&sideLabels=32cd32&dates=32cd32&stroke=00ff00" alt="GitHub Streak" width="100%" />
       </td>
     </tr>
     <tr>
       <td width="50%" align="center" valign="top">
-        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=OminduD&layout=compact&theme=dark&bg_color=000000&hide_border=true&title_color=00ff00&text_color=32cd32" alt="Top Languages" width="100%" />
+        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=OminduD&layout=compact&theme=dark&bg_color=000000&hide_border=true&title_color=00ff00&text_color=32cd32&langs_count=8&cache_seconds=1800" alt="Top Languages" width="100%" />
       </td>
       <td width="50%" align="center" valign="top">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=OminduD&repo=pulse&theme=dark&bg_color=000000&hide_border=true&title_color=00ff00&text_color=32cd32&icon_color=00fa9a" alt="Pinned Repo" width="100%" />
+        <img src="https://github-readme-stats.vercel.app/api/pin/?username=OminduD&repo=pulse&theme=dark&bg_color=000000&hide_border=true&title_color=00ff00&text_color=32cd32&icon_color=00fa9a&cache_seconds=1800" alt="Pinned Repo" width="100%" />
       </td>
     </tr>
   </table>
