@@ -34,7 +34,11 @@
 
 <div align="center">
   <p><b>Core Languages</b></p>
-  <img src="https://skillicons.dev/icons?i=python,js,go,css,ts,c,rust,ruby,perl,cpp,html,pascal,asm&perline=13" alt="Core Languages" />
+  <img src="https://skillicons.dev/icons?i=python,js,go,css,ts,c,rust,ruby,perl,cpp,html&perline=11" alt="Core Languages" />
+  <br/><br/>
+  <!-- Fallbacks for languages not natively supported by skillicons -->
+  <img src="https://img.shields.io/badge/-Assembly-000000?style=for-the-badge&logo=webassembly&logoColor=00ff00" alt="Assembly" />
+  <img src="https://img.shields.io/badge/-Pascal-000000?style=for-the-badge&logo=delphi&logoColor=00ff00" alt="Pascal" />
   <br/><br/>
   <p><b>Backend, DevOps & Cloud</b></p>
   <img src="https://skillicons.dev/icons?i=linux,arch,docker,aws,kubernetes,nginx,bash&perline=10" alt="DevOps" />
