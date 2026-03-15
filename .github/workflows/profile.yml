@@ -1,4 +1,4 @@
-name: Generate Animations
+name: Generate Profile Animations
 
 on:
   schedule:
@@ -15,68 +15,38 @@ jobs:
   generate:
     runs-on: ubuntu-latest
     timeout-minutes: 20
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v5
         with:
           fetch-depth: 0
-          
+
       - name: Generate 3D contribution map
         uses: yoshi389111/github-profile-3d-contrib@0.7.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
-          
-      - name: Commit updated SVGs
+
+      - name: Commit 3D contribution graphs
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore(metrics): update profile 3D graphics"
+          commit_message: "chore(metrics): update 3D contribution graphs"
+          file_pattern: 'profile-3d-contrib/*.svg'
+          commit_user_name: 'github-actions[bot]'
+          commit_user_email: 'github-actions[bot]@users.noreply.github.com'
+          commit_author: 'github-actions[bot] <github-actions[bot]@users.noreply.github.com>'
 
-      - name: Generate LeetCode card
-        continue-on-error: true
-        if: ${{ vars.LEETCODE_USER != '' }}
+      - name: Generate terminal-style overview
         uses: lowlighter/metrics@latest
         with:
-          token: ${{ secrets.METRICS_TOKEN || github.token }}
-          user: OminduD
-          base: ""
-          plugin_leetcode: yes
-          plugin_leetcode_user: ${{ vars.LEETCODE_USER }}
-          plugin_leetcode_sections: solved, skills
-          template: classic
-          config_timezone: UTC
-          output_action: none
-          filename: metrics-leetcode.svg
-
-      - name: Generate Stack Overflow card
-        continue-on-error: true
-        if: ${{ vars.STACKOVERFLOW_USER_ID != '' }}
-        uses: lowlighter/metrics@latest
-        with:
-          token: ${{ secrets.METRICS_TOKEN || github.token }}
-          user: OminduD
-          base: ""
-          plugin_stackoverflow: yes
-          plugin_stackoverflow_user: ${{ vars.STACKOVERFLOW_USER_ID }}
-          plugin_stackoverflow_sections: answers-top
-          plugin_stackoverflow_limit: 2
-          template: classic
-          config_timezone: UTC
-          output_action: none
-          filename: metrics-stackoverflow.svg
-
-
-      - name: Generate User Account Overview
-        continue-on-error: true
-        uses: lowlighter/metrics@latest
-        with:
-          token: ${{ secrets.METRICS_TOKEN || github.token }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           user: OminduD
           base: header, activity, community, repositories, metadata
           template: terminal
           config_timezone: UTC
           filename: metrics-overview.svg
+          output_action: none
           extras_css: |
             pre { background: #000000 !important; color: #00ff00 !important; }
             .header { background: #111111 !important; }
@@ -86,18 +56,11 @@ jobs:
             .banner, footer { color: #00c800 !important; }
             .diff { color: #00ff00 !important; }
 
-      - name: Generate Repository License Overview
-        continue-on-error: true
-        uses: lowlighter/metrics@latest
+      - name: Commit metrics overview
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          token: ${{ secrets.METRICS_TOKEN || github.token }}
-          user: OminduD
-          repo: OminduD
-          base: ""
-          plugin_licenses: yes
-          plugin_licenses_setup: bash -c '[[ -f package.json ]] && npm ci || true'
-          plugin_licenses_legal: yes
-          plugin_licenses_ratio: yes
-          template: classic
-          config_timezone: UTC
-          filename: metrics-licenses.svg
+          commit_message: "chore(metrics): update terminal overview"
+          file_pattern: 'metrics-overview.svg'
+          commit_user_name: 'github-actions[bot]'
+          commit_user_email: 'github-actions[bot]@users.noreply.github.com'
+          commit_author: 'github-actions[bot] <github-actions[bot]@users.noreply.github.com>'

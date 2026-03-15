@@ -33,6 +33,17 @@
 
 ---
 
+<!-- TERMINAL-STYLE ABOUT & LICENSE -->
+<h2 align="center"><font color="#00ff00">🖥️ About Me</font></h2>
+
+<div align="center">
+  <img src="./metrics-overview.svg" alt="Terminal Overview" width="480" />
+</div>
+
+<br/>
+
+---
+
 <!-- TECH STACK SECTION -->
 <h2 align="center"><font color="#00ff00">💻 Tech Stack & Tools</font></h2>
 
@@ -57,18 +68,6 @@
 <h2 align="center"><font color="#00ff00">📊 GitHub Dashboard</font></h2>
 
 <div align="center">
-  <!-- Dynamic Trophies (Centered properly) -->
-  <!-- Trophies are temporarily hidden because the provider (github-profile-trophy.vercel.app) is down globally -->
-  <!--
-  <a href="https://github.com/ryo-ma/github-profile-trophy">
-    <img src="https://github-profile-trophy.vercel.app/?username=OminduD&theme=matrix&no-frame=1&no-bg=1&margin-w=15" alt="Trophies" />
-  </a>
-  -->
-</div>
-
-<br/>
-
-<div align="center">
   <table width="100%" border="0" cellspacing="0" cellpadding="0">
     <tr>
       <td width="50%" align="center" valign="top">
@@ -83,15 +82,7 @@
         <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=OminduD&layout=compact&theme=dark&bg_color=000000&hide_border=true&title_color=00ff00&text_color=32cd32" alt="Top Languages" width="100%" />
       </td>
       <td width="50%" align="center" valign="top">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=OminduD&repo=OminduD&theme=dark&bg_color=000000&hide_border=true&title_color=00ff00&text_color=32cd32&icon_color=00fa9a" alt="Pinned Repo" width="100%" />
-      </td>
-    </tr>
-    <tr>
-      <td width="50%" align="center" valign="middle">
-        <img src="https://leetcard.jacoblin.cool/OminduD?theme=dark&font=JetBrains%20Mono&ext=activity" alt="LeetCode Stats" width="100%" />
-      </td>
-      <td width="50%" align="center" valign="middle">
-        <img src="https://github-readme-stackoverflow.vercel.app/?userID=27091856&theme=dark&bg_color=000000&hide_border=true&title_color=00ff00&text_color=32cd32&icon_color=00fa9a" alt="StackOverflow Stats" height="150" />
+        <img src="https://github-readme-stats.vercel.app/api/pin/?username=OminduD&repo=pulse&theme=dark&bg_color=000000&hide_border=true&title_color=00ff00&text_color=32cd32&icon_color=00fa9a" alt="Pinned Repo" width="100%" />
       </td>
     </tr>
   </table>
@@ -100,17 +91,16 @@
 <br/>
 
 <div align="center">
-  <!-- Beautiful full-width Activity Graph -->
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=OminduD&bg_color=000000&color=00ff00&line=00c800&point=00fa9a&area=true&hide_border=true" alt="Activity Graph" width="98%" />
 </div>
 
 <br/>
 
-<h2 align="center"><font color="#00ff00">🗺️ Visitor Map</font></h2>
+<!-- 3D CONTRIBUTION GRAPH -->
+<h2 align="center"><font color="#00ff00">📈 3D Contribution Graph</font></h2>
 
 <div align="center">
-  <!-- Reliable static world map -->
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/World_map_-_low_resolution.svg/1280px-World_map_-_low_resolution.svg.png" alt="World Map" width="98%" />
+  <img src="./profile-3d-contrib/profile-night-green.svg" alt="3D Contribution Graph" width="98%" />
 </div>
 
 ---
