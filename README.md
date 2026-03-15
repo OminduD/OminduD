@@ -25,6 +25,8 @@
   <a href="https://github.com/OminduD?tab=followers"><img src="https://img.shields.io/github/followers/OminduD?label=Followers&style=for-the-badge&color=000000&logo=github&labelColor=00ff00&logoColor=000000" alt="Followers" /></a>
   <a href="https://github.com/OminduD"><img src="https://img.shields.io/github/stars/OminduD?label=Total%20Stars&style=for-the-badge&color=000000&logo=star&labelColor=00c800&logoColor=000000" alt="Stars" /></a>
   <img src="https://komarev.com/ghpvc/?username=OminduD&label=Profile%20Views&color=000000&style=for-the-badge&labelColor=00ff00&logoColor=000000" alt="visitor badge"/>
+  <br/><br/>
+  <a href="./docs/PROJECTS.md"><img src="https://img.shields.io/badge/EXECUTE_FILE:-PROJECTS.md-000000?style=for-the-badge&logo=visualstudiocode&labelColor=00ff00&color=000000" alt="View Projects" /></a>
 </p>
 
 ---
@@ -90,14 +92,6 @@
         <img src="https://github-readme-stackoverflow.vercel.app/?userID=27091856&theme=dark&bg_color=000000&hide_border=true&title_color=00ff00&text_color=32cd32&icon_color=00fa9a" alt="StackOverflow Stats" height="150" />
       </td>
     </tr>
-    <tr>
-      <td width="50%" align="center" valign="middle">
-        <img src="metrics-overview.svg" alt="Account Overview" width="100%" />
-      </td>
-      <td width="50%" align="center" valign="middle">
-        <img src="metrics-licenses.svg" alt="License Overview" width="100%" />
-      </td>
-    </tr>
   </table>
 </div>
 
@@ -110,24 +104,14 @@
 
 <br/>
 
-<h2 align="center"><font color="#00ff00">🗺️ 3D Contribution Landscape & Visitor Map</font></h2>
+<h2 align="center"><font color="#00ff00">🗺️ Visitor Map</font></h2>
 
 <div align="center">
-  <!-- GitHub Action Generated 3D Map -->
-  <img src="./profile-3d-contrib/profile-night-green.svg" alt="3D Isometric Commit Calendar" width="98%" />
-  <br/><br/>
   <!-- Reliable static world map -->
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/World_map_-_low_resolution.svg/1280px-World_map_-_low_resolution.svg.png" alt="World Map" width="98%" />
 </div>
 
 ---
-
-<!-- ANIMATION SECTION -->
-<h2 align="center"><font color="#00ff00">🎬 Cyber Zone</font></h2>
-
-<div align="center">
-  <img src="./game.gif" alt="Space Shooter Animation" width="98%" />
-</div>
 
 <div align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=00ff00&height=100&section=footer" alt="Footer" />
