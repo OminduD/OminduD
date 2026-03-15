@@ -37,39 +37,6 @@
 <h2 align="center"><font color="#00ff00">🖥️ About Me</font></h2>
 
 <div align="center">
-  <table style="background-color: #000000; border: 2px solid #00ff00; border-radius: 8px; font-family: 'Courier New', monospace;">
-    <tr>
-      <td style="padding: 20px; color: #00ff00;">
-        <div style="color: #00c800; margin-bottom: 10px;">┌─[omindu@arch]─[~]</div>
-        <div style="color: #00ff00; margin-bottom: 8px;">└─$ <span style="color: #ffffff;">whoami --detailed</span></div>
-        <div style="color: #32cd32; margin-bottom: 15px; border-left: 3px solid #00ff00; padding-left: 10px;">
-          <div><span style="color: #00fa9a;">●</span> <strong>Name:</strong> Omindu Gunathilaka</div>
-          <div><span style="color: #00fa9a;">●</span> <strong>Status:</strong> CS Undergraduate Student</div>
-          <div><span style="color: #00fa9a;">●</span> <strong>Focus:</strong> Systems Programming & Cybersecurity</div>
-          <div><span style="color: #00fa9a;">●</span> <strong>OS:</strong> Arch Linux + Hyprland</div>
-          <div><span style="color: #00fa9a;">●</span> <strong>Editor:</strong> Neovim</div>
-          <div><span style="color: #00fa9a;">●</span> <strong>Languages:</strong> Rust, Go, Python, C/C++</div>
-          <div><span style="color: #00fa9a;">●</span> <strong>Interests:</strong> Terminal Tools, Security Research, Open Source</div>
-        </div>
-        <div style="color: #00ff00; margin-bottom: 8px;">└─$ <span style="color: #ffffff;">cat ~/motto.txt</span></div>
-        <div style="color: #ffd700; font-style: italic; margin-bottom: 15px; border-left: 3px solid #ffd700; padding-left: 10px;">
-          "Building fast, secure, and elegant developer tools"
-        </div>
-        <div style="color: #00ff00; margin-bottom: 8px;">└─$ <span style="color: #ffffff;">ls -la ~/current_projects/</span></div>
-        <div style="color: #32cd32; margin-bottom: 10px;">
-          <div>drwxr-xr-x pulse/          <span style="color: #888;">// System monitoring TUI in Rust</span></div>
-          <div>drwxr-xr-x arch-sandbox/  <span style="color: #888;">// Container management tool in Go</span></div>
-          <div>drwxr-xr-x learning/      <span style="color: #888;">// CS coursework & experiments</span></div>
-        </div>
-        <div style="color: #00c800;">└─$ █</div>
-      </td>
-    </tr>
-  </table>
-</div>
-
-<br/>
-
-<div align="center">
   <img src="./metrics-overview.svg" alt="GitHub Metrics" width="480" />
 </div>
 
