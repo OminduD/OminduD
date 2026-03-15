@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="340" viewBox="0 0 900 340" role="img" aria-label="Metrics habits placeholder">
-  <rect width="100%" height="100%" fill="#1a1b26"/>
-  <rect x="16" y="16" width="868" height="308" rx="14" fill="#24283b" stroke="#7aa2f7"/>
-  <text x="40" y="72" fill="#7aa2f7" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="700">Coding Habits</text>
-  <text x="40" y="122" fill="#c0caf5" font-family="Segoe UI, Arial, sans-serif" font-size="22">This card will auto-refresh from GitHub Actions.</text>
-  <text x="40" y="160" fill="#9aa5ce" font-family="Segoe UI, Arial, sans-serif" font-size="18">Workflow: Update Profile README (runs every 6 hours)</text>
-  <text x="40" y="206" fill="#bb9af7" font-family="Segoe UI, Arial, sans-serif" font-size="18">Theme: Tokyo Night</text>
-</svg>
