@@ -319,4 +319,20 @@
   </tr>
 </table>
 
+---
 
+<div align="center">
+
+<a href="../README.md">
+  <img src="https://img.shields.io/badge/◀_RETURN_TO_MAIN_TERMINAL-000000?style=for-the-badge&labelColor=00ff00&color=000000" />
+</a>
+&nbsp;
+<a href="./LEARNING.md">
+  <img src="https://img.shields.io/badge/📚_VIEW_LEARNING_STACK-000000?style=for-the-badge&labelColor=00c800&color=000000" />
+</a>
+
+<br/><br/>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=00ff00&height=100&section=footer" alt="Footer" />
+
+</div>
