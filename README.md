@@ -96,6 +96,15 @@
 
 <br/>
 
+<!-- SPACE SHOOTER CONTRIBUTION GAME -->
+<h2 align="center"><font color="#00ff00">🚀 Space Shooter Contributions</font></h2>
+
+<div align="center">
+  <img src="./game.gif" alt="Space Shooter Contribution Game" width="98%" />
+</div>
+
+<br/>
+
 <!-- 3D CONTRIBUTION GRAPH -->
 <h2 align="center"><font color="#00ff00">📈 3D Contribution Graph</font></h2>
 
