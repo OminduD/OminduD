@@ -9,12 +9,11 @@
 <br/>
 
 [![Total Projects](https://img.shields.io/badge/dynamic/json?url=https://api.github.com/users/OminduD&query=$.public_repos&suffix=+public&label=PUBLIC+PROJECTS&color=000000&labelColor=00ff00&style=for-the-badge&logoColor=000000)](https://github.com/OminduD) 
-[![All Repos](https://img.shields.io/badge/dynamic/json?url=https://api.github.com/users/OminduD&query=$.total_private_repos&suffix=+total&label=TOTAL+REPOS&color=000000&labelColor=00c800&style=for-the-badge)](https://github.com/OminduD) 
 [![Status](https://img.shields.io/badge/SYSTEM-ONLINE-000000?style=for-the-badge&color=000000&labelColor=00fa9a)](https://github.com/OminduD)
 
 <br/>
 
-## <font color="#00ff00">&gt;_ TOP TIER PROGRAMS</font>
+## <font color="#00ff00">&gt;_ TOP TIER PROGRAMS / PUBLIC REPOSITORIES</font>
 
 <table width="100%" style="background-color: #0d0d0d; border: 1px solid #00ff00;">
   <tr>
@@ -91,98 +90,23 @@
 
 <br/>
 
-## <font color="#00ff00">&gt;_ GAMING & ALGORITHMS</font>
+## <font color="#00ff00">&gt;_ SECURITY & INFRASTRUCTURE</font>
 
 <table width="100%" style="background-color: #0d0d0d; border: 1px solid #00ff00;">
   <tr>
-    <td width="50%" valign="top" style="border: 1px solid #00ff00; padding: 15px;">
-      <h3 align="center"><font color="#00ff00">🎯 monkey_zone</font></h3>
-      <p align="center"><i>Interactive game project written in Python</i></p>
+    <td width="100%" valign="top" style="border: 1px solid #00ff00; padding: 15px;">
+      <h3 align="center"><font color="#00ff00">🛡️ monkey_zone</font></h3>
+      <p align="center"><i>Security Tool / Infrastructure Utility</i></p>
       <p align="center">
         <img src="https://img.shields.io/badge/Python-000000?style=for-the-badge&logo=python&logoColor=00ff00" />
+        <img src="https://img.shields.io/badge/Security-000000?style=for-the-badge&logoColor=00ff00" />
       </p>
       <p><b>Sys_Log:</b>
-      <br/>► Interactive mechanics
-      <br/>► Custom graphics & animation
-      <br/>► Smooth gameplay flow</p>
+      <br/>► Security integrations & utility scripts
+      <br/>► Penetration and testing toolkit
+      <br/>► Custom security parameters</p>
       <div align="center">
         <a href="https://github.com/OminduD/monkey_zone">
-          <img src="https://img.shields.io/badge/ACCESS_REPOSITORY-000000?style=for-the-badge&labelColor=00ff00&color=000000" />
-        </a>
-      </div>
-    </td>
-    <td width="50%" valign="top" style="border: 1px solid #00ff00; padding: 15px;">
-      <h3 align="center"><font color="#00ff00">🏃 MazeRunner</font> <i>[Restricted]</i></h3>
-      <p align="center"><i>Maze generation & solving algorithm</i></p>
-      <p align="center">
-        <img src="https://img.shields.io/badge/C-000000?style=for-the-badge&logo=c&logoColor=00ff00" />
-        <img src="https://img.shields.io/badge/Algorithm-000000?style=for-the-badge&logoColor=00ff00" />
-      </p>
-      <p><b>Sys_Log:</b>
-      <br/>► Generating & pathfinding AI
-      <br/>► Raw C optimization
-      <br/>► Low level memory auth</p>
-      <div align="center">
-        <a href="https://github.com/OminduD/MazeRunner">
-          <img src="https://img.shields.io/badge/ACCESS_REPOSITORY-000000?style=for-the-badge&labelColor=00ff00&color=000000" />
-        </a>
-      </div>
-    </td>
-  </tr>
-</table>
-
-<br/>
-
-## <font color="#00ff00">&gt;_ WEB & UTILITIES EXTENSIONS</font>
-
-<table width="100%" style="background-color: #0d0d0d; border: 1px solid #00ff00;">
-  <tr>
-    <td width="50%" valign="top" style="border: 1px solid #00ff00; padding: 15px;">
-      <h3 align="center"><font color="#00ff00">⚡ Ionex-Tab</font> <i>[Restricted]</i></h3>
-      <p align="center"><i>Lightning fast browser tab manager</i></p>
-      <p align="center">
-        <img src="https://img.shields.io/badge/TypeScript-000000?style=for-the-badge&logo=typescript&logoColor=00ff00" />
-      </p>
-      <div align="center">
-        <a href="https://github.com/OminduD/Ionex-Tab">
-          <img src="https://img.shields.io/badge/ACCESS_REPOSITORY-000000?style=for-the-badge&labelColor=00ff00&color=000000" />
-        </a>
-      </div>
-    </td>
-    <td width="50%" valign="top" style="border: 1px solid #00ff00; padding: 15px;">
-      <h3 align="center"><font color="#00ff00">📁 folderloop</font> <i>[Restricted]</i></h3>
-      <p align="center"><i>Optimized folder traversal & scanning tool</i></p>
-      <p align="center">
-        <img src="https://img.shields.io/badge/Python-000000?style=for-the-badge&logo=python&logoColor=00ff00" />
-      </p>
-      <div align="center">
-        <a href="https://github.com/OminduD/folderloop">
-          <img src="https://img.shields.io/badge/ACCESS_REPOSITORY-000000?style=for-the-badge&labelColor=00ff00&color=000000" />
-        </a>
-      </div>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top" style="border: 1px solid #00ff00; padding: 15px;">
-      <h3 align="center"><font color="#00ff00">📊 Risk</font> <i>[Restricted]</i></h3>
-      <p align="center"><i>Data analysis and risk modeling</i></p>
-      <p align="center">
-        <img src="https://img.shields.io/badge/Python-000000?style=for-the-badge&logo=python&logoColor=00ff00" />
-      </p>
-      <div align="center">
-        <a href="https://github.com/OminduD/Risk">
-          <img src="https://img.shields.io/badge/ACCESS_REPOSITORY-000000?style=for-the-badge&labelColor=00ff00&color=000000" />
-        </a>
-      </div>
-    </td>
-    <td width="50%" valign="top" style="border: 1px solid #00ff00; padding: 15px;">
-      <h3 align="center"><font color="#00ff00">📈 SSR</font> <i>[Restricted]</i></h3>
-      <p align="center"><i>Statistical modeling and visualization</i></p>
-      <p align="center">
-        <img src="https://img.shields.io/badge/Data_Science-000000?style=for-the-badge&logoColor=00ff00" />
-      </p>
-      <div align="center">
-        <a href="https://github.com/OminduD/SSR">
           <img src="https://img.shields.io/badge/ACCESS_REPOSITORY-000000?style=for-the-badge&labelColor=00ff00&color=000000" />
         </a>
       </div>
@@ -201,9 +125,11 @@
 <br/><hr/><br/>
 
 <div align="center">
-  <a href="../README.md">
-    <img src="https://img.shields.io/badge/RETURN_TO_MAIN_TERMINAL-000000?style=for-the-badge&labelColor=00ff00&color=000000" />
-  </a>
+  <button style="background-color: transparent; border: none;">
+    <a href="../README.md">
+      <img src="https://img.shields.io/badge/RETURN_TO_MAIN_TERMINAL-000000?style=for-the-badge&labelColor=00ff00&color=000000" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'" />
+    </a>
+  </button>
 </div>
 
 </div>
