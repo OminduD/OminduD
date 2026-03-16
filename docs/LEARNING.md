@@ -12,6 +12,12 @@
 
 <br/>
 
+<div align="center">
+  <p><i>Computer Science undergraduate passionate about systems programming, Linux, and developer tooling. I enjoy building terminal-based applications, exploring algorithms, and experimenting with networking and cryptography concepts. Focused on creating efficient, minimal, and practical software while actively contributing to open-source and expanding my technical depth.</i></p>
+</div>
+
+<br/>
+
 <table width="80%" style="background-color: #0d0d0d; border: 1px solid #333;">
   <tr>
     <td align="center" style="padding: 10px; border: 1px solid #333;"><font color="#00ff00">🦀 Rust</font></td>
@@ -27,6 +33,16 @@
     <td align="center" style="padding: 10px; border: 1px solid #333;"><font color="#00ff00">⚙️ C++</font></td>
     <td align="center" style="padding: 10px; border: 1px solid #333;"><font color="#009900">█████░░░░░</font></td>
     <td align="center" style="padding: 10px; border: 1px solid #333;"><code>ACTIVE</code>&nbsp; — Low-level, performance, games</td>
+  </tr>
+  <tr>
+    <td align="center" style="padding: 10px; border: 1px solid #333;"><font color="#00ff00">🌐 Networking</font></td>
+    <td align="center" style="padding: 10px; border: 1px solid #333;"><font color="#007700">████░░░░░░</font></td>
+    <td align="center" style="padding: 10px; border: 1px solid #333;"><code>STUDY</code>&nbsp; — Protocols, sockets, packet analysis</td>
+  </tr>
+  <tr>
+    <td align="center" style="padding: 10px; border: 1px solid #333;"><font color="#00ff00">🔐 Crypto</font></td>
+    <td align="center" style="padding: 10px; border: 1px solid #333;"><font color="#005500">███░░░░░░░</font></td>
+    <td align="center" style="padding: 10px; border: 1px solid #333;"><code>STUDY</code>&nbsp; — AES, RSA, hash functions, TLS</td>
   </tr>
 </table>
 
@@ -93,11 +109,46 @@ async fn main() {
     println!("{body}");
 }
 
+```rust
 // Iterators & closures (zero-cost)
 let sum: i32 = (1..=10).filter(|x| x % 2 == 0).map(|x| x * x).sum();
 ```
 
-<table width="100%" style="background-color: #0d0d0d; border: 1px solid #333;">
+---
+
+<div align="center">
+<img src="https://img.shields.io/badge/▶──────────────────────────────────────────────────────▶-000000?style=for-the-badge&labelColor=00ff00&color=000000" />
+
+## <font color="#00ff00">&gt;_ [STUDY] NETWORKING & CRYPTOGRAPHY 🌐🔐</font>
+
+<i>Exploring protocols, low-level socket programming, and secure communication.</i>
+</div>
+
+<br/>
+
+<table width="100%" style="background-color: #0d0d0d; border: 2px solid #00ff00;">
+  <tr>
+    <td width="50%" valign="top" style="border: 1px solid #00ff00; padding: 18px;">
+      <b><font color="#00ff00">Networking Concepts</font></b>
+      <br/>► <b>OSI Model</b> — Layered approach to network protocols
+      <br/>► <b>TCP/UDP</b> — Reliable vs performance-oriented comms
+      <br/>► <b>Sockets</b> — Interface for low-level data exchange
+      <br/>► <b>HTTP/HTTPS</b> — Analyzing web traffic & headers
+    </td>
+    <td width="50%" valign="top" style="border: 1px solid #00ff00; padding: 18px;">
+      <b><font color="#00ff00">Cryptography Concepts</font></b>
+      <br/>► <b>Symmetric/Asymmetric Encryption</b> — AES, RSA
+      <br/>► <b>Hashing</b> — SHA-256 for data integrity
+      <br/>► <b>Digital Signatures</b> — Verifying authenticity
+      <br/>► <b>TLS/SSL</b> — Implementing secure handshakes
+    </td>
+  </tr>
+</table>
+
+<br/>
+
+<table width="100%" style="background-color: #0d0d0d; border: 1px solid #333;"> (existing footer table)
+
   <tr>
     <th align="left" style="border: 1px solid #333; padding: 8px;"><font color="#00ff00">Crate</font></th>
     <th align="left" style="border: 1px solid #333; padding: 8px;"><font color="#00ff00">Purpose</font></th>
