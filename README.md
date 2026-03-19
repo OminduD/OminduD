@@ -112,7 +112,6 @@
   <img src="./profile-3d-contrib/profile-night-green.svg" alt="3D Contribution Graph" width="98%" />
 </div>
 
----
 
 <div align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=00ff00&height=100&section=footer" alt="Footer" />
