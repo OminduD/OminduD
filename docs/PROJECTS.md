@@ -14,9 +14,6 @@
 
 <br/>
 
-<div align="center">
-  <p><i>Computer Science undergraduate passionate about systems programming, Linux, and developer tooling. I enjoy building terminal-based applications, exploring algorithms, and experimenting with networking and cryptography concepts. Focused on creating efficient, minimal, and practical software while actively contributing to open-source and expanding my technical depth.</i></p>
-</div>
 
 ---
 
