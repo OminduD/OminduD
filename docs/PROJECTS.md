@@ -2,7 +2,7 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=00ff00&height=180&section=header&text=ROOT%2FPROJECTS&fontSize=55&fontAlignY=38&fontColor=000000&desc=Initializing%20Project%20Database...&descAlignY=60&descSize=18&animation=fadeIn" alt="Header" />
 
-<img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=700&size=18&duration=2500&pause=800&color=00ff00&center=true&vCenter=true&random=false&width=780&lines=%5BSYS%5D+Scanning+repositories...+DONE;%5B+OK+%5D+14+public+repos+indexed;%5B+OK+%5D+Categorization+complete;%5B+OK+%5D+Access+granted+to+project+directory" alt="Boot sequence" />
+<img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=700&size=18&duration=2500&pause=800&color=00ff00&center=true&vCenter=true&random=false&width=780&lines=%5BSYS%5D+Scanning+repositories...+DONE;%5B+OK+%5D+16+public+repos+indexed;%5B+OK+%5D+Categorization+complete;%5B+OK+%5D+Access+granted+to+project+directory" alt="Boot sequence" />
 
 <br/>
 
@@ -299,7 +299,7 @@
 
 <table width="100%" style="background-color: #0d0d0d; border: 2px solid #555555;">
   <tr>
-    <td width="100%" valign="top" style="border: 1px solid #555555; padding: 18px;">
+    <td width="50%" valign="top" style="border: 1px solid #555555; padding: 18px;">
       <h3 align="center"><font color="#00ff00">🔄 Converter</font></h3>
       <p align="center"><i>Multi-purpose file and data converter utility — First Project!</i></p>
       <p align="center">
@@ -315,6 +315,48 @@
       <br/>► Portable utility — no heavy dependencies</p>
       <div align="center">
         <a href="https://github.com/OminduD/Converter">
+          <img src="https://img.shields.io/badge/ACCESS_REPOSITORY-000000?style=for-the-badge&labelColor=555555&color=000000" />
+        </a>
+      </div>
+    </td>
+    <td width="50%" valign="top" style="border: 1px solid #555555; padding: 18px;">
+      <h3 align="center"><font color="#00ff00">🎨 sddm-themes</font></h3>
+      <p align="center"><i>Highly customizable, cinematic SDDM login screen theme collection for Linux</i></p>
+      <p align="center">
+        <img src="https://img.shields.io/badge/Shell-000000?style=for-the-badge&logo=gnu-bash&logoColor=00ff00" />
+      </p>
+      <p align="center">
+        <img src="https://img.shields.io/github/last-commit/OminduD/sddm-themes?style=flat-square&labelColor=0d0d0d&color=0d0d0d&logo=github&logoColor=00ff00&label=last+commit" />
+        <img src="https://img.shields.io/github/stars/OminduD/sddm-themes?style=flat-square&labelColor=0d0d0d&color=0d0d0d&logo=star&logoColor=00c800&label=stars" />
+      </p>
+      <p><b><font color="#00ff00">Sys_Log:</font></b>
+      <br/>► Cinematic login themes
+      <br/>► Highly customizable parameters
+      <br/>► Seamless Linux SDDM integration</p>
+      <div align="center">
+        <a href="https://github.com/OminduD/sddm-themes">
+          <img src="https://img.shields.io/badge/ACCESS_REPOSITORY-000000?style=for-the-badge&labelColor=555555&color=000000" />
+        </a>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%" colspan="2" valign="top" style="border: 1px solid #555555; padding: 18px;">
+      <h3 align="center"><font color="#00ff00">🕷️ scraping-platform</font></h3>
+      <p align="center"><i>Automated web data extraction and scraping scripts</i></p>
+      <p align="center">
+        <img src="https://img.shields.io/badge/Python-000000?style=for-the-badge&logo=python&logoColor=00ff00" />
+      </p>
+      <p align="center">
+        <img src="https://img.shields.io/github/last-commit/OminduD/scraping-platform?style=flat-square&labelColor=0d0d0d&color=0d0d0d&logo=github&logoColor=00ff00&label=last+commit" />
+        <img src="https://img.shields.io/github/stars/OminduD/scraping-platform?style=flat-square&labelColor=0d0d0d&color=0d0d0d&logo=star&logoColor=00c800&label=stars" />
+      </p>
+      <p><b><font color="#00ff00">Sys_Log:</font></b>
+      <br/>► Web scraping utilities
+      <br/>► Data extraction capabilities
+      <br/>► Python-based workflow automation</p>
+      <div align="center">
+        <a href="https://github.com/OminduD/scraping-platform">
           <img src="https://img.shields.io/badge/ACCESS_REPOSITORY-000000?style=for-the-badge&labelColor=555555&color=000000" />
         </a>
       </div>
