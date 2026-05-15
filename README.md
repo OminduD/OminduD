@@ -21,7 +21,7 @@
   <a href="https://linkedin.com/in/omindud"><img src="https://img.shields.io/badge/LinkedIn-000000?style=for-the-badge&logo=linkedin&logoColor=00ff00&labelColor=000000&color=000000" alt="LinkedIn" /></a>
   <a href="https://twitter.com/OminduD"><img src="https://img.shields.io/badge/Twitter-000000?style=for-the-badge&logo=x&logoColor=00ff00&labelColor=000000&color=000000" alt="Twitter" /></a>
   <a href="https://kaggle.com/omindud"><img src="https://img.shields.io/badge/Kaggle-000000?style=for-the-badge&logo=kaggle&logoColor=00ff00&labelColor=000000&color=000000" alt="Kaggle" /></a>
-  <a href="https://portfoliov2-beta-liard.vercel.app"><img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=00ff00&labelColor=000000&color=000000" alt="Portfolio" /></a>
+  <a href="https://omindudportfolio.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=00ff00&labelColor=000000&color=000000" alt="Portfolio" /></a>
   <br/><br/>
   <a href="https://github.com/OminduD?tab=followers"><img src="https://img.shields.io/github/followers/OminduD?label=Followers&style=for-the-badge&color=000000&logo=github&labelColor=00ff00&logoColor=000000" alt="Followers" /></a>
   <a href="https://github.com/OminduD"><img src="https://img.shields.io/github/stars/OminduD?label=Total%20Stars&style=for-the-badge&color=000000&logo=star&labelColor=00c800&logoColor=000000" alt="Stars" /></a>
