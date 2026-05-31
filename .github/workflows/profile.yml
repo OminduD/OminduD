@@ -28,15 +28,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
 
-      - name: Commit 3D contribution graphs
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "chore(metrics): update 3D contribution graphs"
-          file_pattern: 'profile-3d-contrib/*.svg'
-          commit_user_name: 'github-actions[bot]'
-          commit_user_email: 'github-actions[bot]@users.noreply.github.com'
-          commit_author: 'github-actions[bot] <github-actions[bot]@users.noreply.github.com>'
-
       - name: Generate terminal-style overview
         uses: lowlighter/metrics@latest
         with:
@@ -56,11 +47,11 @@ jobs:
             .banner, footer { color: #00c800 !important; }
             .diff { color: #00ff00 !important; }
 
-      - name: Commit metrics overview
+      - name: Commit metrics and overviews
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore(metrics): update terminal overview"
-          file_pattern: 'metrics-overview.svg'
+          commit_message: "chore(metrics): update dashboard and 3d graphs"
+          file_pattern: 'profile-3d-contrib/*.svg metrics-overview.svg'
           commit_user_name: 'github-actions[bot]'
           commit_user_email: 'github-actions[bot]@users.noreply.github.com'
           commit_author: 'github-actions[bot] <github-actions[bot]@users.noreply.github.com>'
