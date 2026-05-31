@@ -47,6 +47,9 @@ jobs:
             .banner, footer { color: #00c800 !important; }
             .diff { color: #00ff00 !important; }
 
+      - name: Copy metrics overview to workspace
+        run: sudo cp /metrics_renders/metrics-overview.svg ./metrics-overview.svg
+
       - name: Commit metrics and overviews
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
