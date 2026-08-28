@@ -235,54 +235,139 @@
 ---
 
 <div align="center">
-<img src="https://img.shields.io/badge/▶──────────────────────────────────────────────────────▶-000000?style=for-the-badge&labelColor=ff9900&color=000000" />
+<img src="https://img.shields.io/badge/▶──────────────────────────────────────────────────────▶-000000?style=for-the-badge&labelColor=ff007f&color=000000" />
 
-## <font color="#00ff00">&gt;_ WEB DEVELOPMENT</font>
+## <font color="#00ff00">&gt;_ HOBBIES & FREE-TIME BUILDS (STATIC SITES)</font>
 </div>
 
-<table width="100%" style="background-color: #0d0d0d; border: 2px solid #ff9900;">
+<table width="100%" style="background-color: #0d0d0d; border: 2px solid #ff007f;">
   <tr>
-    <td width="50%" valign="top" style="border: 1px solid #ff9900; padding: 18px;">
-      <h3 align="center"><font color="#00ff00">🍜 chinese_resturant_page</font></h3>
-      <p align="center"><i>Clean responsive static website for a modern Chinese restaurant</i></p>
+    <td width="50%" valign="top" style="border: 1px solid #ff007f; padding: 18px;">
+      <h3 align="center"><font color="#00ff00">✨ Al-Kimiya (الكيمياء)</font></h3>
+      <p align="center"><i>Interactive WebGL luxury art pilgrimage & desert observatory</i></p>
       <p align="center">
-        <img src="https://img.shields.io/badge/HTML-000000?style=for-the-badge&logo=html5&logoColor=00ff00" />
-        <img src="https://img.shields.io/badge/CSS-000000?style=for-the-badge&logo=css3&logoColor=00ff00" />
+        <img src="https://img.shields.io/badge/HTML5-000000?style=for-the-badge&logo=html5&logoColor=00ff00" />
+        <img src="https://img.shields.io/badge/CSS3-000000?style=for-the-badge&logo=css3&logoColor=00ff00" />
+        <img src="https://img.shields.io/badge/WebGL-000000?style=for-the-badge&logo=webgl&logoColor=00ff00" />
+        <img src="https://img.shields.io/badge/JavaScript-000000?style=for-the-badge&logo=javascript&logoColor=00ff00" />
+      </p>
+      <p><b><font color="#00ff00">Sys_Log:</font></b>
+      <br/>► 5-chapter cinematic journey across ancient celestial observatories
+      <br/>► Interactive WebGL stardust particles & audio atmosphere
+      <br/>► Multi-layered foreground parallax with custom typography</p>
+      <div align="center">
+        <a href="https://omindud.github.io/Al-Kimiya/">
+          <img src="https://img.shields.io/badge/VISIT_LIVE_SITE-000000?style=for-the-badge&labelColor=ff007f&color=000000" />
+        </a>
+      </div>
+    </td>
+    <td width="50%" valign="top" style="border: 1px solid #ff007f; padding: 18px;">
+      <h3 align="center"><font color="#00ff00">🎋 SHUIMO (水墨)</font></h3>
+      <p align="center"><i>The Way of Ink — Zen ink wash artistry & aesthetic single-page experience</i></p>
+      <p align="center">
+        <img src="https://img.shields.io/badge/HTML5-000000?style=for-the-badge&logo=html5&logoColor=00ff00" />
+        <img src="https://img.shields.io/badge/CSS3-000000?style=for-the-badge&logo=css3&logoColor=00ff00" />
+        <img src="https://img.shields.io/badge/JavaScript-000000?style=for-the-badge&logo=javascript&logoColor=00ff00" />
+      </p>
+      <p><b><font color="#00ff00">Sys_Log:</font></b>
+      <br/>► Inspired by traditional Chinese Ink Wash & Japanese Sumi-e painting
+      <br/>► Ambient scroll-driven animations & classical Asian brush typography
+      <br/>► Contemplative Zen aesthetic exploring minimalism and tranquility</p>
+      <div align="center">
+        <a href="https://omindud.github.io/SHUIMO/">
+          <img src="https://img.shields.io/badge/VISIT_LIVE_SITE-000000?style=for-the-badge&labelColor=ff007f&color=000000" />
+        </a>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top" style="border: 1px solid #ff007f; padding: 18px;">
+      <h3 align="center"><font color="#00ff00">💌 Where Forever Begins</font></h3>
+      <p align="center"><i>Cinematic animated wedding invitation & digital guest experience</i></p>
+      <p align="center">
+        <img src="https://img.shields.io/badge/HTML5-000000?style=for-the-badge&logo=html5&logoColor=00ff00" />
+        <img src="https://img.shields.io/badge/CSS3-000000?style=for-the-badge&logo=css3&logoColor=00ff00" />
+        <img src="https://img.shields.io/badge/JavaScript-000000?style=for-the-badge&logo=javascript&logoColor=00ff00" />
+      </p>
+      <p><b><font color="#00ff00">Sys_Log:</font></b>
+      <br/>► Mobile-first animated wedding invitation (Pubudi & Vidura)
+      <br/>► Interactive culinary feast menu & story timeline presentation
+      <br/>► Curated romantic typography & custom audio/visual animations</p>
+      <div align="center">
+        <a href="https://omindud.github.io/where-forever-begins/">
+          <img src="https://img.shields.io/badge/VISIT_LIVE_SITE-000000?style=for-the-badge&labelColor=ff007f&color=000000" />
+        </a>
+      </div>
+    </td>
+    <td width="50%" valign="top" style="border: 1px solid #ff007f; padding: 18px;">
+      <h3 align="center"><font color="#00ff00">🐉 Golden Dragon Restaurant</font></h3>
+      <p align="center"><i>Atmospheric responsive static website for a modern Chinese restaurant</i></p>
+      <p align="center">
+        <img src="https://img.shields.io/badge/HTML5-000000?style=for-the-badge&logo=html5&logoColor=00ff00" />
+        <img src="https://img.shields.io/badge/CSS3-000000?style=for-the-badge&logo=css3&logoColor=00ff00" />
+        <img src="https://img.shields.io/badge/JavaScript-000000?style=for-the-badge&logo=javascript&logoColor=00ff00" />
       </p>
       <p align="center">
         <img src="https://img.shields.io/github/last-commit/OminduD/chinese_resturant_page?style=flat-square&labelColor=0d0d0d&color=0d0d0d&logo=github&logoColor=00ff00&label=last+commit" />
         <img src="https://img.shields.io/github/stars/OminduD/chinese_resturant_page?style=flat-square&labelColor=0d0d0d&color=0d0d0d&logo=star&logoColor=00c800&label=stars" />
       </p>
       <p><b><font color="#00ff00">Sys_Log:</font></b>
-      <br/>► Vanilla HTML & CSS — zero dependencies
-      <br/>► Responsive layout & modern design
-      <br/>► Clean static web template</p>
+      <br/>► Ambient floating gold particle system & scroll progress tracking
+      <br/>► Full restaurant menu, reservations booking UI & rich dragon ornaments
+      <br/>► Zero framework dependencies — crafted with pure vanilla web stack</p>
       <div align="center">
+        <a href="https://omindud.github.io/chinese_resturant_page/">
+          <img src="https://img.shields.io/badge/VISIT_LIVE_SITE-000000?style=for-the-badge&labelColor=ff007f&color=000000" />
+        </a>
+        &nbsp;
         <a href="https://github.com/OminduD/chinese_resturant_page">
-          <img src="https://img.shields.io/badge/ACCESS_REPOSITORY-000000?style=for-the-badge&labelColor=ff9900&color=000000" />
+          <img src="https://img.shields.io/badge/SOURCE-000000?style=for-the-badge&labelColor=333333&color=000000" />
         </a>
       </div>
     </td>
-    <td width="50%" valign="top" style="border: 1px solid #ff9900; padding: 18px;">
-      <h3 align="center"><font color="#00ff00">🗂 Portfolio Sites</font></h3>
-      <p align="center"><i>Personal portfolio websites (v1 & v2)</i></p>
+  </tr>
+  <tr>
+    <td width="50%" valign="top" style="border: 1px solid #ff007f; padding: 18px;">
+      <h3 align="center"><font color="#00ff00">🕹️ 3D Immersive Portfolio</font></h3>
+      <p align="center"><i>Experimental 3D personal portfolio & WebGL playground (v1)</i></p>
       <p align="center">
-        <img src="https://img.shields.io/badge/JavaScript-000000?style=for-the-badge&logo=javascript&logoColor=00ff00" />
-      </p>
-      <p align="center">
-        <img src="https://img.shields.io/github/last-commit/OminduD/portfolio?style=flat-square&labelColor=0d0d0d&color=0d0d0d&logo=github&logoColor=00ff00&label=v1+commit" />
-        <img src="https://img.shields.io/github/last-commit/OminduD/portfoliov2?style=flat-square&labelColor=0d0d0d&color=0d0d0d&logo=github&logoColor=00c800&label=v2+commit" />
+        <img src="https://img.shields.io/badge/WebGL-000000?style=for-the-badge&logo=webgl&logoColor=00ff00" />
+        <img src="https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=threedotjs&logoColor=00ff00" />
+        <img src="https://img.shields.io/badge/Vite-000000?style=for-the-badge&logo=vite&logoColor=00ff00" />
       </p>
       <p><b><font color="#00ff00">Sys_Log:</font></b>
-      <br/>► portfolio — first personal portfolio site
-      <br/>► portfoliov2 — redesigned portfolio iteration
-      <br/>► JavaScript-driven layouts</p>
+      <br/>► Interactive 3D scene space navigation & camera motion
+      <br/>► Dynamic lighting, mesh materials & exploratory layout
+      <br/>► Creative early exploration into 3D browser experiences</p>
       <div align="center">
-        <a href="https://github.com/OminduD/portfolio">
-          <img src="https://img.shields.io/badge/v1-000000?style=for-the-badge&labelColor=ff9900&color=000000" />
+        <a href="https://omindud.github.io/portfolio-old/">
+          <img src="https://img.shields.io/badge/VISIT_LIVE_SITE-000000?style=for-the-badge&labelColor=ff007f&color=000000" />
         </a>
+        &nbsp;
+        <a href="https://github.com/OminduD/portfolio">
+          <img src="https://img.shields.io/badge/SOURCE-000000?style=for-the-badge&labelColor=333333&color=000000" />
+        </a>
+      </div>
+    </td>
+    <td width="50%" valign="top" style="border: 1px solid #ff007f; padding: 18px;">
+      <h3 align="center"><font color="#00ff00">🎨 Neo-Brutalist Portfolio</font></h3>
+      <p align="center"><i>Playful retro-styled portfolio & interactive creative playground</i></p>
+      <p align="center">
+        <img src="https://img.shields.io/badge/HTML5-000000?style=for-the-badge&logo=html5&logoColor=00ff00" />
+        <img src="https://img.shields.io/badge/CSS3-000000?style=for-the-badge&logo=css3&logoColor=00ff00" />
+        <img src="https://img.shields.io/badge/JavaScript-000000?style=for-the-badge&logo=javascript&logoColor=00ff00" />
+      </p>
+      <p><b><font color="#00ff00">Sys_Log:</font></b>
+      <br/>► Neo-brutalist sticker aesthetic, torn paper effects & theme switcher
+      <br/>► Treasure-map journey timeline with interactive Leaflet map integration
+      <br/>► Retro loader sequence, interactive checkpoints & project showcase</p>
+      <div align="center">
+        <a href="https://omindud.vercel.app/">
+          <img src="https://img.shields.io/badge/VISIT_LIVE_SITE-000000?style=for-the-badge&labelColor=ff007f&color=000000" />
+        </a>
+        &nbsp;
         <a href="https://github.com/OminduD/portfoliov2">
-          <img src="https://img.shields.io/badge/v2-000000?style=for-the-badge&labelColor=ff6600&color=000000" />
+          <img src="https://img.shields.io/badge/SOURCE-000000?style=for-the-badge&labelColor=333333&color=000000" />
         </a>
       </div>
     </td>
