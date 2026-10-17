@@ -443,7 +443,7 @@
       <br/>► Treasure-map journey timeline with interactive Leaflet map integration
       <br/>► Retro loader sequence, interactive checkpoints & project showcase</p>
       <div align="center">
-        <a href="https://omindud.vercel.app/">
+        <a href="https://omindu.dev">
           <img src="https://img.shields.io/badge/VISIT_LIVE_SITE-000000?style=for-the-badge&labelColor=ff007f&color=000000" />
         </a>
       </div>

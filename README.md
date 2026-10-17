@@ -10,11 +10,11 @@
 
 <!-- ACTION BUTTONS -->
 <div align="center">
-  <a href="https://omindudportfolio.vercel.app/"><img src="./assets/btn-portfolio.svg" height="40" alt="Portfolio"></a>&nbsp;
+  <a href="https://omindu.dev"><img src="./assets/btn-portfolio.svg" height="40" alt="Portfolio"></a>&nbsp;
   <a href="./docs/PROJECTS.md"><img src="./assets/btn-projects.svg" height="40" alt="Projects"></a>&nbsp;
   <a href="./docs/LEARNING.md"><img src="./assets/btn-learning.svg" height="40" alt="Learning"></a>&nbsp;
   <a href="https://linkedin.com/in/omindud"><img src="./assets/btn-linkedin.svg" height="40" alt="LinkedIn"></a>&nbsp;
-  <a href="mailto:omindudealwis1109@gmail.com"><img src="./assets/btn-email.svg" height="40" alt="Email"></a>
+  <a href="mailto:omindudulneth@outlook.com"><img src="./assets/btn-email.svg" height="40" alt="Email"></a>
 </div>
 
 <br/>
