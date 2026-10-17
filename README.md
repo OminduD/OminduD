@@ -1,119 +1,213 @@
-<div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=00ff00&height=250&section=header&text=Hello,%20I'm%20Omindu!&fontSize=70&fontAlignY=35&desc=Systems%20Engineer%20%7C%20Security%20%7C%20Open%20Source&descAlignY=55&descSize=20&animation=fadeIn" alt="Header" />
-</div>
+<!-- ========================================================= -->
+<!--                          HERO                             -->
+<!-- ========================================================= -->
 
-<div align="center">
-  <a href="https://github.com/OminduD">
-    <img src="https://images.weserv.nl/?url=avatars.githubusercontent.com/OminduD?v=4&h=120&w=120&fit=cover&mask=circle&maxage=7d" width="120" height="120" alt="Omindu Profile Picture" style="margin-top:-60px; border-radius: 50%; border: 4px solid #000000;" />
-  </a>
-</div>
-
-<br/>
-
-<div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=700&size=22&duration=3000&pause=1000&color=00ff00&center=true&vCenter=true&random=false&width=780&lines=Building+fast,+clean,+reliable+developer+tools;Systems+Programming,+compilers+%26+servers;Arch+Linux+%2B+Hyprland+%2B+Terminal+first+workflow;Crafting+code+that's+clean,+fast,+and+secure" alt="Typing Intro" />
-</div>
-
-<br/>
-
-<!-- SOCIAL && REPO BADGES -->
 <p align="center">
-  <a href="https://linkedin.com/in/omindud"><img src="https://img.shields.io/badge/LinkedIn-000000?style=for-the-badge&logo=linkedin&logoColor=00ff00&labelColor=000000&color=000000" alt="LinkedIn" /></a>
-  <a href="https://twitter.com/OminduD"><img src="https://img.shields.io/badge/Twitter-000000?style=for-the-badge&logo=x&logoColor=00ff00&labelColor=000000&color=000000" alt="Twitter" /></a>
-  <a href="https://kaggle.com/omindud"><img src="https://img.shields.io/badge/Kaggle-000000?style=for-the-badge&logo=kaggle&logoColor=00ff00&labelColor=000000&color=000000" alt="Kaggle" /></a>
-  <a href="https://omindudportfolio.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=00ff00&labelColor=000000&color=000000" alt="Portfolio" /></a>
-  <br/><br/>
-  <a href="https://github.com/OminduD?tab=followers"><img src="https://img.shields.io/github/followers/OminduD?label=Followers&style=for-the-badge&color=000000&logo=github&labelColor=00ff00&logoColor=000000" alt="Followers" /></a>
-  <a href="https://github.com/OminduD"><img src="https://img.shields.io/github/stars/OminduD?label=Total%20Stars&style=for-the-badge&color=000000&logo=star&labelColor=00c800&logoColor=000000" alt="Stars" /></a>
-  <img src="https://komarev.com/ghpvc/?username=OminduD&label=Profile%20Views&color=000000&style=for-the-badge&labelColor=00ff00&logoColor=000000" alt="visitor badge"/>
-  <br/><br/>
-  <a href="./docs/PROJECTS.md"><img src="https://img.shields.io/badge/EXECUTE_FILE:-PROJECTS.md-000000?style=for-the-badge&logo=visualstudiocode&labelColor=00ff00&color=000000" alt="View Projects" /></a>
-  &nbsp;
-  <a href="./docs/LEARNING.md"><img src="https://img.shields.io/badge/EXECUTE_FILE:-LEARNING.md-000000?style=for-the-badge&logo=visualstudiocode&labelColor=00c800&color=000000" alt="View Learning" /></a>
+  <a href="https://github.com/OminduD">
+    <img width="100%" src="./assets/hero.svg" alt="Omindu D. Gunathilaka (@OminduD) — Aspiring DevOps &amp; Cloud Engineer" />
+  </a>
 </p>
 
----
-
-<!-- TERMINAL-STYLE ABOUT & LICENSE -->
-<h2 align="center"><font color="#00ff00">🖥️ About Me</font></h2>
-
+<!-- ACTION BUTTONS -->
 <div align="center">
-  <img src="./metrics-overview.svg" alt="GitHub Metrics" width="480" />
+  <a href="https://omindudportfolio.vercel.app/"><img src="./assets/btn-portfolio.svg" height="40" alt="Portfolio"></a>&nbsp;
+  <a href="./docs/PROJECTS.md"><img src="./assets/btn-projects.svg" height="40" alt="Projects"></a>&nbsp;
+  <a href="./docs/LEARNING.md"><img src="./assets/btn-learning.svg" height="40" alt="Learning"></a>&nbsp;
+  <a href="https://linkedin.com/in/omindud"><img src="./assets/btn-linkedin.svg" height="40" alt="LinkedIn"></a>&nbsp;
+  <a href="mailto:omindudealwis1109@gmail.com"><img src="./assets/btn-email.svg" height="40" alt="Email"></a>
 </div>
 
 <br/>
 
----
+<!-- PIPELINE STAGE 1: COMMIT -->
+<p align="center">
+  <img width="100%" alt="Octocat moving through the CI/CD pipeline - Stage 1: Commit" src="./assets/pipeline-1.svg" />
+</p>
 
-<!-- TECH STACK SECTION -->
-<h2 align="center"><font color="#00ff00">💻 Tech Stack & Tools</font></h2>
+<!-- ========================================================= -->
+<!--                       01 NODE_SPEC                        -->
+<!-- ========================================================= -->
 
-<div align="center">
-  <p><b>Core Languages</b></p>
-  <img src="https://skillicons.dev/icons?i=python,js,go,css,ts,c,rust,ruby,perl,cpp,html&perline=11" alt="Core Languages" />
-  <br/><br/>
-  <!-- Fallbacks for languages not natively supported by skillicons -->
-  <img src="https://img.shields.io/badge/-Assembly-000000?style=for-the-badge&logo=webassembly&logoColor=00ff00" alt="Assembly" />
-  <img src="https://img.shields.io/badge/-Pascal-000000?style=for-the-badge&logo=delphi&logoColor=00ff00" alt="Pascal" />
-  <br/><br/>
-  <p><b>Backend, DevOps & Cloud</b></p>
-  <img src="https://skillicons.dev/icons?i=linux,arch,docker,aws,kubernetes,nginx,bash&perline=10" alt="DevOps" />
-  <br/><br/>
-  <p><b>Tools & Environment</b></p>
-  <img src="https://skillicons.dev/icons?i=git,github,neovim,vscode,postman,mysql,postgres,sqlite&perline=10" alt="Tools" />
-</div>
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: light)" srcset="./assets/head-whoami-light.svg">
+    <img src="./assets/head-whoami.svg" width="100%" alt="01 node_spec">
+  </picture>
+</p>
 
----
-
-<!-- LIVE METRICS DASHBOARD -->
-<h2 align="center"><font color="#00ff00">📊 GitHub Dashboard</font></h2>
+<p align="center">
+  <img width="100%" src="./assets/whoami.svg" alt="Omindu's Profile — cat profile.yml inside terminal with telemetry meters" />
+</p>
 
 <div align="center">
-  <table width="100%" border="0" cellspacing="0" cellpadding="0">
-    <tr>
-      <td width="50%" align="center" valign="top">
-        <img src="https://github-readme-stats.vercel.app/api?username=OminduD&show_icons=true&theme=dark&bg_color=000000&hide_border=true&title_color=00ff00&icon_color=00fa9a&text_color=32cd32&count_private=true&include_all_commits=true&cache_seconds=1800" alt="GitHub Stats" width="100%" />
-      </td>
-      <td width="50%" align="center" valign="top">
-        <img src="https://streak-stats.demolab.com/?user=OminduD&theme=dark&background=000000&hide_border=true&fire=00fa9a&ring=00c800&currStreakNum=00ff00&sideLabels=32cd32&dates=32cd32&stroke=00ff00" alt="GitHub Streak" width="100%" />
-      </td>
-    </tr>
-    <tr>
-      <td width="50%" align="center" valign="top">
-        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=OminduD&layout=compact&theme=dark&bg_color=000000&hide_border=true&title_color=00ff00&text_color=32cd32&langs_count=10&cache_seconds=1800" alt="Top Languages" width="100%" />
-      </td>
-      <td width="50%" align="center" valign="top">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=OminduD&repo=pulse&theme=dark&bg_color=000000&hide_border=true&title_color=00ff00&text_color=32cd32&icon_color=00fa9a&cache_seconds=1800" alt="Pinned Repo" width="100%" />
-      </td>
-    </tr>
-  </table>
+  <img width="380" src="./assets/octocat.svg" alt="Animated Octocat coding on a laptop" />
+  <br><br>
+  <img src="https://komarev.com/ghpvc/?username=OminduD&label=Profile%20Views&color=00ff88&style=for-the-badge&labelColor=0d1117" alt="Profile Views"/>&nbsp;
+  <a href="https://github.com/OminduD?tab=followers"><img src="https://img.shields.io/github/followers/OminduD?label=Followers&style=for-the-badge&color=00ff88&logo=github&labelColor=0d1117&logoColor=00ff88" alt="Followers" /></a>&nbsp;
+  <a href="https://github.com/OminduD"><img src="https://img.shields.io/github/stars/OminduD?label=Total%20Stars&style=for-the-badge&color=00ff88&logo=star&labelColor=0d1117&logoColor=00ff88" alt="Stars" /></a>
 </div>
 
-<br/>
+<!-- PIPELINE STAGE 2: BUILD -->
+<p align="center">
+  <img width="100%" alt="Octocat moving through the CI/CD pipeline - Stage 2: Build" src="./assets/pipeline-2.svg" />
+</p>
 
-<div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=OminduD&bg_color=000000&color=00ff00&line=00c800&point=00fa9a&area=true&hide_border=true" alt="Activity Graph" width="98%" />
-</div>
+<!-- ========================================================= -->
+<!--                     02 CLUSTER_STACK                      -->
+<!-- ========================================================= -->
 
-<br/>
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: light)" srcset="./assets/head-arsenal-light.svg">
+    <img src="./assets/head-arsenal.svg" width="100%" alt="02 cluster_stack">
+  </picture>
+</p>
 
-<!-- SPACE SHOOTER CONTRIBUTION GAME -->
-<h2 align="center"><font color="#00ff00">🚀 Space Shooter Contributions</font></h2>
+<p align="center">
+  <img width="100%" src="./assets/stack.svg" alt="DevOps and Cloud Technology Matrix" />
+</p>
 
-<div align="center">
-  <img src="./game.gif" alt="Space Shooter Contribution Game" width="98%" />
-</div>
+<!-- PIPELINE STAGE 3: TEST -->
+<p align="center">
+  <img width="100%" alt="Octocat moving through the CI/CD pipeline - Stage 3: Test" src="./assets/pipeline-3.svg" />
+</p>
 
-<br/>
+<!-- ========================================================= -->
+<!--                    03 CLOUD_TOPOLOGY                      -->
+<!-- ========================================================= -->
 
-<!-- 3D CONTRIBUTION GRAPH -->
-<h2 align="center"><font color="#00ff00">📈 3D Contribution Graph</font></h2>
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: light)" srcset="./assets/head-architecture-light.svg">
+    <img src="./assets/head-architecture.svg" width="100%" alt="03 cloud_topology">
+  </picture>
+</p>
 
-<div align="center">
-  <img src="./profile-3d-contrib/profile-night-green.svg" alt="3D Contribution Graph" width="98%" />
-</div>
+<p align="center">
+  <img width="100%" src="./assets/services.svg" alt="DevOps Lifecycle and Architecture: IaC, Containers, CI/CD, Observability" />
+</p>
 
+<!-- PIPELINE STAGE 4: REVIEW -->
+<p align="center">
+  <img width="100%" alt="Octocat moving through the CI/CD pipeline - Stage 4: Review" src="./assets/pipeline-4.svg" />
+</p>
 
-<div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=00ff00&height=100&section=footer" alt="Footer" />
-</div>
+<!-- ========================================================= -->
+<!--                       04 WORKLOADS                        -->
+<!-- ========================================================= -->
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: light)" srcset="./assets/head-cases-light.svg">
+    <img src="./assets/head-cases.svg" width="100%" alt="04 workloads">
+  </picture>
+</p>
+
+<p align="center">
+  <a href="https://github.com/OminduD/arch-sandbox"><img src="./assets/case-arch-sandbox.svg" width="49%" alt="CASE-001 arch-sandbox: Ephemeral Containers"></a>&nbsp;
+  <a href="https://github.com/OminduD/pulse"><img src="./assets/case-pulse.svg" width="49%" alt="CASE-002 pulse: Real-Time Telemetry Monitor"></a><br/>
+  <a href="https://github.com/OminduD/nexus-enroll2.0-frontend"><img src="./assets/case-nexus.svg" width="49%" alt="CASE-003 nexus-enroll2.0: Dockerized Service"></a>&nbsp;
+  <a href="https://github.com/OminduD/ChronosZSH"><img src="./assets/case-chronos.svg" width="49%" alt="CASE-004 ChronosZSH: Unix Provisioning Suite"></a>
+</p>
+
+<p align="center"><sub>Explore all 20+ open-source repositories and cloud architectures in <a href="./docs/PROJECTS.md"><b>docs/PROJECTS.md →</b></a></sub></p>
+
+<!-- PIPELINE STAGE 5: MERGE -->
+<p align="center">
+  <img width="100%" alt="Octocat moving through the CI/CD pipeline - Stage 5: Merge" src="./assets/pipeline-5.svg" />
+</p>
+
+<!-- ========================================================= -->
+<!--                       05 RUNBOOKS                         -->
+<!-- ========================================================= -->
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: light)" srcset="./assets/head-intel-light.svg">
+    <img src="./assets/head-intel.svg" width="100%" alt="05 runbooks">
+  </picture>
+</p>
+
+<p align="center">
+  <img width="100%" src="./assets/intel.svg" alt="Education: University of Colombo School of Computing (UCSC) - B.Sc. in Computer Science; DevOps learning paths and provable project milestones" />
+</p>
+
+<!-- ========================================================= -->
+<!--                     06 OBSERVABILITY                      -->
+<!-- ========================================================= -->
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: light)" srcset="./assets/head-telemetry-light.svg">
+    <img src="./assets/head-telemetry.svg" width="100%" alt="06 observability">
+  </picture>
+</p>
+
+<p align="center">
+  <img width="100%" src="./assets/telemetry.svg" alt="GitHub Observability &amp; Telemetry: Lifetime Stats, Contribution Streak Velocity, and Language Stack Matrix" />
+</p>
+
+<!-- PIPELINE STAGE 6: DEPLOY -->
+<p align="center">
+  <img width="100%" alt="Octocat moving through the CI/CD pipeline - Stage 6: Deploy" src="./assets/pipeline-6.svg" />
+</p>
+
+<!-- ========================================================= -->
+<!--                      07 CHAOS_DRILL                       -->
+<!-- ========================================================= -->
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: light)" srcset="./assets/head-space-light.svg">
+    <img src="./assets/head-space.svg" width="100%" alt="07 chaos_drill">
+  </picture>
+</p>
+
+<p align="center">
+  <img width="100%" src="./game.gif" alt="Chaos Monkey Drill: Space Invaders Contribution Matrix Defense Game" />
+</p>
+
+<!-- ========================================================= -->
+<!--                      08 COMMIT_MESH                       -->
+<!-- ========================================================= -->
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: light)" srcset="./assets/head-contrib3d-light.svg">
+    <img src="./assets/head-contrib3d.svg" width="100%" alt="08 commit_mesh">
+  </picture>
+</p>
+
+<p align="center">
+  <img width="100%" src="./profile-3d-contrib/profile-night-green.svg" alt="3D Contribution Graph" />
+</p>
+
+<!-- ========================================================= -->
+<!--                     09 CLUSTER_MESH                       -->
+<!-- ========================================================= -->
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: light)" srcset="./assets/head-pets-light.svg">
+    <img src="./assets/head-pets.svg" width="100%" alt="09 cluster_mesh">
+  </picture>
+</p>
+
+<p align="center">
+  <img width="100%" src="./assets/pets.svg" alt="Kubernetes Autonomous Self-Healing Fleet and Reconciler Service Mesh: Ingress Cilium eBPF, Pod Failover, Kubelet Auto-Eviction, and GitOps ArgoCD Sync" />
+</p>
+
+<!-- PIPELINE STAGE 7: LIVE -->
+<p align="center">
+  <img width="100%" alt="Octocat moving through the CI/CD pipeline - Stage 7: Live" src="./assets/pipeline-7.svg" />
+</p>
+
+<!-- ========================================================= -->
+<!--                     END BANNER                            -->
+<!-- ========================================================= -->
+
+<p align="center">
+  <a href="https://github.com/OminduD">
+    <img width="100%" src="./assets/footer.svg" alt="OMINDU D. GUNATHILAKA" />
+  </a>
+</p>

@@ -27,11 +27,19 @@ jobs:
           output-path: 'game.gif'
           strategy: 'random'
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Frame space shooter game in Cyber Terminal
+        run: node scripts/frame-space-game.mjs
+
       - name: Commit space shooter game
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "🚀 Update space shooter contribution game"
-          file_pattern: 'game.gif'
+          commit_message: "🚀 Update framed space shooter contribution game"
+          file_pattern: 'game.gif assets/terminal-frame-860.png'
           commit_user_name: 'github-actions[bot]'
           commit_user_email: 'github-actions[bot]@users.noreply.github.com'
           commit_author: 'github-actions[bot] <github-actions[bot]@users.noreply.github.com>'

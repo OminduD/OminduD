@@ -50,11 +50,21 @@ jobs:
       - name: Copy metrics overview to workspace
         run: sudo cp /metrics_renders/metrics-overview.svg ./metrics-overview.svg
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Generate live contribution calendar space SVG
+        run: node scripts/build-space.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Commit metrics and overviews
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore(metrics): update dashboard and 3d graphs"
-          file_pattern: 'profile-3d-contrib/*.svg metrics-overview.svg'
+          commit_message: "chore(metrics): update dashboard, 3d graphs & live calendar SVG"
+          file_pattern: 'profile-3d-contrib/*.svg metrics-overview.svg assets/space.svg scripts/contributions-cache.json'
           commit_user_name: 'github-actions[bot]'
           commit_user_email: 'github-actions[bot]@users.noreply.github.com'
           commit_author: 'github-actions[bot] <github-actions[bot]@users.noreply.github.com>'
