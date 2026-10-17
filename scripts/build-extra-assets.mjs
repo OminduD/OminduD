@@ -1613,11 +1613,11 @@ export function buildFooter() {
     <rect width="1600" height="480" fill="url(#grid)"/>
 
     <g mask="url(#fade-footer)">
-      <text class="sans" x="805.5" y="275" text-anchor="middle" font-size="289" font-weight="900" letter-spacing="0" fill="url(#fill-footer)" stroke="#1E2630" stroke-width="1.4">OMINDU D.</text>
-      <text class="sans" x="800" y="455" text-anchor="middle" font-size="210" font-weight="900" letter-spacing="0" fill="url(#fill-footer)" stroke="#1E2630" stroke-width="1.4">GUNATHILAKA</text>
+      <text class="sans" x="805.5" y="250" text-anchor="middle" font-size="265" font-weight="900" letter-spacing="0" fill="url(#fill-footer)" stroke="#1E2630" stroke-width="1.4">OMINDU D.</text>
+      <text class="sans" x="800" y="440" text-anchor="middle" font-size="192" font-weight="900" letter-spacing="0" fill="url(#fill-footer)" stroke="#1E2630" stroke-width="1.4">GUNATHILAKA</text>
       <g mask="url(#spot-footer)">
-        <text class="sans" x="805.5" y="275" text-anchor="middle" font-size="289" font-weight="900" letter-spacing="0" fill="#00ff88" fill-opacity=".18" stroke="#00ff88" stroke-width="2.2">OMINDU D.</text>
-        <text class="sans" x="800" y="455" text-anchor="middle" font-size="210" font-weight="900" letter-spacing="0" fill="#00ff88" fill-opacity=".18" stroke="#00ff88" stroke-width="2.2">GUNATHILAKA</text>
+        <text class="sans" x="805.5" y="250" text-anchor="middle" font-size="265" font-weight="900" letter-spacing="0" fill="#00ff88" fill-opacity=".18" stroke="#00ff88" stroke-width="2.2">OMINDU D.</text>
+        <text class="sans" x="800" y="440" text-anchor="middle" font-size="192" font-weight="900" letter-spacing="0" fill="#00ff88" fill-opacity=".18" stroke="#00ff88" stroke-width="2.2">GUNATHILAKA</text>
       </g>
     </g>
 
