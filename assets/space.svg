@@ -115,7 +115,7 @@
 <path d="M24 72H816" stroke="#2A3542"/>
 <circle class="pulse-dot" cx="38" cy="56" r="3" fill="none" stroke="#00ff88"/><circle cx="38" cy="56" r="3" fill="#00ff88"/>
 <text class="m up" x="48" y="60" font-size="10.5" font-weight="700" letter-spacing="1.1" fill="#00ff88">CHAOS DRILL // FAULT INJECTION ACTIVE</text>
-<text class="m" x="420" y="60" text-anchor="middle" font-size="11" fill="#55616E">SCORE: <tspan font-weight="700" fill="#E6EDF3">1,955</tspan> · WAVE: <tspan font-weight="700" fill="#00ff88">07</tspan></text>
+<text class="m" x="420" y="60" text-anchor="middle" font-size="11" fill="#55616E">SCORE: <tspan font-weight="700" fill="#E6EDF3">1,974</tspan> · WAVE: <tspan font-weight="700" fill="#00ff88">07</tspan></text>
 <text class="m" x="802" y="60" text-anchor="end" font-size="10.5" fill="#3BD4FF">POD_KILLER: random</text>
 <text class="m" x="66" y="118.2" text-anchor="end" font-size="9" fill="#55616E">Mon</text>
 <text class="m" x="66" y="145.6" text-anchor="end" font-size="9" fill="#55616E">Wed</text>
@@ -490,7 +490,7 @@
 <rect x="761.0" y="150.8" width="10.5" height="10.5" rx="2" fill="#0e4429" fill-opacity="0.95"/>
 <rect x="761.0" y="164.5" width="10.5" height="10.5" rx="2" fill="#161b22" fill-opacity="0.55" stroke="#21262d" stroke-width="0.5"/>
 <rect x="761.0" y="178.2" width="10.5" height="10.5" rx="2" fill="#0e4429" fill-opacity="0.95"/>
-<rect x="774.7" y="96.0" width="10.5" height="10.5" rx="2" fill="#0e4429" fill-opacity="0.95"/>
+<rect x="774.7" y="96.0" width="10.5" height="10.5" rx="2" fill="#006d32" fill-opacity="1"/>
 <rect x="774.7" y="109.7" width="10.5" height="10.5" rx="2" fill="#161b22" fill-opacity="0.55" stroke="#21262d" stroke-width="0.5"/>
 <rect x="774.7" y="123.4" width="10.5" height="10.5" rx="2" fill="#161b22" fill-opacity="0.55" stroke="#21262d" stroke-width="0.5"/>
 <rect x="774.7" y="137.1" width="10.5" height="10.5" rx="2" fill="#161b22" fill-opacity="0.55" stroke="#21262d" stroke-width="0.5"/>
@@ -535,7 +535,7 @@
   </g>
 <path d="M24 292H816" stroke="#2A3542"/>
 <text class="m" x="38" y="316" font-size="10.5" fill="#55616E">CLUSTER: <tspan fill="#00ff88">HEALTHY (5/5 PODS)</tspan></text>
-<text class="m" x="430" y="316" text-anchor="middle" font-size="10.5" fill="#55616E">ANNUAL SCORE: <tspan fill="#00ff88" font-weight="700">1,955 COMMITS</tspan> · 365 DAYS</text>
+<text class="m" x="430" y="316" text-anchor="middle" font-size="10.5" fill="#55616E">ANNUAL SCORE: <tspan fill="#00ff88" font-weight="700">1,974 COMMITS</tspan> · 365 DAYS</text>
 <text class="m" x="682" y="316" text-anchor="end" font-size="9" fill="#55616E">Less</text>
 <rect x="690" y="307" width="9" height="9" rx="1.5" fill="#161b22" fill-opacity="0.55" stroke="#21262d" stroke-width="0.5"/>
 <rect x="703" y="307" width="9" height="9" rx="1.5" fill="#0e4429" fill-opacity="0.95"/>
