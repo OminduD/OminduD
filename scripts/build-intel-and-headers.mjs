@@ -1,5 +1,6 @@
 import { writeFileSync, mkdirSync, readFileSync, existsSync } from "node:fs";
 import { createHash } from "node:crypto";
+import { execSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
 import { dirname, join, resolve } from "node:path";
 import https from "node:https";
@@ -423,153 +424,343 @@ console.log("Generated: intel.svg");
 
 /* ----------------------------------------------------------------- Live GitHub Telemetry Fetcher */
 async function fetchLiveStats(username = "OminduD") {
-  const token = process.env.GITHUB_TOKEN;
+  let token = process.env.GITHUB_TOKEN || process.env.GH_TOKEN;
+  if (!token) {
+    try {
+      token = execSync("gh auth token", { encoding: "utf8", stdio: ["ignore", "pipe", "ignore"] }).trim();
+    } catch {}
+  }
+
   let cache = {};
   if (existsSync(CACHE_FILE)) {
     try {
       cache = JSON.parse(readFileSync(CACHE_FILE, "utf8"));
-    } catch (e) {}
+    } catch {}
   }
 
-  let currentStreak = 0;
-  let longestStreak = 0;
-  let streakPeriod = "";
-  let longestPeriod = "";
-  let totalContribs = cache.total?.lastYear ? Number(cache.total.lastYear).toLocaleString() : "2,016";
+  const currentYear = new Date().getUTCFullYear();
+  const years = [];
+  for (let y = 2021; y <= currentYear; y++) years.push(y);
 
-  if (cache.contributions && cache.contributions.length > 0) {
-    const list = cache.contributions;
-    let temp = 0, tempS = "";
-    for (const c of list) {
-      if (c.count > 0) {
-        if (temp === 0) tempS = c.date;
-        temp++;
-        if (temp > longestStreak) {
-          longestStreak = temp;
-          longestPeriod = `${tempS} – ${c.date}`;
-        }
-      } else {
-        temp = 0;
-      }
-    }
-
-    let idx = list.length - 1;
-    if (list[idx].count === 0 && idx > 0 && list[idx - 1].count > 0) idx--;
-    if (list[idx].count > 0) {
-      let sDate = list[idx].date;
-      for (let i = idx; i >= 0; i--) {
-        if (list[i].count > 0) {
-          currentStreak++;
-          sDate = list[i].date;
-        } else break;
-      }
-      streakPeriod = `${sDate} – ${list[idx].date}`;
-    }
-  }
-
+  // Default verified baseline stats (if offline with no cache)
   let stats = {
     stars: "44",
-    commits: "959",
-    prs: "4",
+    commits: "2,004",
+    yearCommits: "966",
+    prs: "35",
     issues: "5",
-    contributedTo: "19",
-    totalContribs,
-    currentStreak: String(currentStreak),
-    streakPeriod: streakPeriod || "Live",
-    longestStreak: String(longestStreak || 19),
-    longestPeriod: longestPeriod || "Peak Record",
-    grade: "A",
+    contributedTo: "21",
+    totalContribs: "2,044",
+    currentStreak: "2",
+    streakPeriod: "2026-10-17 – 2026-10-18",
+    longestStreak: "19",
+    longestPeriod: "2025-10-11 – 2025-10-29",
+    grade: "A+",
+    scorePercent: 0.92,
     langs: [
-      { name: "TypeScript", pct: 27.00, color: "#3178C6" },
-      { name: "JavaScript", pct: 19.35, color: "#F1E05A" },
-      { name: "CSS", pct: 11.89, color: "#663399" },
-      { name: "Jupyter Notebook", pct: 11.65, color: "#DA5B0B" },
-      { name: "Python", pct: 8.37, color: "#3572A5" },
-      { name: "Rust", pct: 5.32, color: "#DEA584" },
-      { name: "HTML", pct: 4.74, color: "#E34C26" },
-      { name: "C#", pct: 3.24, color: "#7355DD" }
+      { name: "TypeScript", pct: 27.47, color: "#3178c6" },
+      { name: "JavaScript", pct: 19.29, color: "#f1e05a" },
+      { name: "CSS", pct: 11.80, color: "#663399" },
+      { name: "Jupyter Notebook", pct: 11.56, color: "#DA5B0B" },
+      { name: "Python", pct: 8.30, color: "#3572A5" },
+      { name: "Rust", pct: 5.28, color: "#dea584" },
+      { name: "HTML", pct: 4.70, color: "#e34c26" },
+      { name: "C#", pct: 3.22, color: "#7355dd" }
     ],
-    reposCount: 56
+    reposCount: 63,
+    contribDataForSpace: null
   };
 
-  if (!token) return stats;
+  // If token is available, fetch complete live metrics via GitHub GraphQL API
+  if (token) {
+    try {
+      const yearQueries = years.map(y => `
+        y${y}: contributionsCollection(from: "${y}-01-01T00:00:00Z", to: "${y}-12-31T23:59:59Z") {
+          contributionCalendar { totalContributions weeks { contributionDays { date contributionCount } } }
+          totalCommitContributions
+          restrictedContributionsCount
+          commitContributionsByRepository(maxRepositories: 100) { repository { nameWithOwner } }
+        }
+      `).join("\n");
 
-  try {
-    const query = JSON.stringify({
-      query: `query {
-        user(login: "${username}") {
-          repositories(first: 100, ownerAffiliations: OWNER, isFork: false) {
-            totalCount
-            nodes {
-              stargazerCount
-              languages(first: 10, orderBy: {field: SIZE, direction: DESC}) {
-                edges { size node { name color } }
+      const query = JSON.stringify({
+        query: `query {
+          user(login: "${username}") {
+            repositories(first: 100, ownerAffiliations: OWNER, isFork: false) {
+              totalCount
+              nodes {
+                name
+                stargazerCount
+                languages(first: 10, orderBy: {field: SIZE, direction: DESC}) {
+                  edges { size node { name color } }
+                }
               }
             }
+            forks: repositories(first: 100, ownerAffiliations: OWNER, isFork: true) {
+              totalCount
+              nodes { stargazerCount }
+            }
+            pullRequests(states: [OPEN, CLOSED, MERGED]) { totalCount }
+            issues(states: [OPEN, CLOSED]) { totalCount }
+            contributionsCollection {
+              totalCommitContributions
+              restrictedContributionsCount
+              totalPullRequestContributions
+              totalIssueContributions
+              totalRepositoriesWithContributedCommits
+            }
+            ${yearQueries}
           }
-          contributionsCollection {
-            totalCommitContributions
-            totalPullRequestContributions
-            totalIssueContributions
-            totalRepositoriesWithContributedCommits
-          }
-        }
-      }`
-    });
+        }`
+      });
 
-    const res = await new Promise((resolve, reject) => {
-      const req = https.request("https://api.github.com/graphql", {
-        method: "POST",
-        headers: {
-          "User-Agent": "OminduD-Profile-Builder",
-          "Content-Type": "application/json",
-          "Authorization": `bearer ${token}`
+      const res = await new Promise((resolve, reject) => {
+        const req = https.request("https://api.github.com/graphql", {
+          method: "POST",
+          headers: {
+            "User-Agent": "OminduD-Profile-Builder",
+            "Content-Type": "application/json",
+            "Authorization": `bearer ${token}`
+          }
+        }, (res) => {
+          let b = "";
+          res.on("data", c => b += c);
+          res.on("end", () => {
+            if (res.statusCode === 200) {
+              try {
+                resolve(JSON.parse(b));
+              } catch (e) {
+                reject(e);
+              }
+            } else {
+              reject(new Error("GraphQL status " + res.statusCode));
+            }
+          });
+        });
+        req.on("error", reject);
+        req.write(query);
+        req.end();
+      });
+
+      if (res.data?.user) {
+        const u = res.data.user;
+        const repos = u.repositories.nodes || [];
+        const forks = u.forks?.nodes || [];
+
+        // Stars
+        let starSum = 0;
+        repos.forEach(r => starSum += (r.stargazerCount || 0));
+        forks.forEach(r => starSum += (r.stargazerCount || 0));
+        stats.stars = String(starSum);
+
+        // Repositories
+        const totalReposCount = (u.repositories.totalCount || 0) + (u.forks?.totalCount || 0);
+        stats.reposCount = totalReposCount || 63;
+
+        // Lifetime Commits & Contributions across all active years
+        let totalCommits = 0;
+        let totalContribs = 0;
+        const contributedRepos = new Set();
+        const allDaysMap = new Map();
+
+        for (const y of years) {
+          const yc = u[`y${y}`];
+          if (!yc) continue;
+          totalCommits += (yc.totalCommitContributions || 0) + (yc.restrictedContributionsCount || 0);
+          totalContribs += (yc.contributionCalendar?.totalContributions || 0);
+          for (const r of yc.commitContributionsByRepository || []) {
+            if (r.repository?.nameWithOwner) contributedRepos.add(r.repository.nameWithOwner);
+          }
+          for (const w of yc.contributionCalendar?.weeks || []) {
+            for (const d of w.contributionDays || []) {
+              allDaysMap.set(d.date, d.contributionCount);
+            }
+          }
         }
+
+        stats.commits = totalCommits ? totalCommits.toLocaleString() : stats.commits;
+        stats.totalContribs = totalContribs ? totalContribs.toLocaleString() : stats.totalContribs;
+        if (contributedRepos.size > 0) {
+          stats.contributedTo = String(contributedRepos.size);
+        } else if (u.contributionsCollection?.totalRepositoriesWithContributedCommits) {
+          stats.contributedTo = String(u.contributionsCollection.totalRepositoriesWithContributedCommits);
+        }
+
+        // Pull Requests & Issues
+        let prCount = u.pullRequests?.totalCount || 0;
+        try {
+          const searchRes = await new Promise((resolve) => {
+            https.get(`https://api.github.com/search/issues?q=type:pr+author:${username}`, {
+              headers: { "User-Agent": "OminduD-Profile-Builder", "Authorization": `bearer ${token}` }
+            }, (res) => {
+              let b = "";
+              res.on("data", c => b += c);
+              res.on("end", () => {
+                try { resolve(JSON.parse(b)); } catch { resolve(null); }
+              });
+            }).on("error", () => resolve(null));
+          });
+          if (searchRes?.total_count) prCount = Math.max(prCount, searchRes.total_count);
+        } catch {}
+        stats.prs = String(prCount || 35);
+        stats.issues = String(u.issues?.totalCount || 5);
+
+        // Streaks Calculation
+        const todayStr = new Date().toISOString().slice(0, 10);
+        const allDays = Array.from(allDaysMap.entries())
+          .map(([date, count]) => ({ date, count }))
+          .sort((a, b) => a.date.localeCompare(b.date));
+        const pastDays = allDays.filter(d => d.date <= todayStr);
+
+        let longestStreak = 0, longestStart = "", longestEnd = "";
+        let cur = 0, curStart = "";
+        for (const d of pastDays) {
+          if (d.count > 0) {
+            if (cur === 0) curStart = d.date;
+            cur++;
+            if (cur > longestStreak) {
+              longestStreak = cur;
+              longestStart = curStart;
+              longestEnd = d.date;
+            }
+          } else {
+            cur = 0;
+          }
+        }
+
+        let currentStreak = 0, currentStart = "", currentEnd = "";
+        let idx = pastDays.length - 1;
+        if (pastDays[idx]?.count === 0 && idx > 0 && pastDays[idx - 1]?.count > 0) {
+          idx--;
+        }
+        if (pastDays[idx]?.count > 0) {
+          currentEnd = pastDays[idx].date;
+          while (idx >= 0 && pastDays[idx]?.count > 0) {
+            currentStreak++;
+            currentStart = pastDays[idx].date;
+            idx--;
+          }
+        }
+
+        stats.currentStreak = String(currentStreak);
+        stats.streakPeriod = currentStreak > 0 ? `${currentStart} – ${currentEnd}` : "Continuous";
+        stats.longestStreak = String(longestStreak || 19);
+        stats.longestPeriod = longestStart && longestEnd ? `${longestStart} – ${longestEnd}` : "Peak Record";
+
+        // Languages distribution across non-fork repos
+        const langMap = {};
+        let totalBytes = 0;
+        for (const r of repos) {
+          for (const e of (r.languages?.edges || [])) {
+            const n = e.node.name, col = e.node.color || "#888888", sz = e.size;
+            if (!langMap[n]) langMap[n] = { name: n, color: col, size: 0 };
+            langMap[n].size += sz;
+            totalBytes += sz;
+          }
+        }
+        if (totalBytes > 0) {
+          const sorted = Object.values(langMap).sort((a, b) => b.size - a.size).slice(0, 8);
+          stats.langs = sorted.map(l => ({
+            name: l.name,
+            pct: Number(((l.size / totalBytes) * 100).toFixed(2)),
+            color: l.color
+          }));
+        }
+
+        // Calculate dynamic Grade
+        const commitsVal = totalCommits || 2004;
+        const commitsScore = Math.min(100, (commitsVal / 1500) * 100);
+        const starsScore = Math.min(100, (starSum / 50) * 100);
+        const prsScore = Math.min(100, (prCount / 30) * 100);
+        const reposScore = Math.min(100, (contributedRepos.size / 20) * 100);
+        const issuesScore = Math.min(100, (Number(stats.issues) / 5) * 100);
+        const finalScore = (commitsScore * 0.35 + starsScore * 0.25 + prsScore * 0.20 + reposScore * 0.10 + issuesScore * 0.10);
+        stats.scorePercent = Number((finalScore / 100).toFixed(2));
+        stats.grade = finalScore >= 90 ? "A+" : finalScore >= 80 ? "A" : "B+";
+
+        // Trailing 365 days for space game
+        const trailingDays = pastDays.slice(-365);
+        stats.contribDataForSpace = {
+          total: {
+            allTime: totalContribs,
+            lastYear: trailingDays.reduce((a, b) => a + b.count, 0)
+          },
+          contributions: trailingDays
+        };
+
+        // Update local cache
+        try {
+          writeFileSync(CACHE_FILE, JSON.stringify(stats.contribDataForSpace, null, 2));
+        } catch {}
+
+        console.log(`Live GitHub Telemetry: ${stats.commits} commits, ${stats.stars} stars, ${stats.prs} PRs, ${stats.totalContribs} total contribs, current streak: ${stats.currentStreak}d (${stats.streakPeriod}), longest streak: ${stats.longestStreak}d`);
+        return stats;
+      }
+    } catch (e) {
+      console.warn("Could not fetch live GitHub GraphQL stats, trying fallback:", e.message);
+    }
+  }
+
+  // Fallback if token unavailable or network fails: try jogruber API for contributions
+  try {
+    const jogruberData = await new Promise((resolve) => {
+      https.get(`https://github-contributions-api.jogruber.de/v4/${username}?y=all`, {
+        headers: { "User-Agent": "OminduD-Profile-Builder" }
       }, (res) => {
         let b = "";
         res.on("data", c => b += c);
         res.on("end", () => {
-          if (res.statusCode === 200) resolve(JSON.parse(b));
-          else reject(new Error("GraphQL status " + res.statusCode));
+          try { resolve(JSON.parse(b)); } catch { resolve(null); }
         });
-      });
-      req.on("error", reject);
-      req.write(query);
-      req.end();
+      }).on("error", () => resolve(null));
     });
 
-    if (res.data?.user) {
-      const u = res.data.user;
-      const repos = u.repositories.nodes;
-      const cc = u.contributionsCollection;
-      stats.stars = String(repos.reduce((a, r) => a + r.stargazerCount, 0));
-      stats.commits = String(cc.totalCommitContributions);
-      stats.prs = String(cc.totalPullRequestContributions);
-      stats.issues = String(cc.totalIssueContributions);
-      stats.contributedTo = String(cc.totalRepositoriesWithContributedCommits);
-      stats.reposCount = u.repositories.totalCount;
+    if (jogruberData?.contributions?.length > 0) {
+      let totalAll = 0;
+      if (jogruberData.total) {
+        for (const v of Object.values(jogruberData.total)) totalAll += Number(v);
+      }
+      if (totalAll > 0) stats.totalContribs = totalAll.toLocaleString();
 
-      const langMap = {};
-      let totalSize = 0;
-      for (const r of repos) {
-        for (const e of r.languages.edges) {
-          const n = e.node.name, col = e.node.color || "#888888", sz = e.size;
-          if (!langMap[n]) langMap[n] = { name: n, color: col, size: 0 };
-          langMap[n].size += sz;
-          totalSize += sz;
+      const sorted = jogruberData.contributions.sort((a, b) => a.date.localeCompare(b.date));
+      const todayStr = new Date().toISOString().slice(0, 10);
+      const pastDays = sorted.filter(d => d.date <= todayStr);
+
+      let longestStreak = 0, longestStart = "", longestEnd = "";
+      let cur = 0, curStart = "";
+      for (const d of pastDays) {
+        if (d.count > 0) {
+          if (cur === 0) curStart = d.date;
+          cur++;
+          if (cur > longestStreak) {
+            longestStreak = cur;
+            longestStart = curStart;
+            longestEnd = d.date;
+          }
+        } else {
+          cur = 0;
         }
       }
-      if (totalSize > 0) {
-        const sorted = Object.values(langMap).sort((a, b) => b.size - a.size).slice(0, 8);
-        stats.langs = sorted.map(l => ({
-          name: l.name,
-          pct: Number(((l.size / totalSize) * 100).toFixed(2)),
-          color: l.color
-        }));
+
+      let currentStreak = 0, currentStart = "", currentEnd = "";
+      let idx = pastDays.length - 1;
+      if (pastDays[idx]?.count === 0 && idx > 0 && pastDays[idx - 1]?.count > 0) idx--;
+      if (pastDays[idx]?.count > 0) {
+        currentEnd = pastDays[idx].date;
+        while (idx >= 0 && pastDays[idx]?.count > 0) {
+          currentStreak++;
+          currentStart = pastDays[idx].date;
+          idx--;
+        }
       }
+
+      stats.currentStreak = String(currentStreak);
+      stats.streakPeriod = currentStreak > 0 ? `${currentStart} – ${currentEnd}` : "Continuous";
+      stats.longestStreak = String(longestStreak || 19);
+      stats.longestPeriod = longestStart && longestEnd ? `${longestStart} – ${longestEnd}` : "Peak Record";
     }
-  } catch(e) {
-    console.warn("Could not fetch live GitHub GraphQL stats, using cached fallback:", e.message);
+  } catch (e) {
+    console.warn("Fallback jogruber fetch failed:", e.message);
   }
 
   return stats;
@@ -579,18 +770,18 @@ async function fetchLiveStats(username = "OminduD") {
 function buildTelemetry(stats = null) {
   if (!stats) {
     stats = {
-      stars: "44", commits: "959", prs: "4", issues: "5", contributedTo: "19",
-      totalContribs: "2,016", currentStreak: "0", streakPeriod: "Continuous",
-      longestStreak: "19", longestPeriod: "Oct 11 – Oct 29", grade: "A",
+      stars: "44", commits: "2,004", prs: "35", issues: "5", contributedTo: "21",
+      totalContribs: "2,044", currentStreak: "2", streakPeriod: "2026-10-17 – 2026-10-18",
+      longestStreak: "19", longestPeriod: "2025-10-11 – 2025-10-29", grade: "A+", scorePercent: 0.92,
       langs: [
-        { name: "TypeScript", pct: 27.00, color: "#3178C6" },
-        { name: "JavaScript", pct: 19.35, color: "#F1E05A" },
-        { name: "CSS", pct: 11.89, color: "#663399" },
-        { name: "Jupyter Notebook", pct: 11.65, color: "#DA5B0B" },
-        { name: "Python", pct: 8.37, color: "#3572A5" },
-        { name: "Rust", pct: 5.32, color: "#DEA584" },
-        { name: "HTML", pct: 4.74, color: "#E34C26" },
-        { name: "C#", pct: 3.24, color: "#7355DD" }
+        { name: "TypeScript", pct: 27.47, color: "#3178c6" },
+        { name: "JavaScript", pct: 19.29, color: "#f1e05a" },
+        { name: "CSS", pct: 11.80, color: "#663399" },
+        { name: "Jupyter Notebook", pct: 11.56, color: "#DA5B0B" },
+        { name: "Python", pct: 8.30, color: "#3572A5" },
+        { name: "Rust", pct: 5.28, color: "#dea584" },
+        { name: "HTML", pct: 4.70, color: "#e34c26" },
+        { name: "C#", pct: 3.22, color: "#7355dd" }
       ]
     };
   }
@@ -625,7 +816,7 @@ function buildTelemetry(stats = null) {
   // GitHub Stats rows
   const statsRows = [
     { label: "Total Stars Earned:", val: stats.stars, icon: `<polygon points="7,1 8.8,4.8 13,5.4 10,8.3 10.7,12.5 7,10.5 3.3,12.5 4,8.3 1,5.4 5.2,4.8" fill="#E3B341"/>` },
-    { label: "Total Commits (year):", val: stats.commits, icon: `<circle cx="7" cy="7" r="2.6" fill="none" stroke="#00ff88" stroke-width="1.6"/><path d="M1 7h3.4M9.6 7H13" stroke="#00ff88" stroke-width="1.6"/>` },
+    { label: "Total Commits:", val: stats.commits, icon: `<circle cx="7" cy="7" r="2.6" fill="none" stroke="#00ff88" stroke-width="1.6"/><path d="M1 7h3.4M9.6 7H13" stroke="#00ff88" stroke-width="1.6"/>` },
     { label: "Total Pull Requests:", val: stats.prs, icon: `<circle cx="3.5" cy="3.5" r="1.8" fill="none" stroke="#38BDF8" stroke-width="1.3"/><circle cx="10.5" cy="10.5" r="1.8" fill="none" stroke="#38BDF8" stroke-width="1.3"/><circle cx="3.5" cy="10.5" r="1.8" fill="none" stroke="#38BDF8" stroke-width="1.3"/><path d="M3.5 5.3v3.4M10.5 5.3v3.4M5.3 3.5h2.6a2.6 2.6 0 0 1 2.6 2.6" fill="none" stroke="#38BDF8" stroke-width="1.3"/>` },
     { label: "Total Issues Opened:", val: stats.issues, icon: `<circle cx="7" cy="7" r="5" fill="none" stroke="#F87171" stroke-width="1.3"/><path d="M7 4.5v3M7 9.5v.5" stroke="#F87171" stroke-width="1.3" stroke-linecap="round"/>` },
     { label: "Contributed to (repos):", val: stats.contributedTo, icon: `<rect x="2" y="2.5" width="10" height="7.5" rx="1.2" fill="none" stroke="#A78BFA" stroke-width="1.3"/><path d="M4.5 12h5M7 10v2" stroke="#A78BFA" stroke-width="1.3"/>` }
@@ -643,8 +834,9 @@ function buildTelemetry(stats = null) {
   const gx = p1x + 314, gy = p1y + 118, gr = 36;
   out.push(`<circle cx="${gx}" cy="${gy}" r="${gr}" fill="${C.term}" stroke="${C.line2}" stroke-width="5"/>`);
   const circ = 2 * Math.PI * gr;
-  out.push(`<circle cx="${gx}" cy="${gy}" r="${gr}" fill="none" stroke="#00ff88" stroke-width="5" stroke-dasharray="${(circ * 0.76).toFixed(1)} ${circ.toFixed(1)}" stroke-linecap="round" transform="rotate(-90 ${gx} ${gy})"/>`);
-  out.push(`<text class="s" x="${gx}" y="${gy + 10}" text-anchor="middle" font-size="30" font-weight="700" fill="${C.text}">${esc(stats.grade || "A")}</text>`);
+  const scorePct = stats.scorePercent || 0.92;
+  out.push(`<circle cx="${gx}" cy="${gy}" r="${gr}" fill="none" stroke="#00ff88" stroke-width="5" stroke-dasharray="${(circ * scorePct).toFixed(1)} ${circ.toFixed(1)}" stroke-linecap="round" transform="rotate(-90 ${gx} ${gy})"/>`);
+  out.push(`<text class="s" x="${gx}" y="${gy + 10}" text-anchor="middle" font-size="${(stats.grade || "A+").length > 1 ? 26 : 30}" font-weight="700" fill="${C.text}">${esc(stats.grade || "A+")}</text>`);
   out.push(`<text class="m up" x="${gx}" y="${gy + gr + 16}" text-anchor="middle" font-size="9" font-weight="700" letter-spacing="0.8" fill="#00ff88">GRADE</text>`);
 
   // Right Panel: Streak Stats
@@ -706,14 +898,15 @@ function buildTelemetry(stats = null) {
   out.push(`<text class="m up" x="${p3x + 26}" y="${p3y + 20}" font-size="10.5" font-weight="700" letter-spacing="1.1" fill="#00ff88">MOST USED LANGUAGES &amp; WORKLOADS</text>`);
   out.push(`<text class="m" x="${p3x + p3w - 14}" y="${p3y + 20}" text-anchor="end" font-size="10" fill="${C.dim}">${stats.langs.length} PRIMARY RUNTIMES</text>`);
 
-  // Language segmented bar
+  // Language segmented bar (proportional across top languages)
   const barX = p3x + 18, barY = p3y + 48, barW = p3w - 36, barH = 10;
   out.push(`<g clip-path="url(#lang-bar-clip)">`);
   out.push(`<defs><clipPath id="lang-bar-clip"><rect x="${barX}" y="${barY}" width="${barW}" height="${barH}" rx="5"/></clipPath></defs>`);
   let curX = barX;
+  const topTotal = stats.langs.reduce((a, b) => a + b.pct, 0) || 100;
   stats.langs.forEach((l, idx) => {
-    const segW = (l.pct / 100) * barW;
     const isLast = idx === stats.langs.length - 1;
+    const segW = (l.pct / topTotal) * barW;
     const w = isLast ? (barX + barW - curX) : segW;
     out.push(`<rect x="${curX.toFixed(2)}" y="${barY}" width="${(w + 0.5).toFixed(2)}" height="${barH}" fill="${l.color}"/>`);
     curX += segW;
@@ -749,7 +942,7 @@ function buildTelemetry(stats = null) {
 const liveStats = await fetchLiveStats("OminduD");
 buildWhoami(liveStats);
 buildTelemetry(liveStats);
-await buildSpace();
+await buildSpace(liveStats?.contribDataForSpace);
 
 
 

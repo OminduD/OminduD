@@ -38,8 +38,17 @@ async function fetchContributions() {
       res.on("end", () => {
         try {
           const data = JSON.parse(raw);
-          writeFileSync(CACHE_FILE, JSON.stringify(data, null, 2));
-          finish(data);
+          const existing = readCache() || {};
+          const merged = {
+            ...existing,
+            total: {
+              ...(existing.total || {}),
+              ...(data.total || {})
+            },
+            contributions: data.contributions || existing.contributions
+          };
+          writeFileSync(CACHE_FILE, JSON.stringify(merged, null, 2));
+          finish(merged);
         } catch (e) {
           console.warn("Error parsing API response:", e);
           finish(readCache());

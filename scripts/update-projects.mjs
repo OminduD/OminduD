@@ -11,7 +11,13 @@ const USERNAME = "OminduD";
 mkdirSync(GITHUB_DIR, { recursive: true });
 
 export async function updateProjectsSummary() {
-  const token = process.env.GITHUB_TOKEN;
+  let token = process.env.GITHUB_TOKEN || process.env.GH_TOKEN;
+  if (!token) {
+    try {
+      const { execSync } = await import("node:child_process");
+      token = execSync("gh auth token", { encoding: "utf8", stdio: ["ignore", "pipe", "ignore"] }).trim();
+    } catch {}
+  }
   const headers = {
     "User-Agent": "OminduD-Profile-Builder",
     "Accept": "application/vnd.github.v3+json",
