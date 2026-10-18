@@ -1,20 +1,37 @@
 import { writeFileSync, readFileSync, existsSync } from "node:fs";
-import { join } from "node:path";
+import { fileURLToPath } from "node:url";
+import { dirname, join, resolve } from "node:path";
 import https from "node:https";
 import { C, Doc, svg, chrome, corners, esc } from "./lib.mjs";
 
-const OUT = "/home/omindu/Documents/OminduD/assets";
-const CACHE_FILE = "/home/omindu/Documents/OminduD/scripts/contributions-cache.json";
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const ROOT = resolve(__dirname, "..");
+const OUT = join(ROOT, "assets");
+const CACHE_FILE = join(ROOT, "scripts", "contributions-cache.json");
 const USERNAME = "OminduD";
 
 // Fetch contribution data from public API or cache fallback
 async function fetchContributions() {
   return new Promise((resolve) => {
     const url = `https://github-contributions-api.jogruber.de/v4/${USERNAME}?y=last`;
+    let isDone = false;
+    const finish = (val) => {
+      if (isDone) return;
+      isDone = true;
+      clearTimeout(timer);
+      resolve(val);
+    };
+
+    const timer = setTimeout(() => {
+      console.warn("Request timed out, falling back to cache.");
+      req.destroy();
+      finish(readCache());
+    }, 25000);
+
     const req = https.get(url, { headers: { "User-Agent": "OminduD-Profile-Builder" } }, (res) => {
       if (res.statusCode !== 200) {
         console.warn(`API returned status ${res.statusCode}, falling back to cache if available.`);
-        return resolve(readCache());
+        return finish(readCache());
       }
       let raw = "";
       res.on("data", (chunk) => (raw += chunk));
@@ -22,21 +39,19 @@ async function fetchContributions() {
         try {
           const data = JSON.parse(raw);
           writeFileSync(CACHE_FILE, JSON.stringify(data, null, 2));
-          resolve(data);
+          finish(data);
         } catch (e) {
           console.warn("Error parsing API response:", e);
-          resolve(readCache());
+          finish(readCache());
         }
       });
     });
+
     req.on("error", (e) => {
-      console.warn("Network error fetching contributions:", e.message);
-      resolve(readCache());
-    });
-    req.setTimeout(8000, () => {
-      req.destroy();
-      console.warn("Request timed out, falling back to cache.");
-      resolve(readCache());
+      if (!isDone) {
+        console.warn("Network error fetching contributions:", e.message);
+        finish(readCache());
+      }
     });
   });
 }

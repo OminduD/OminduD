@@ -1,9 +1,12 @@
 import { writeFileSync } from "node:fs";
 import { execSync } from "node:child_process";
-import { join } from "node:path";
+import { fileURLToPath } from "node:url";
+import { dirname, join, resolve } from "node:path";
 import { C, chrome, corners, svg } from "./lib.mjs";
 
-const OUT_DIR = "/home/omindu/Documents/OminduD/assets";
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const ROOT = resolve(__dirname, "..");
+const OUT_DIR = join(ROOT, "assets");
 const W = 860, H = 308;
 const topBar = 36, hudH = 26, gameY = topBar + hudH, gameH = 230;
 

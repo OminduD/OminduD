@@ -1,9 +1,18 @@
-name: Generate Profile Animations
+name: Update Profile Assets & Telemetry
 
 on:
   schedule:
-    - cron: "0 */6 * * *"
-  workflow_dispatch:
+    - cron: "0 */6 * * *" # Every 6 hours
+  workflow_dispatch: # Allow manual trigger
+  push:
+    branches: ["main"]
+    paths:
+      - 'scripts/**'
+      - '.github/workflows/profile.yml'
+
+concurrency:
+  group: profile-update-${{ github.ref }}
+  cancel-in-progress: true
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
@@ -12,15 +21,26 @@ permissions:
   contents: write
 
 jobs:
-  generate:
+  update-profile:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js runtime
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq --no-install-recommends librsvg2-bin ffmpeg
 
       - name: Generate 3D contribution map
         uses: yoshi389111/github-profile-3d-contrib@0.7.1
@@ -50,21 +70,31 @@ jobs:
       - name: Copy metrics overview to workspace
         run: sudo cp /metrics_renders/metrics-overview.svg ./metrics-overview.svg
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - name: Generate space shooter game GIF
+        uses: czl9707/gh-space-shooter@v1
         with:
-          node-version: 20
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          output-path: 'game.gif'
+          strategy: 'random'
 
-      - name: Generate live contribution calendar space SVG
-        run: node scripts/build-space.mjs
+      - name: Frame space shooter game in Cyber Terminal
+        run: node scripts/frame-space-game.mjs
+
+      - name: Update live telemetry, space calendar & whoami
+        run: node scripts/build-intel-and-headers.mjs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Commit metrics and overviews
+      - name: Update repository project summary
+        run: node scripts/update-projects.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit and push profile updates
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore(metrics): update dashboard, 3d graphs & live calendar SVG"
-          file_pattern: 'profile-3d-contrib/*.svg metrics-overview.svg assets/space.svg scripts/contributions-cache.json'
+          commit_message: "chore(profile): 🤖 update live stats, 3D mesh, space drill & telemetry [skip ci]"
+          file_pattern: 'profile-3d-contrib/*.svg metrics-overview.svg game.gif assets/*.svg assets/*.png scripts/contributions-cache.json .github/project-summary.json'
           commit_user_name: 'github-actions[bot]'
           commit_user_email: 'github-actions[bot]@users.noreply.github.com'
           commit_author: 'github-actions[bot] <github-actions[bot]@users.noreply.github.com>'

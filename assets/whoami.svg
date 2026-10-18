@@ -62,7 +62,7 @@
 <text class="m" x="570" y="254" font-size="10.5" fill="#55616E">CLUSTERS</text>
 <text class="m" x="796" y="254" text-anchor="end" font-size="10.5" fill="#E6EDF3">minikube · k3s mesh</text>
 <text class="m" x="570" y="276" font-size="10.5" fill="#55616E">PROJECTS</text>
-<text class="m" x="796" y="276" text-anchor="end" font-size="10.5" fill="#E6EDF3">20+ repositories</text>
+<text class="m" x="796" y="276" text-anchor="end" font-size="10.5" fill="#E6EDF3">56+ repositories</text>
 <text class="m" x="570" y="306" font-size="9.5" letter-spacing="0.8" fill="#8A97A5">CPU LOAD</text><text class="m" x="796" y="306" text-anchor="end" font-size="9.5" fill="#00ff88">18%</text>
 <rect x="570" y="313" width="226" height="6" rx="3" fill="#080B0F"/><rect x="570" y="313" width="42" height="6" rx="3" fill="#00ff88"/>
 <text class="m" x="570" y="333" font-size="9.5" letter-spacing="0.8" fill="#8A97A5">RAM ALLOCATION</text><text class="m" x="796" y="333" text-anchor="end" font-size="9.5" fill="#3BD4FF">12.4G / 32G</text>

@@ -1,7 +1,10 @@
 import { writeFileSync, mkdirSync, readFileSync, existsSync } from "node:fs";
-import { join } from "node:path";
+import { fileURLToPath } from "node:url";
+import { dirname, join, resolve } from "node:path";
 
-const OUT = "/home/omindu/Documents/OminduD/assets";
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const ROOT = resolve(__dirname, "..");
+const OUT = join(ROOT, "assets");
 mkdirSync(OUT, { recursive: true });
 
 /* ==========================================================================

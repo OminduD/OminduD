@@ -1,10 +1,12 @@
 import { existsSync, copyFileSync, unlinkSync } from "node:fs";
 import { execSync } from "node:child_process";
-import { join } from "node:path";
+import { fileURLToPath } from "node:url";
+import { dirname, join, resolve } from "node:path";
 
-const ROOT = "/home/omindu/Documents/OminduD";
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const ROOT = resolve(__dirname, "..");
 const GAME_GIF = join(ROOT, "game.gif");
-const FRAME_PNG = join(ROOT, "assets/terminal-frame-860.png");
+const FRAME_PNG = join(ROOT, "assets", "terminal-frame-860.png");
 const TMP_OUT = join(ROOT, "game_framed_tmp.gif");
 
 export function frameSpaceGame() {

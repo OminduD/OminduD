@@ -1,10 +1,15 @@
-import { writeFileSync, mkdirSync } from "node:fs";
+import { writeFileSync, mkdirSync, readFileSync, existsSync } from "node:fs";
 import { createHash } from "node:crypto";
-import { join } from "node:path";
+import { fileURLToPath } from "node:url";
+import { dirname, join, resolve } from "node:path";
+import https from "node:https";
 import { C, Doc, svg, chrome, corners, wrap, textWidth, esc, mono } from "./lib.mjs";
 import { buildSpace } from "./build-space.mjs";
 
-const OUT = "/home/omindu/Documents/OminduD/assets";
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const ROOT = resolve(__dirname, "..");
+const OUT = join(ROOT, "assets");
+const CACHE_FILE = join(ROOT, "scripts", "contributions-cache.json");
 mkdirSync(OUT, { recursive: true });
 
 /* --------------------------------------------------------- Section Headers */
@@ -55,7 +60,7 @@ for (const [key, [idx, title, meta]] of Object.entries(SECTIONS)) {
 console.log("Generated: all 20 section headers (dark & light)");
 
 /* ----------------------------------------------------------------- Whoami Terminal SVG */
-function buildWhoami() {
+function buildWhoami(stats = null) {
   const d = new Doc(), W = 840, H = 490, X = 28;
   const out = [];
 
@@ -128,7 +133,7 @@ function buildWhoami() {
     ["SHELL", "zsh 5.9 (starship)"],
     ["UPTIME", "99.99% (reliable)"],
     ["CLUSTERS", "minikube · k3s mesh"],
-    ["PROJECTS", "20+ repositories"]
+    ["PROJECTS", stats?.reposCount ? `${stats.reposCount}+ repositories` : "50+ repositories"]
   ];
 
   let ry = by + 54;
@@ -287,8 +292,6 @@ cases.forEach((p, i) => {
   console.log(`Generated: ${p.file}.svg`);
 });
 
-buildWhoami();
-
 /* ----------------------------------------------------------------- Intel Card */
 const education = [
   {
@@ -418,8 +421,180 @@ writeFileSync(
 );
 console.log("Generated: intel.svg");
 
+/* ----------------------------------------------------------------- Live GitHub Telemetry Fetcher */
+async function fetchLiveStats(username = "OminduD") {
+  const token = process.env.GITHUB_TOKEN;
+  let cache = {};
+  if (existsSync(CACHE_FILE)) {
+    try {
+      cache = JSON.parse(readFileSync(CACHE_FILE, "utf8"));
+    } catch (e) {}
+  }
+
+  let currentStreak = 0;
+  let longestStreak = 0;
+  let streakPeriod = "";
+  let longestPeriod = "";
+  let totalContribs = cache.total?.lastYear ? Number(cache.total.lastYear).toLocaleString() : "2,016";
+
+  if (cache.contributions && cache.contributions.length > 0) {
+    const list = cache.contributions;
+    let temp = 0, tempS = "";
+    for (const c of list) {
+      if (c.count > 0) {
+        if (temp === 0) tempS = c.date;
+        temp++;
+        if (temp > longestStreak) {
+          longestStreak = temp;
+          longestPeriod = `${tempS} – ${c.date}`;
+        }
+      } else {
+        temp = 0;
+      }
+    }
+
+    let idx = list.length - 1;
+    if (list[idx].count === 0 && idx > 0 && list[idx - 1].count > 0) idx--;
+    if (list[idx].count > 0) {
+      let sDate = list[idx].date;
+      for (let i = idx; i >= 0; i--) {
+        if (list[i].count > 0) {
+          currentStreak++;
+          sDate = list[i].date;
+        } else break;
+      }
+      streakPeriod = `${sDate} – ${list[idx].date}`;
+    }
+  }
+
+  let stats = {
+    stars: "44",
+    commits: "959",
+    prs: "4",
+    issues: "5",
+    contributedTo: "19",
+    totalContribs,
+    currentStreak: String(currentStreak),
+    streakPeriod: streakPeriod || "Live",
+    longestStreak: String(longestStreak || 19),
+    longestPeriod: longestPeriod || "Peak Record",
+    grade: "A",
+    langs: [
+      { name: "TypeScript", pct: 27.00, color: "#3178C6" },
+      { name: "JavaScript", pct: 19.35, color: "#F1E05A" },
+      { name: "CSS", pct: 11.89, color: "#663399" },
+      { name: "Jupyter Notebook", pct: 11.65, color: "#DA5B0B" },
+      { name: "Python", pct: 8.37, color: "#3572A5" },
+      { name: "Rust", pct: 5.32, color: "#DEA584" },
+      { name: "HTML", pct: 4.74, color: "#E34C26" },
+      { name: "C#", pct: 3.24, color: "#7355DD" }
+    ],
+    reposCount: 56
+  };
+
+  if (!token) return stats;
+
+  try {
+    const query = JSON.stringify({
+      query: `query {
+        user(login: "${username}") {
+          repositories(first: 100, ownerAffiliations: OWNER, isFork: false) {
+            totalCount
+            nodes {
+              stargazerCount
+              languages(first: 10, orderBy: {field: SIZE, direction: DESC}) {
+                edges { size node { name color } }
+              }
+            }
+          }
+          contributionsCollection {
+            totalCommitContributions
+            totalPullRequestContributions
+            totalIssueContributions
+            totalRepositoriesWithContributedCommits
+          }
+        }
+      }`
+    });
+
+    const res = await new Promise((resolve, reject) => {
+      const req = https.request("https://api.github.com/graphql", {
+        method: "POST",
+        headers: {
+          "User-Agent": "OminduD-Profile-Builder",
+          "Content-Type": "application/json",
+          "Authorization": `bearer ${token}`
+        }
+      }, (res) => {
+        let b = "";
+        res.on("data", c => b += c);
+        res.on("end", () => {
+          if (res.statusCode === 200) resolve(JSON.parse(b));
+          else reject(new Error("GraphQL status " + res.statusCode));
+        });
+      });
+      req.on("error", reject);
+      req.write(query);
+      req.end();
+    });
+
+    if (res.data?.user) {
+      const u = res.data.user;
+      const repos = u.repositories.nodes;
+      const cc = u.contributionsCollection;
+      stats.stars = String(repos.reduce((a, r) => a + r.stargazerCount, 0));
+      stats.commits = String(cc.totalCommitContributions);
+      stats.prs = String(cc.totalPullRequestContributions);
+      stats.issues = String(cc.totalIssueContributions);
+      stats.contributedTo = String(cc.totalRepositoriesWithContributedCommits);
+      stats.reposCount = u.repositories.totalCount;
+
+      const langMap = {};
+      let totalSize = 0;
+      for (const r of repos) {
+        for (const e of r.languages.edges) {
+          const n = e.node.name, col = e.node.color || "#888888", sz = e.size;
+          if (!langMap[n]) langMap[n] = { name: n, color: col, size: 0 };
+          langMap[n].size += sz;
+          totalSize += sz;
+        }
+      }
+      if (totalSize > 0) {
+        const sorted = Object.values(langMap).sort((a, b) => b.size - a.size).slice(0, 8);
+        stats.langs = sorted.map(l => ({
+          name: l.name,
+          pct: Number(((l.size / totalSize) * 100).toFixed(2)),
+          color: l.color
+        }));
+      }
+    }
+  } catch(e) {
+    console.warn("Could not fetch live GitHub GraphQL stats, using cached fallback:", e.message);
+  }
+
+  return stats;
+}
+
 /* ----------------------------------------------------------------- Telemetry Dashboard SVG */
-function buildTelemetry() {
+function buildTelemetry(stats = null) {
+  if (!stats) {
+    stats = {
+      stars: "44", commits: "959", prs: "4", issues: "5", contributedTo: "19",
+      totalContribs: "2,016", currentStreak: "0", streakPeriod: "Continuous",
+      longestStreak: "19", longestPeriod: "Oct 11 – Oct 29", grade: "A",
+      langs: [
+        { name: "TypeScript", pct: 27.00, color: "#3178C6" },
+        { name: "JavaScript", pct: 19.35, color: "#F1E05A" },
+        { name: "CSS", pct: 11.89, color: "#663399" },
+        { name: "Jupyter Notebook", pct: 11.65, color: "#DA5B0B" },
+        { name: "Python", pct: 8.37, color: "#3572A5" },
+        { name: "Rust", pct: 5.32, color: "#DEA584" },
+        { name: "HTML", pct: 4.74, color: "#E34C26" },
+        { name: "C#", pct: 3.24, color: "#7355DD" }
+      ]
+    };
+  }
+
   const d = new Doc(), W = 840, H = 480;
   const out = [];
 
@@ -449,11 +624,11 @@ function buildTelemetry() {
 
   // GitHub Stats rows
   const statsRows = [
-    { label: "Total Stars Earned:", val: "44", icon: `<polygon points="7,1 8.8,4.8 13,5.4 10,8.3 10.7,12.5 7,10.5 3.3,12.5 4,8.3 1,5.4 5.2,4.8" fill="#E3B341"/>` },
-    { label: "Total Commits (year):", val: "956", icon: `<circle cx="7" cy="7" r="2.6" fill="none" stroke="#00ff88" stroke-width="1.6"/><path d="M1 7h3.4M9.6 7H13" stroke="#00ff88" stroke-width="1.6"/>` },
-    { label: "Total Pull Requests:", val: "5", icon: `<circle cx="3.5" cy="3.5" r="1.8" fill="none" stroke="#38BDF8" stroke-width="1.3"/><circle cx="10.5" cy="10.5" r="1.8" fill="none" stroke="#38BDF8" stroke-width="1.3"/><circle cx="3.5" cy="10.5" r="1.8" fill="none" stroke="#38BDF8" stroke-width="1.3"/><path d="M3.5 5.3v3.4M10.5 5.3v3.4M5.3 3.5h2.6a2.6 2.6 0 0 1 2.6 2.6" fill="none" stroke="#38BDF8" stroke-width="1.3"/>` },
-    { label: "Total Issues Opened:", val: "5", icon: `<circle cx="7" cy="7" r="5" fill="none" stroke="#F87171" stroke-width="1.3"/><path d="M7 4.5v3M7 9.5v.5" stroke="#F87171" stroke-width="1.3" stroke-linecap="round"/>` },
-    { label: "Contributed to (repos):", val: "4", icon: `<rect x="2" y="2.5" width="10" height="7.5" rx="1.2" fill="none" stroke="#A78BFA" stroke-width="1.3"/><path d="M4.5 12h5M7 10v2" stroke="#A78BFA" stroke-width="1.3"/>` }
+    { label: "Total Stars Earned:", val: stats.stars, icon: `<polygon points="7,1 8.8,4.8 13,5.4 10,8.3 10.7,12.5 7,10.5 3.3,12.5 4,8.3 1,5.4 5.2,4.8" fill="#E3B341"/>` },
+    { label: "Total Commits (year):", val: stats.commits, icon: `<circle cx="7" cy="7" r="2.6" fill="none" stroke="#00ff88" stroke-width="1.6"/><path d="M1 7h3.4M9.6 7H13" stroke="#00ff88" stroke-width="1.6"/>` },
+    { label: "Total Pull Requests:", val: stats.prs, icon: `<circle cx="3.5" cy="3.5" r="1.8" fill="none" stroke="#38BDF8" stroke-width="1.3"/><circle cx="10.5" cy="10.5" r="1.8" fill="none" stroke="#38BDF8" stroke-width="1.3"/><circle cx="3.5" cy="10.5" r="1.8" fill="none" stroke="#38BDF8" stroke-width="1.3"/><path d="M3.5 5.3v3.4M10.5 5.3v3.4M5.3 3.5h2.6a2.6 2.6 0 0 1 2.6 2.6" fill="none" stroke="#38BDF8" stroke-width="1.3"/>` },
+    { label: "Total Issues Opened:", val: stats.issues, icon: `<circle cx="7" cy="7" r="5" fill="none" stroke="#F87171" stroke-width="1.3"/><path d="M7 4.5v3M7 9.5v.5" stroke="#F87171" stroke-width="1.3" stroke-linecap="round"/>` },
+    { label: "Contributed to (repos):", val: stats.contributedTo, icon: `<rect x="2" y="2.5" width="10" height="7.5" rx="1.2" fill="none" stroke="#A78BFA" stroke-width="1.3"/><path d="M4.5 12h5M7 10v2" stroke="#A78BFA" stroke-width="1.3"/>` }
   ];
 
   let sy = p1y + 54;
@@ -469,7 +644,7 @@ function buildTelemetry() {
   out.push(`<circle cx="${gx}" cy="${gy}" r="${gr}" fill="${C.term}" stroke="${C.line2}" stroke-width="5"/>`);
   const circ = 2 * Math.PI * gr;
   out.push(`<circle cx="${gx}" cy="${gy}" r="${gr}" fill="none" stroke="#00ff88" stroke-width="5" stroke-dasharray="${(circ * 0.76).toFixed(1)} ${circ.toFixed(1)}" stroke-linecap="round" transform="rotate(-90 ${gx} ${gy})"/>`);
-  out.push(`<text class="s" x="${gx}" y="${gy + 10}" text-anchor="middle" font-size="30" font-weight="700" fill="${C.text}">B</text>`);
+  out.push(`<text class="s" x="${gx}" y="${gy + 10}" text-anchor="middle" font-size="30" font-weight="700" fill="${C.text}">${esc(stats.grade || "A")}</text>`);
   out.push(`<text class="m up" x="${gx}" y="${gy + gr + 16}" text-anchor="middle" font-size="9" font-weight="700" letter-spacing="0.8" fill="#00ff88">GRADE</text>`);
 
   // Right Panel: Streak Stats
@@ -488,7 +663,7 @@ function buildTelemetry() {
 
   // Left Metric: Total Contributions
   const m1x = p2x + 60;
-  out.push(`<text class="s" x="${m1x}" y="152" text-anchor="middle" font-size="26" font-weight="700" letter-spacing="-0.5" fill="${C.text}">2,016</text>`);
+  out.push(`<text class="s" x="${m1x}" y="152" text-anchor="middle" font-size="26" font-weight="700" letter-spacing="-0.5" fill="${C.text}">${esc(stats.totalContribs)}</text>`);
   out.push(`<text class="m up" x="${m1x}" y="178" text-anchor="middle" font-size="9.5" font-weight="700" letter-spacing="0.8" fill="${C.dim}">TOTAL CONTRIBS</text>`);
   out.push(`<text class="m" x="${m1x}" y="196" text-anchor="middle" font-size="9" fill="${C.muted}">2021 – Present</text>`);
 
@@ -509,18 +684,18 @@ function buildTelemetry() {
     <path d="M 1.5 0.67 C 1.5 0.67 2.24 3.32 2.24 5.47 C 2.24 7.53 0.89 9.2 -1.17 9.2 C -3.23 9.2 -4.79 7.53 -4.79 5.47 L -4.76 5.11 C -6.78 7.51 -8 10.62 -8 13.99 C -8 18.41 -4.42 22 0 22 C 4.42 22 8 18.41 8 13.99 C 8 8.6 5.41 3.79 1.5 0.67 Z M -0.29 19 C -2.07 19 -3.51 17.6 -3.51 15.86 C -3.51 14.24 -2.46 13.1 -0.7 12.74 C 1.07 12.38 2.9 11.53 3.92 10.16 C 4.31 11.45 4.51 12.81 4.51 14.2 C 4.51 16.85 2.36 19 -0.29 19 Z" fill="#00ff88"/>
   </g>`);
 
-  // Big number 0 centered inside ring
-  out.push(`<text class="s" x="${fx}" y="${fy + 10}" text-anchor="middle" font-size="28" font-weight="700" fill="#00ff88">0</text>`);
+  // Big number centered inside ring
+  out.push(`<text class="s" x="${fx}" y="${fy + 10}" text-anchor="middle" font-size="28" font-weight="700" fill="#00ff88">${esc(stats.currentStreak)}</text>`);
 
   // Clear space below ring for label
   out.push(`<text class="m up" x="${fx}" y="${fy + fr + 20}" text-anchor="middle" font-size="9.5" font-weight="700" letter-spacing="0.8" fill="#00ff88">CURRENT STREAK</text>`);
-  out.push(`<text class="m" x="${fx}" y="${fy + fr + 36}" text-anchor="middle" font-size="9" fill="${C.dim}">Oct 17</text>`);
+  out.push(`<text class="m" x="${fx}" y="${fy + fr + 36}" text-anchor="middle" font-size="9" fill="${C.dim}">${esc(stats.streakPeriod)}</text>`);
 
   // Right Metric: Longest Streak
   const m2x = p2x + 324;
-  out.push(`<text class="s" x="${m2x}" y="152" text-anchor="middle" font-size="26" font-weight="700" letter-spacing="-0.5" fill="${C.text}">19</text>`);
+  out.push(`<text class="s" x="${m2x}" y="152" text-anchor="middle" font-size="26" font-weight="700" letter-spacing="-0.5" fill="${C.text}">${esc(stats.longestStreak)}</text>`);
   out.push(`<text class="m up" x="${m2x}" y="178" text-anchor="middle" font-size="9.5" font-weight="700" letter-spacing="0.8" fill="${C.dim}">LONGEST STREAK</text>`);
-  out.push(`<text class="m" x="${m2x}" y="196" text-anchor="middle" font-size="9" fill="${C.muted}">Oct 11 – Oct 29</text>`);
+  out.push(`<text class="m" x="${m2x}" y="196" text-anchor="middle" font-size="9" fill="${C.muted}">${esc(stats.longestPeriod)}</text>`);
 
   // Section 2: Bottom Panel (Most Used Languages)
   const p3x = 28, p3y = 294, p3w = 784, p3h = 162;
@@ -529,28 +704,16 @@ function buildTelemetry() {
   out.push(`<path d="M${p3x} ${p3y + 32}H${p3x + p3w}" stroke="${C.line}"/>`);
   out.push(`<circle class="pulse-dot" cx="${p3x + 16}" cy="${p3y + 16}" r="3" fill="none" stroke="#00ff88"/><circle cx="${p3x + 16}" cy="${p3y + 16}" r="3" fill="#00ff88"/>`);
   out.push(`<text class="m up" x="${p3x + 26}" y="${p3y + 20}" font-size="10.5" font-weight="700" letter-spacing="1.1" fill="#00ff88">MOST USED LANGUAGES &amp; WORKLOADS</text>`);
-  out.push(`<text class="m" x="${p3x + p3w - 14}" y="${p3y + 20}" text-anchor="end" font-size="10" fill="${C.dim}">8 PRIMARY RUNTIMES</text>`);
-
-  // Languages data
-  const langs = [
-    { name: "Jupyter Notebook", pct: 28.18, color: "#DA5B0B" },
-    { name: "TypeScript", pct: 26.77, color: "#3178C6" },
-    { name: "Python", pct: 20.76, color: "#3572A5" },
-    { name: "CSS", pct: 8.14, color: "#563D7C" },
-    { name: "Rust", pct: 6.69, color: "#DEA584" },
-    { name: "Shell", pct: 3.59, color: "#89E051" },
-    { name: "HTML", pct: 3.38, color: "#E34C26" },
-    { name: "PHP", pct: 2.49, color: "#4F5D95" }
-  ];
+  out.push(`<text class="m" x="${p3x + p3w - 14}" y="${p3y + 20}" text-anchor="end" font-size="10" fill="${C.dim}">${stats.langs.length} PRIMARY RUNTIMES</text>`);
 
   // Language segmented bar
   const barX = p3x + 18, barY = p3y + 48, barW = p3w - 36, barH = 10;
   out.push(`<g clip-path="url(#lang-bar-clip)">`);
   out.push(`<defs><clipPath id="lang-bar-clip"><rect x="${barX}" y="${barY}" width="${barW}" height="${barH}" rx="5"/></clipPath></defs>`);
   let curX = barX;
-  langs.forEach((l, idx) => {
+  stats.langs.forEach((l, idx) => {
     const segW = (l.pct / 100) * barW;
-    const isLast = idx === langs.length - 1;
+    const isLast = idx === stats.langs.length - 1;
     const w = isLast ? (barX + barW - curX) : segW;
     out.push(`<rect x="${curX.toFixed(2)}" y="${barY}" width="${(w + 0.5).toFixed(2)}" height="${barH}" fill="${l.color}"/>`);
     curX += segW;
@@ -559,7 +722,7 @@ function buildTelemetry() {
 
   // Language grid (2 rows x 4 columns)
   const colW = (p3w - 36) / 4;
-  langs.forEach((l, idx) => {
+  stats.langs.forEach((l, idx) => {
     const row = Math.floor(idx / 4);
     const col = idx % 4;
     const lx = barX + col * colW;
@@ -582,9 +745,11 @@ function buildTelemetry() {
   console.log("Generated: telemetry.svg");
 }
 
-buildTelemetry();
-
-/* ----------------------------------------------------------------- Space Shooter / Chaos Drill SVG */
+/* ----------------------------------------------------------------- Execution */
+const liveStats = await fetchLiveStats("OminduD");
+buildWhoami(liveStats);
+buildTelemetry(liveStats);
 await buildSpace();
+
 
 
