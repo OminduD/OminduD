@@ -87,59 +87,19 @@
   <img width="100%" src="./assets/services.svg" alt="DevOps Lifecycle and Architecture: IaC, Containers, CI/CD, Observability" />
 </p>
 
-<!-- PIPELINE STAGE 4: REVIEW -->
+<!-- PIPELINE STAGE 4: DEPLOY -->
 <p align="center">
-  <img width="100%" alt="Octocat moving through the CI/CD pipeline - Stage 4: Review" src="./assets/pipeline-4.svg" />
+  <img width="100%" alt="Octocat moving through the CI/CD pipeline - Stage 6: Deploy" src="./assets/pipeline-6.svg" />
 </p>
 
 <!-- ========================================================= -->
-<!--                       04 WORKLOADS                        -->
-<!-- ========================================================= -->
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: light)" srcset="./assets/head-cases-light.svg">
-    <img src="./assets/head-cases.svg" width="100%" alt="04 workloads">
-  </picture>
-</p>
-
-<p align="center">
-  <a href="https://github.com/OminduD/arch-sandbox"><img src="./assets/case-arch-sandbox.svg" width="49%" alt="CASE-001 arch-sandbox: Ephemeral Containers"></a>&nbsp;
-  <a href="https://github.com/OminduD/pulse"><img src="./assets/case-pulse.svg" width="49%" alt="CASE-002 pulse: Real-Time Telemetry Monitor"></a><br/>
-  <a href="https://github.com/OminduD/nexus-enroll2.0-frontend"><img src="./assets/case-nexus.svg" width="49%" alt="CASE-003 nexus-enroll2.0: Dockerized Service"></a>&nbsp;
-  <a href="https://github.com/OminduD/ChronosZSH"><img src="./assets/case-chronos.svg" width="49%" alt="CASE-004 ChronosZSH: Unix Provisioning Suite"></a>
-</p>
-
-<p align="center"><sub>Explore all 20+ open-source repositories and cloud architectures in <a href="./docs/PROJECTS.md"><b>docs/PROJECTS.md →</b></a></sub></p>
-
-<!-- PIPELINE STAGE 5: MERGE -->
-<p align="center">
-  <img width="100%" alt="Octocat moving through the CI/CD pipeline - Stage 5: Merge" src="./assets/pipeline-5.svg" />
-</p>
-
-<!-- ========================================================= -->
-<!--                       05 RUNBOOKS                         -->
-<!-- ========================================================= -->
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: light)" srcset="./assets/head-intel-light.svg">
-    <img src="./assets/head-intel.svg" width="100%" alt="05 runbooks">
-  </picture>
-</p>
-
-<p align="center">
-  <img width="100%" src="./assets/intel.svg" alt="Education: University of Colombo School of Computing (UCSC) - B.Sc. in Computer Science; DevOps learning paths and provable project milestones" />
-</p>
-
-<!-- ========================================================= -->
-<!--                     06 OBSERVABILITY                      -->
+<!--                     04 OBSERVABILITY                      -->
 <!-- ========================================================= -->
 
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: light)" srcset="./assets/head-telemetry-light.svg">
-    <img src="./assets/head-telemetry.svg" width="100%" alt="06 observability">
+    <img src="./assets/head-telemetry.svg" width="100%" alt="04 observability">
   </picture>
 </p>
 
@@ -147,19 +107,14 @@
   <img width="100%" src="./assets/telemetry.svg" alt="GitHub Observability &amp; Telemetry: Lifetime Stats, Contribution Streak Velocity, and Language Stack Matrix" />
 </p>
 
-<!-- PIPELINE STAGE 6: DEPLOY -->
-<p align="center">
-  <img width="100%" alt="Octocat moving through the CI/CD pipeline - Stage 6: Deploy" src="./assets/pipeline-6.svg" />
-</p>
-
 <!-- ========================================================= -->
-<!--                      07 CHAOS_DRILL                       -->
+<!--                      05 CHAOS_DRILL                       -->
 <!-- ========================================================= -->
 
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: light)" srcset="./assets/head-space-light.svg">
-    <img src="./assets/head-space.svg" width="100%" alt="07 chaos_drill">
+    <img src="./assets/head-space.svg" width="100%" alt="05 chaos_drill">
   </picture>
 </p>
 
@@ -168,13 +123,13 @@
 </p>
 
 <!-- ========================================================= -->
-<!--                      08 COMMIT_MESH                       -->
+<!--                      06 COMMIT_MESH                       -->
 <!-- ========================================================= -->
 
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: light)" srcset="./assets/head-contrib3d-light.svg">
-    <img src="./assets/head-contrib3d.svg" width="100%" alt="08 commit_mesh">
+    <img src="./assets/head-contrib3d.svg" width="100%" alt="06 commit_mesh">
   </picture>
 </p>
 
@@ -183,13 +138,13 @@
 </p>
 
 <!-- ========================================================= -->
-<!--                     09 CLUSTER_MESH                       -->
+<!--                     07 CLUSTER_MESH                       -->
 <!-- ========================================================= -->
 
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: light)" srcset="./assets/head-pets-light.svg">
-    <img src="./assets/head-pets.svg" width="100%" alt="09 cluster_mesh">
+    <img src="./assets/head-pets.svg" width="100%" alt="07 cluster_mesh">
   </picture>
 </p>
 
@@ -197,7 +152,7 @@
   <img width="100%" src="./assets/pets.svg" alt="Kubernetes Autonomous Self-Healing Fleet and Reconciler Service Mesh: Ingress Cilium eBPF, Pod Failover, Kubelet Auto-Eviction, and GitOps ArgoCD Sync" />
 </p>
 
-<!-- PIPELINE STAGE 7: LIVE -->
+<!-- PIPELINE STAGE 5: LIVE -->
 <p align="center">
   <img width="100%" alt="Octocat moving through the CI/CD pipeline - Stage 7: Live" src="./assets/pipeline-7.svg" />
 </p>

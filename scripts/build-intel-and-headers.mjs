@@ -23,12 +23,12 @@ const SECTIONS = {
   whoami: ["01", "node_spec", "kubectl describe node/omindu"],
   arsenal: ["02", "cluster_stack", "helm list -A --all-namespaces"],
   architecture: ["03", "cloud_topology", "terraform graph | dot -Tsvg"],
-  cases: ["04", "workloads", "kubectl get deployments -o wide"],
-  intel: ["05", "runbooks", "cat /etc/credentials/certs.pem"],
-  telemetry: ["06", "observability", "promtool check metrics --live"],
-  space: ["07", "chaos_drill", "chaos-monkey inject --cluster"],
-  contrib3d: ["08", "commit_mesh", "git log --graph --oneline --all"],
-  pets: ["09", "cluster_mesh", "kubectl get pods -A -o wide --watch · self-healing"]
+  telemetry: ["04", "observability", "promtool check metrics --live"],
+  space: ["05", "chaos_drill", "chaos-monkey inject --cluster"],
+  contrib3d: ["06", "commit_mesh", "git log --graph --oneline --all"],
+  pets: ["07", "cluster_mesh", "kubectl get pods -A -o wide --watch · self-healing"],
+  cases: ["01", "workloads", "kubectl get deployments -o wide"],
+  intel: ["01", "runbooks", "cat /etc/credentials/certs.pem"]
 };
 
 for (const [key, [idx, title, meta]] of Object.entries(SECTIONS)) {
@@ -282,12 +282,170 @@ const cases = [
     stack: ["Bash", "Zsh", "Linux", "DevOps"],
     metric: ["3", "distros supported"],
     live: true, private: false
+  },
+  {
+    file: "case-pantheon", id: "CASE-005", type: "Desktop Linux · Display Engine",
+    title: "PantheonSDDM: Cinematic Themes",
+    summary: "Hardware-accelerated SDDM login suite featuring 37 cinematic video playlists, interactive TUI installer, and themes for Hyprland, Sway, and KDE.",
+    stack: ["Qt/QML", "C++", "Shell", "Linux"],
+    metric: ["30+", "GitHub stars"],
+    live: true, private: false
+  },
+  {
+    file: "case-ionex", id: "CASE-006", type: "Browser Extension · React",
+    title: "Ionex-Tab: Productivity Extension",
+    summary: "Published Mozilla Firefox Add-on featuring smart developer dashboard, AI assistant, 3D interactive themes, and focus timer widgets.",
+    stack: ["TypeScript", "React", "WebExt", "Firefox"],
+    metric: ["100%", "open source"],
+    live: true, private: false
+  },
+  {
+    file: "case-analyzer", id: "CASE-007", type: "Static Analysis · Security",
+    title: "code_analyzer: Security Engine",
+    summary: "High-speed static security analyzer detecting malware patterns, registry abuses, and data exfiltration across Python, PHP, Bash, and C/C++.",
+    stack: ["Perl", "Regex", "AST", "Security"],
+    metric: ["0ms", "warm overhead"],
+    live: true, private: false
+  },
+  {
+    file: "case-cipherpop", id: "CASE-008", type: "Cryptography · CLI Suite",
+    title: "CipherPop: Programmable Crypto",
+    summary: "Cross-platform cryptographic cipher suite supporting AES-256-GCM, RSA-4096 key-pair generation, and scriptable automated encryption workflows.",
+    stack: ["Python", "AES-256", "RSA", "PKI"],
+    metric: ["256-bit", "cipher strength"],
+    live: true, private: false
   }
 ];
 
 const cardH = Math.ceil(Math.max(...cases.map((p) => caseLayout(p).h)));
 cases.forEach((p, i) => {
   writeFileSync(join(OUT, `${p.file}.svg`), generateCaseCard(p, i, cardH));
+  console.log(`Generated: ${p.file}.svg`);
+});
+
+/* ----------------------------------------------------------------- Runbook Cards */
+function runbookLayout(p) {
+  const title = wrap(p.title, "sg-700", 20, 370, 2);
+  const sum = wrap(p.summary, "sg-500", 13.5, 370, 3);
+  return { title, sum, h: 38 + 34 + (title.length - 1) * 24 + 16 + sum.length * 19.5 + 12 + 22 + 60 };
+}
+
+function generateRunbookCard(p, i, H) {
+  const d = new Doc(), W = 410, X = 20, L = runbookLayout(p);
+  const out = [];
+  const accent = p.accent || "#00ff88";
+
+  out.push(`<defs><linearGradient id="bg-${p.file}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${C.panel}"/><stop offset="1" stop-color="${C.panel2}"/></linearGradient>
+<linearGradient id="sw-${p.file}" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="${accent}" stop-opacity="0"/><stop offset=".5" stop-color="${accent}" stop-opacity=".09"/><stop offset="1" stop-color="${accent}" stop-opacity="0"/></linearGradient>
+<clipPath id="cc-${p.file}"><rect x=".5" y=".5" width="${W - 1}" height="${H - 1}" rx="4"/></clipPath></defs>
+<rect x=".5" y=".5" width="${W - 1}" height="${H - 1}" rx="4" fill="url(#bg-${p.file})" stroke="${C.line}"/>`);
+
+  // scan sweep
+  d.rule(`.sw{animation:sw 8s cubic-bezier(.4,0,.2,1) ${(1 + i * 1.3).toFixed(1)}s infinite both}@keyframes sw{0%{transform:translateX(0)}18%,100%{transform:translateX(${W + 260}px)}}
+.lv{transform-box:fill-box;transform-origin:center;animation:lv 1.8s ease-out infinite}@keyframes lv{from{opacity:.9;transform:scale(1)}to{opacity:0;transform:scale(2.6)}}`);
+  out.push(`<g clip-path="url(#cc-${p.file})"><rect class="sw" x="-240" y="0" width="200" height="${H}" fill="url(#sw-${p.file})" transform="skewX(-12)"/></g>`);
+  out.push(corners(0.5, 0.5, W - 1, H - 1, accent));
+
+  // top bar
+  out.push(`<text class="m" x="${X}" y="24" font-size="11" letter-spacing=".9" fill="${accent}">${p.id}</text>
+<text class="m up" x="${W - X}" y="24" text-anchor="end" font-size="10.5" letter-spacing=".8" fill="${C.muted}">${esc(p.type)}</text>
+<path d="M1 38.5H${W - 1}" stroke="${C.line}"/>`);
+
+  let y = 38 + 34;
+  L.title.forEach((ln, k) => out.push(`<text class="s" x="${X}" y="${y + k * 24}" font-size="20" font-weight="700" letter-spacing="-.4" fill="${C.text}">${esc(ln)}</text>`));
+  y += (L.title.length - 1) * 24 + 16;
+  L.sum.forEach((ln, k) => out.push(`<text class="s" x="${X}" y="${y + 13 + k * 19.5}" font-size="13.5" font-weight="500" fill="${C.muted}">${esc(ln)}</text>`));
+  y += L.sum.length * 19.5 + 12;
+
+  // stack chips
+  let cx = X;
+  for (const s of p.stack) {
+    const w = textWidth(s, "jbm-400", 10.5) + 16;
+    if (cx + w > W - X) break;
+    out.push(`<rect x="${cx + .5}" y="${y + .5}" width="${w}" height="21" rx="2" fill="${C.term}" stroke="${C.line2}"/><text class="m" x="${cx + 8.5}" y="${y + 15}" font-size="10.5" fill="${C.muted}">${esc(s)}</text>`);
+    cx += w + 6;
+  }
+
+  // metric + status badge pinned to the bottom
+  const my = H - 22, [mv, ml] = p.metric;
+  const vw = textWidth(mv, "sg-700", 28, -0.8);
+  out.push(`<text class="s" x="${X}" y="${my}" font-size="28" font-weight="700" letter-spacing="-.8" fill="${accent}">${esc(mv)}</text>
+<text class="m up" x="${X + vw + 10}" y="${my}" font-size="10" letter-spacing="1" fill="${C.dim}">${esc(ml)}</text>`);
+
+  const bw = textWidth(p.badge.label, "jbm-700", 9.5, 0.9) + 26;
+  const bx = W - X - bw;
+  out.push(`<rect x="${bx + 0.5}" y="${my - 16.5}" width="${bw}" height="21" rx="2" fill="none" stroke="${p.badge.color}" stroke-opacity="0.55"/>
+<circle class="lv" cx="${bx + 10.5}" cy="${my - 5.5}" r="3" fill="none" stroke="${p.badge.color}"/><circle cx="${bx + 10.5}" cy="${my - 5.5}" r="3" fill="${p.badge.color}"/>
+<text class="m up" x="${bx + 19}" y="${my - 2.5}" font-size="9.5" font-weight="700" letter-spacing="0.9" fill="${p.badge.color}">${esc(p.badge.label)}</text>`);
+
+  return svg({
+    w: W, h: H, doc: d, fonts: ["jbm-400", "jbm-700", "sg-500", "sg-700"],
+    title: `${p.id}: ${p.title}`,
+    desc: `${p.summary} Stack: ${p.stack.join(", ")}. Metric: ${p.metric.join(" ")}. Status: ${p.badge.label}.`,
+    body: out.join("\n")
+  });
+}
+
+const runbooks = [
+  {
+    file: "runbook-cloud", id: "RUNBOOK-001", type: "Multi-AZ · VPC · IAM · OIDC",
+    title: "Cloud Architecture & AWS Topology",
+    summary: "Multi-AZ VPC network isolation with public and private subnets, NAT Gateways, least-privilege IAM policies, STS AssumeRole, OIDC GitHub federation, and S3 lifecycle tiers.",
+    stack: ["AWS VPC", "IAM STS", "EC2 ASG", "S3 Tiers", "OIDC"],
+    metric: ["99.99%", "high availability"],
+    badge: { label: "PROD-GRADE", color: "#00ff88" },
+    accent: "#00ff88"
+  },
+  {
+    file: "runbook-k8s", id: "RUNBOOK-002", type: "Kubernetes · CNI · Helm 3",
+    title: "Container Fleet & Kubernetes Mesh",
+    summary: "Hardened multi-stage Docker builds with distroless non-root runtimes, declarative Kubernetes Deployments with PDBs, HPA autoscaling, Traefik ingress, and Cilium eBPF network security.",
+    stack: ["Kubernetes", "Docker", "Helm 3", "Cilium eBPF", "Traefik"],
+    metric: ["0", "root privileges"],
+    badge: { label: "HARDENED", color: "#3BD4FF" },
+    accent: "#3BD4FF"
+  },
+  {
+    file: "runbook-iac", id: "RUNBOOK-003", type: "Terraform · ArgoCD · GitOps",
+    title: "IaC Architecture & GitOps Engine",
+    summary: "Modular Terraform HCL with encrypted S3 remote state and DynamoDB distributed locking, automated ArgoCD declarative GitOps reconciliation, and Ansible OS provisioning.",
+    stack: ["Terraform", "ArgoCD", "Ansible", "DynamoDB", "HCL"],
+    metric: ["0", "manual drift"],
+    badge: { label: "GITOPS SYNC", color: "#FFB020" },
+    accent: "#FFB020"
+  },
+  {
+    file: "runbook-sre", id: "RUNBOOK-004", type: "Prometheus · Grafana · SRE",
+    title: "Observability, SRE & Telemetry",
+    summary: "Prometheus time-series metric collection with PromQL alert rules for 5xx spikes and pod restarts, real-time Grafana cyber telemetry, OpenTelemetry tracing, and 4 Golden Signals.",
+    stack: ["Prometheus", "Grafana", "OpenTelemetry", "PromQL", "SRE"],
+    metric: ["<1s", "alert latency"],
+    badge: { label: "SCRAPING", color: "#A78BFA" },
+    accent: "#A78BFA"
+  },
+  {
+    file: "runbook-systems", id: "RUNBOOK-005", type: "Rust · Go · C++ Systems",
+    title: "Systems Programming & Runtimes",
+    summary: "Compile-time memory safety without GC in Rust with Tokio async & Ratatui (pulse), lightweight Go concurrency with Linux namespace sandboxing (arch-sandbox), and C++20 RAII.",
+    stack: ["Rust", "Go", "C++20", "Tokio", "Ratatui", "cgroups"],
+    metric: ["100%", "memory safe"],
+    badge: { label: "NATIVE CODE", color: "#FF7B72" },
+    accent: "#FF7B72"
+  },
+  {
+    file: "runbook-network", id: "RUNBOOK-006", type: "Sockets · PKI · TLS 1.3",
+    title: "Networking & Cryptographic Security",
+    summary: "OSI 7-layer packet flow, TCP 3-way handshake analysis, UDP streaming, DNS hierarchy, AES-256-GCM encryption, RSA-4096 / Ed25519 signatures, and TLS 1.3 handshakes.",
+    stack: ["TCP/IP", "Sockets", "TLS 1.3", "AES-256", "RSA-4096"],
+    metric: ["256-bit", "cipher strength"],
+    badge: { label: "ZERO TRUST", color: "#38BDF8" },
+    accent: "#38BDF8"
+  }
+];
+
+const runbookH = Math.ceil(Math.max(...runbooks.map((p) => runbookLayout(p).h)));
+runbooks.forEach((p, i) => {
+  writeFileSync(join(OUT, `${p.file}.svg`), generateRunbookCard(p, i, runbookH));
   console.log(`Generated: ${p.file}.svg`);
 });
 
@@ -936,10 +1094,227 @@ function buildTelemetry(stats = null) {
   console.log("Generated: telemetry.svg");
 }
 
+/* ----------------------------------------------------------------- DevOps & Cloud Curriculum SVG */
+function buildDevOpsCurriculum() {
+  const d = new Doc(), W = 840, H = 586;
+  const out = [];
+
+  d.rule(`.scan{animation:scan 8s linear infinite}@keyframes scan{from{transform:translateY(0)}to{transform:translateY(${H}px)}}
+@keyframes blink{50%{opacity:0}}
+.cur{animation:blink 1s steps(1) infinite}
+@keyframes rise{from{opacity:0;transform:translateY(4px)}}
+.fade-in{animation:rise 0.4s ease-out both}
+.pulse-dot{transform-box:fill-box;transform-origin:center;animation:ring 2.2s ease-out infinite}@keyframes ring{from{opacity:.9;transform:scale(1)}to{opacity:0;transform:scale(2.8)}}`);
+
+  out.push(`<defs>
+<clipPath id="win-curriculum"><rect x="1" y="37" width="${W - 2}" height="${H - 38}" rx="5"/></clipPath>
+<linearGradient id="sl-curr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#00ff88" stop-opacity="0"/><stop offset=".5" stop-color="#00ff88" stop-opacity=".03"/><stop offset="1" stop-color="#00ff88" stop-opacity="0"/></linearGradient>
+</defs>
+<g clip-path="url(#win-curriculum)"><rect class="scan" x="0" y="-24" width="${W}" height="60" fill="url(#sl-curr)"/></g>`);
+
+  // Subheader banner
+  out.push(`<circle class="pulse-dot" cx="36" cy="58" r="3" fill="none" stroke="#00ff88"/><circle cx="36" cy="58" r="3" fill="#00ff88"/>`);
+  out.push(`<text class="m up" x="48" y="62" font-size="11" font-weight="700" letter-spacing="1.2" fill="#00ff88">DEVOPS &amp; CLOUD INFRASTRUCTURE RUNBOOKS // COMPETENCY MATRIX</text>`);
+  out.push(`<text class="m" x="${W - 28}" y="62" text-anchor="end" font-size="10.5" fill="${C.dim}">ENVIRONMENT: <tspan fill="${C.cyan}">PRODUCTION</tspan> · ORCHESTRATION: <tspan fill="#00ff88">AUTOMATED</tspan></text>`);
+  out.push(`<line x1="28" y1="72" x2="${W - 28}" y2="72" stroke="${C.line}"/>`);
+
+  const tracks = [
+    {
+      col: 0, row: 0,
+      accent: "#00ff88", tag: "AWS · GCP",
+      title: "01 // CLOUD ARCHITECTURE &amp; TOPOLOGY",
+      items: [
+        { name: "AWS Multi-AZ VPC Architecture", desc: "Public/Private Subnets · NAT Gateways · Route Tables", status: "PROD", sc: "#00ff88" },
+        { name: "Zero-Trust Identity &amp; Access", desc: "IAM Least Privilege · STS AssumeRole · OIDC · KMS", status: "LOCKED", sc: "#00ff88" },
+        { name: "Compute &amp; Serverless Engines", desc: "EC2 Auto-Scaling · ECS Fargate · Lambda Functions", status: "ACTIVE", sc: "#3BD4FF" },
+        { name: "Resilient Object &amp; Block Store", desc: "S3 Lifecycle Policies · Bucket Policies · EBS gp3", status: "VERIFIED", sc: "#00ff88" }
+      ]
+    },
+    {
+      col: 1, row: 0,
+      accent: "#3BD4FF", tag: "K8S · CNI",
+      title: "02 // CONTAINER FLEET &amp; KUBERNETES MESH",
+      items: [
+        { name: "Production Docker Hardening", desc: "Multi-Stage Builds · Distroless Base · Trivy Scans", status: "HARDENED", sc: "#00ff88" },
+        { name: "Kubernetes Workload Fleet", desc: "Deployments · StatefulSets · DaemonSets · HPA", status: "ACTIVE", sc: "#3BD4FF" },
+        { name: "Ingress &amp; CNI Mesh Networking", desc: "Traefik · NGINX · Cert-Manager TLS · Cilium eBPF", status: "ROUTED", sc: "#3BD4FF" },
+        { name: "Helm 3 Package Ecosystem", desc: "Parametric Charts · Sub-charts · Values Schema", status: "DEPLOYED", sc: "#00ff88" }
+      ]
+    },
+    {
+      col: 0, row: 1,
+      accent: "#FFB020", tag: "TERRAFORM",
+      title: "03 // INFRASTRUCTURE AS CODE &amp; GITOPS",
+      items: [
+        { name: "Terraform HCL Architecture", desc: "Modular Infrastructure · DRY Pattern · Variables", status: "MODULAR", sc: "#FFB020" },
+        { name: "Remote State &amp; State Locking", desc: "S3 Backend · DynamoDB Distributed Lock Table", status: "SECURED", sc: "#00ff88" },
+        { name: "GitOps Continuous Delivery", desc: "ArgoCD Automated Sync · Zero-Drift Pull Engine", status: "GITOPS", sc: "#FFB020" },
+        { name: "Ansible Fleet Provisioning", desc: "Idempotent Playbooks · Node Hardening · SSH", status: "AUTOMATED", sc: "#00ff88" }
+      ]
+    },
+    {
+      col: 1, row: 1,
+      accent: "#A78BFA", tag: "METRICS",
+      title: "04 // OBSERVABILITY, SRE &amp; TELEMETRY",
+      items: [
+        { name: "Prometheus Metric Collection", desc: "PromQL Rules · Node Exporter · Blackbox Probes", status: "SCRAPING", sc: "#00ff88" },
+        { name: "Grafana Cyber Dashboards", desc: "Real-time Telemetry · Incident Panels · Alerts", status: "ONLINE", sc: "#3BD4FF" },
+        { name: "Distributed Tracing &amp; Logs", desc: "OpenTelemetry SDK · Vector Pipeline · JSON Logs", status: "TRACED", sc: "#A78BFA" },
+        { name: "SRE Principles &amp; Chaos Drills", desc: "4 Golden Signals · SLO Error Budgets · Drills", status: "99.99%", sc: "#00ff88" }
+      ]
+    }
+  ];
+
+  tracks.forEach((t) => {
+    const x = t.col === 0 ? 28 : 428;
+    const y = t.row === 0 ? 84 : 302;
+    const w = 384, h = 206;
+
+    out.push(`<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="4" fill="${C.panel2}" stroke="${C.line}"/>`);
+    out.push(corners(x, y, w, h, t.accent, 6));
+    out.push(`<path d="M${x} ${y + 32}H${x + w}" stroke="${C.line}"/>`);
+    out.push(`<circle class="pulse-dot" cx="${x + 16}" cy="${y + 16}" r="3" fill="none" stroke="${t.accent}"/><circle cx="${x + 16}" cy="${y + 16}" r="3" fill="${t.accent}"/>`);
+    out.push(`<text class="m up" x="${x + 26}" y="${y + 20}" font-size="10.5" font-weight="700" letter-spacing="1.1" fill="${t.accent}">${t.title}</text>`);
+    out.push(`<text class="m" x="${x + w - 14}" y="${y + 20}" text-anchor="end" font-size="10" fill="${C.dim}">${t.tag}</text>`);
+
+    let cy = y + 52;
+    t.items.forEach((item) => {
+      // Small bullet dot
+      out.push(`<circle cx="${x + 16}" cy="${cy - 4}" r="2.5" fill="${t.accent}"/>`);
+      // Title
+      out.push(`<text class="s" x="${x + 28}" y="${cy}" font-size="12" font-weight="600" fill="${C.text}">${item.name}</text>`);
+      // Desc
+      out.push(`<text class="m" x="${x + 28}" y="${cy + 14}" font-size="9.5" fill="${C.dim}">${item.desc}</text>`);
+
+      // Status Badge
+      const bw = 58, bh = 17;
+      const bx = x + w - 14 - bw, by = cy - 10;
+      out.push(`<rect x="${bx}" y="${by}" width="${bw}" height="${bh}" rx="2" fill="none" stroke="${item.sc}" stroke-opacity=".5"/>`);
+      out.push(`<text class="m up" x="${bx + bw / 2}" y="${by + 11.5}" text-anchor="middle" font-size="8.5" font-weight="700" letter-spacing="0.8" fill="${item.sc}">${item.status}</text>`);
+
+      cy += 41;
+    });
+  });
+
+  // Global bottom status bar
+  const fx = 28, fy = 522, fw = 784, fh = 40;
+  out.push(`<rect x="${fx}" y="${fy}" width="${fw}" height="${fh}" rx="4" fill="${C.panel2}" stroke="${C.line}"/>`);
+  out.push(corners(fx, fy, fw, fh, "#00ff88", 6));
+  out.push(`<circle class="pulse-dot" cx="${fx + 16}" cy="${fy + 20}" r="3" fill="none" stroke="#00ff88"/><circle cx="${fx + 16}" cy="${fy + 20}" r="3" fill="#00ff88"/>`);
+  out.push(`<text class="m" x="${fx + 28}" y="${fy + 24}" font-size="10.5" fill="${C.text}"><tspan fill="#00ff88">STATUS:</tspan> 4/4 DOMAINS ENGAGED · <tspan fill="${C.cyan}">AUTOMATED DRIFT DETECTION</tspan> · <tspan fill="${C.amber}">ZERO-DOWNTIME CI/CD</tspan></text>`);
+  out.push(`<text class="m" x="${fx + fw - 16}" y="${fy + 24}" text-anchor="end" font-size="10.5" fill="${C.dim}">AVAILABILITY TARGET: <tspan fill="#00ff88">99.99%</tspan></text>`);
+
+  const body = chrome(W, H, "omindu@cloud-mesh: ~ (curriculum)", "kubectl get matrix -n devops") + "\n" + out.join("\n");
+  writeFileSync(
+    join(OUT, "devops-curriculum.svg"),
+    svg({
+      w: W, h: H, doc: d, fonts: ["jbm-400", "jbm-700", "sg-500", "sg-700"],
+      title: "Omindu — DevOps & Cloud Infrastructure Curriculum Matrix",
+      desc: "Comprehensive competency matrix across Cloud Architecture, Kubernetes & Containers, IaC & GitOps, and Observability & SRE",
+      body
+    })
+  );
+  console.log("Generated: devops-curriculum.svg");
+}
+
+/* ----------------------------------------------------------------- Workloads Matrix SVG */
+function buildWorkloadsMatrix() {
+  const d = new Doc(), W = 840, H = 490;
+  const out = [];
+
+  d.rule(`.scan{animation:scan 8s linear infinite}@keyframes scan{from{transform:translateY(0)}to{transform:translateY(${H}px)}}
+@keyframes blink{50%{opacity:0}}
+.cur{animation:blink 1s steps(1) infinite}
+@keyframes rise{from{opacity:0;transform:translateY(4px)}}
+.fade-in{animation:rise 0.4s ease-out both}
+.pulse-dot{transform-box:fill-box;transform-origin:center;animation:ring 2.2s ease-out infinite}@keyframes ring{from{opacity:.9;transform:scale(1)}to{opacity:0;transform:scale(2.8)}}`);
+
+  out.push(`<defs>
+<clipPath id="win-workloads"><rect x="1" y="37" width="${W - 2}" height="${H - 38}" rx="5"/></clipPath>
+<linearGradient id="sl-workloads" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#00ff88" stop-opacity="0"/><stop offset=".5" stop-color="#00ff88" stop-opacity=".03"/><stop offset="1" stop-color="#00ff88" stop-opacity="0"/></linearGradient>
+</defs>
+<g clip-path="url(#win-workloads)"><rect class="scan" x="0" y="-24" width="${W}" height="60" fill="url(#sl-workloads)"/></g>`);
+
+  // Subheader banner
+  out.push(`<circle class="pulse-dot" cx="36" cy="58" r="3" fill="none" stroke="#00ff88"/><circle cx="36" cy="58" r="3" fill="#00ff88"/>`);
+  out.push(`<text class="m up" x="48" y="62" font-size="11" font-weight="700" letter-spacing="1.2" fill="#00ff88">PRODUCTION WORKLOADS &amp; CLUSTER DEPLOYMENTS // ACTIVE FLEET</text>`);
+  out.push(`<text class="m" x="${W - 28}" y="62" text-anchor="end" font-size="10.5" fill="${C.dim}">FLEET: <tspan fill="#00ff88">8 SERVICES</tspan> · STATUS: <tspan fill="${C.cyan}">HEALTHY</tspan></text>`);
+  out.push(`<line x1="28" y1="72" x2="${W - 28}" y2="72" stroke="${C.line}"/>`);
+
+  // Table Container Box
+  const bx = 28, by = 86, bw = 784, bh = 340;
+  out.push(`<rect x="${bx}" y="${by}" width="${bw}" height="${bh}" rx="4" fill="${C.panel2}" stroke="${C.line}"/>`);
+  out.push(corners(bx, by, bw, bh, "#00ff88", 6));
+
+  // Table Header row
+  const hy = by + 24;
+  out.push(`<text class="m up" x="${bx + 18}" y="${hy}" font-size="10" font-weight="700" letter-spacing="0.8" fill="${C.dim}">WORKLOAD NAME</text>`);
+  out.push(`<text class="m up" x="${bx + 185}" y="${hy}" font-size="10" font-weight="700" letter-spacing="0.8" fill="${C.dim}">NAMESPACE</text>`);
+  out.push(`<text class="m up" x="${bx + 300}" y="${hy}" font-size="10" font-weight="700" letter-spacing="0.8" fill="${C.dim}">REPLICAS</text>`);
+  out.push(`<text class="m up" x="${bx + 388}" y="${hy}" font-size="10" font-weight="700" letter-spacing="0.8" fill="${C.dim}">STATUS</text>`);
+  out.push(`<text class="m up" x="${bx + 482}" y="${hy}" font-size="10" font-weight="700" letter-spacing="0.8" fill="${C.dim}">PRIMARY RUNTIME / ARCHITECTURE</text>`);
+  out.push(`<line x1="${bx}" y1="${by + 34}" x2="${bx + bw}" y2="${by + 34}" stroke="${C.line}"/>`);
+
+  const rows = [
+    { name: "pulse", ns: "production", rep: "3/3", st: "Running", sc: "#00ff88", rt: "Rust 1.78 · Tokio · Ratatui TUI" },
+    { name: "arch-sandbox", ns: "isolated", rep: "1/1", st: "Active", sc: "#3BD4FF", rt: "Go 1.22 · systemd-nspawn · OverlayFS" },
+    { name: "nexus-enroll2.0", ns: "production", rep: "4/4", st: "Running", sc: "#00ff88", rt: "Docker Multi-stage · Nginx · React TS" },
+    { name: "ChronosZSH", ns: "workstation", rep: "1/1", st: "Synced", sc: "#FFB020", rt: "Zsh · Bash · Arch/Debian/Ubuntu Suite" },
+    { name: "PantheonSDDM", ns: "desktop-rice", rep: "1/1", st: "Ready", sc: "#00ff88", rt: "Qt/QML · C++20 · 37 Video Engines" },
+    { name: "Ionex-Tab", ns: "addons", rep: "1/1", st: "Active", sc: "#3BD4FF", rt: "TypeScript · React · Mozilla Firefox Add-on" },
+    { name: "code_analyzer", ns: "security-sec", rep: "2/2", st: "Scanning", sc: "#A78BFA", rt: "Perl 5 · Regex Engine · AST Inspector" },
+    { name: "CipherPop", ns: "crypto-vault", rep: "1/1", st: "Locked", sc: "#FF7B72", rt: "Python 3.12 · AES-256-GCM · RSA-4096" }
+  ];
+
+  let ry = by + 64;
+  rows.forEach((r, idx) => {
+    // Alternating faint row tint
+    if (idx % 2 === 1) {
+      out.push(`<rect x="${bx + 1}" y="${ry - 18}" width="${bw - 2}" height="35" fill="${C.panel}" opacity="0.4"/>`);
+    }
+    // Name
+    out.push(`<text class="s" x="${bx + 18}" y="${ry}" font-size="13" font-weight="700" fill="${C.text}">${r.name}</text>`);
+    // Namespace
+    out.push(`<text class="m" x="${bx + 185}" y="${ry}" font-size="11" fill="${C.muted}">${r.ns}</text>`);
+    // Replicas
+    out.push(`<text class="m" x="${bx + 300}" y="${ry}" font-size="11" fill="${C.cyan}">${r.rep}</text>`);
+    // Status badge pill
+    const sw = 64, sh = 17;
+    out.push(`<rect x="${bx + 388}" y="${ry - 11}" width="${sw}" height="${sh}" rx="2" fill="none" stroke="${r.sc}" stroke-opacity="0.5"/>`);
+    out.push(`<text class="m up" x="${bx + 388 + sw / 2}" y="${ry + 1}" text-anchor="middle" font-size="8.5" font-weight="700" letter-spacing="0.8" fill="${r.sc}">${r.st}</text>`);
+    // Runtime
+    out.push(`<text class="m" x="${bx + 482}" y="${ry}" font-size="11" fill="${C.muted}">${r.rt}</text>`);
+
+    ry += 35;
+  });
+
+  // Global bottom status bar
+  const fx = 28, fy = 440, fw = 784, fh = 36;
+  out.push(`<rect x="${fx}" y="${fy}" width="${fw}" height="${fh}" rx="4" fill="${C.panel2}" stroke="${C.line}"/>`);
+  out.push(corners(fx, fy, fw, fh, "#00ff88", 6));
+  out.push(`<circle class="pulse-dot" cx="${fx + 16}" cy="${fy + 18}" r="3" fill="none" stroke="#00ff88"/><circle cx="${fx + 16}" cy="${fy + 18}" r="3" fill="#00ff88"/>`);
+  out.push(`<text class="m" x="${fx + 28}" y="${fy + 22}" font-size="10.5" fill="${C.text}"><tspan fill="#00ff88">REPLICAS:</tspan> 14/14 HEALTHY · <tspan fill="${C.cyan}">ZERO RESTART OVERHEAD</tspan> · <tspan fill="${C.amber}">ROLLING UPDATE STRATEGY</tspan></text>`);
+  out.push(`<text class="m" x="${fx + fw - 16}" y="${fy + 22}" text-anchor="end" font-size="10.5" fill="${C.dim}">AUTO-HEALING: <tspan fill="#00ff88">ENABLED</tspan></text>`);
+
+  const body = chrome(W, H, "omindu@cloud-mesh: ~ (workloads)", "kubectl get deployments -A -o wide") + "\n" + out.join("\n");
+  writeFileSync(
+    join(OUT, "workloads-matrix.svg"),
+    svg({
+      w: W, h: H, doc: d, fonts: ["jbm-400", "jbm-700", "sg-500", "sg-700"],
+      title: "Omindu — Production Workloads & Cluster Deployments",
+      desc: "Live status and deployment overview of all active open-source production workloads, container images, and runtime architectures",
+      body
+    })
+  );
+  console.log("Generated: workloads-matrix.svg");
+}
+
 /* ----------------------------------------------------------------- Execution */
 const liveStats = await fetchLiveStats("OminduD");
 buildWhoami(liveStats);
 buildTelemetry(liveStats);
+buildDevOpsCurriculum();
+buildWorkloadsMatrix();
 
 
 
