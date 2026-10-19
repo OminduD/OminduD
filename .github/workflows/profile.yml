@@ -48,27 +48,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
 
-      - name: Generate terminal-style overview
-        uses: lowlighter/metrics@latest
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          user: OminduD
-          base: header, activity, community, repositories, metadata
-          template: terminal
-          config_timezone: UTC
-          filename: metrics-overview.svg
-          output_action: none
-          extras_css: |
-            pre { background: #000000 !important; color: #00ff00 !important; }
-            .header { background: #111111 !important; }
-            .title { color: #00ff00 !important; }
-            .ps1-path { color: #00ff00 !important; }
-            .ps1-location { color: #00c800 !important; }
-            .banner, footer { color: #00c800 !important; }
-            .diff { color: #00ff00 !important; }
-
-      - name: Copy metrics overview to workspace
-        run: sudo cp /metrics_renders/metrics-overview.svg ./metrics-overview.svg
+      - name: Retain only profile-night-green 3D contribution theme
+        run: |
+          find profile-3d-contrib -type f ! -name 'profile-night-green.svg' -delete
 
       - name: Generate space shooter game GIF
         uses: czl9707/gh-space-shooter@v1
@@ -94,7 +76,7 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore(profile): 🤖 update live stats, 3D mesh, space drill & telemetry [skip ci]"
-          file_pattern: 'profile-3d-contrib/*.svg metrics-overview.svg game.gif assets/*.svg assets/*.png scripts/contributions-cache.json .github/project-summary.json'
+          file_pattern: 'profile-3d-contrib/profile-night-green.svg game.gif assets/*.svg assets/*.png scripts/contributions-cache.json .github/project-summary.json'
           commit_user_name: 'github-actions[bot]'
           commit_user_email: 'github-actions[bot]@users.noreply.github.com'
           commit_author: 'github-actions[bot] <github-actions[bot]@users.noreply.github.com>'

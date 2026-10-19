@@ -5,7 +5,6 @@ import { fileURLToPath } from "node:url";
 import { dirname, join, resolve } from "node:path";
 import https from "node:https";
 import { C, Doc, svg, chrome, corners, wrap, textWidth, esc, mono } from "./lib.mjs";
-import { buildSpace } from "./build-space.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "..");
@@ -29,8 +28,7 @@ const SECTIONS = {
   telemetry: ["06", "observability", "promtool check metrics --live"],
   space: ["07", "chaos_drill", "chaos-monkey inject --cluster"],
   contrib3d: ["08", "commit_mesh", "git log --graph --oneline --all"],
-  pets: ["09", "cluster_mesh", "kubectl get pods -A -o wide --watch · self-healing"],
-  handshake: ["10", "ingress", "curl -I https://omindu.dev/connect"]
+  pets: ["09", "cluster_mesh", "kubectl get pods -A -o wide --watch · self-healing"]
 };
 
 for (const [key, [idx, title, meta]] of Object.entries(SECTIONS)) {
@@ -58,7 +56,7 @@ for (const [key, [idx, title, meta]] of Object.entries(SECTIONS)) {
     );
   }
 }
-console.log("Generated: all 20 section headers (dark & light)");
+console.log("Generated: all 18 section headers (dark & light)");
 
 /* ----------------------------------------------------------------- Whoami Terminal SVG */
 function buildWhoami(stats = null) {
@@ -942,7 +940,6 @@ function buildTelemetry(stats = null) {
 const liveStats = await fetchLiveStats("OminduD");
 buildWhoami(liveStats);
 buildTelemetry(liveStats);
-await buildSpace(liveStats?.contribDataForSpace);
 
 
 
