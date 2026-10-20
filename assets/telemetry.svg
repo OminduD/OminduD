@@ -59,7 +59,7 @@
 <text class="m" x="798" y="74" text-anchor="end" font-size="10" fill="#55616E">CONTINUOUS</text>
 <line x1="548" y1="104" x2="548" y2="250" stroke="#2A3542" stroke-dasharray="2 2"/>
 <line x1="692" y1="104" x2="692" y2="250" stroke="#2A3542" stroke-dasharray="2 2"/>
-<text class="s" x="488" y="152" text-anchor="middle" font-size="26" font-weight="700" letter-spacing="-0.5" fill="#E6EDF3">2,060</text>
+<text class="s" x="488" y="152" text-anchor="middle" font-size="26" font-weight="700" letter-spacing="-0.5" fill="#E6EDF3">2,061</text>
 <text class="m up" x="488" y="178" text-anchor="middle" font-size="9.5" font-weight="700" letter-spacing="0.8" fill="#55616E">TOTAL CONTRIBS</text>
 <text class="m" x="488" y="196" text-anchor="middle" font-size="9" fill="#8A97A5">2021 – Present</text>
 <defs>
