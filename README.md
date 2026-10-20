@@ -164,11 +164,14 @@
 </p>
 
 <p align="left">
-  <a href="./assets/AWSEBadge.png">
-    <img width="130" src="./assets/AWSEBadge.png" alt="AWS Educate — Emerging Talent Community Member" />
+  <a href="https://www.credly.com/badges/6161bd6c-bcc5-4ace-b145-da38087fd93e/public_url">
+    <img width="130" src="./assets/Docker-Essentials.png" alt="Docker Essentials: A Developer Introduction" />
   </a>&nbsp;&nbsp;
   <a href="https://www.credly.com/badges/d3435576-6e14-466f-be23-f1a515203407/public_url">
     <img width="130" src="./assets/MongoDB-AI-Agents.png" alt="Building AI Agents with MongoDB" />
+  </a>&nbsp;&nbsp;
+  <a href="./assets/AWSEBadge.png">
+    <img width="130" src="./assets/AWSEBadge.png" alt="AWS Educate — Emerging Talent Community Member" />
   </a>
 </p>
 
