@@ -165,19 +165,25 @@
 
 <p align="left">
   <a href="https://www.credly.com/badges/6161bd6c-bcc5-4ace-b145-da38087fd93e/public_url">
-    <img width="90" src="./assets/Docker-Essentials.png" alt="Docker Essentials: A Developer Introduction" />
+    <img width="70" src="./assets/Docker-Essentials.png" alt="Docker Essentials: A Developer Introduction" />
+  </a>&nbsp;&nbsp;
+  <a href="https://www.credly.com/badges/2b6ecf21-b6d7-478e-8af4-4bcf91995a4e/public_url">
+    <img width="70" src="./assets/Containers-Kubernetes-Essentials.png" alt="Containers &amp; Kubernetes Essentials" />
   </a>&nbsp;&nbsp;
   <a href="https://www.credly.com/badges/d3435576-6e14-466f-be23-f1a515203407/public_url">
-    <img width="90" src="./assets/MongoDB-AI-Agents.png" alt="Building AI Agents with MongoDB" />
+    <img width="70" src="./assets/MongoDB-AI-Agents.png" alt="Building AI Agents with MongoDB" />
   </a>&nbsp;&nbsp;
   <a href="https://www.credly.com/badges/943bb48b-9c87-4ba5-8eff-95bed7b9588f/public_url">
-    <img width="90" src="./assets/LFD102-Open-Source-Software-Development.png" alt="LFD102: A Beginner's Guide to Open Source Software Development" />
+    <img width="70" src="./assets/LFD102-Open-Source-Software-Development.png" alt="LFD102: A Beginner's Guide to Open Source Software Development" />
   </a>&nbsp;&nbsp;
   <a href="https://www.credly.com/badges/e1eea765-fb0d-44d1-b8fd-a7f087468cb2/public_url">
-    <img width="90" src="./assets/API-Security-Fundamentals.png" alt="API Security Fundamentals '25" />
+    <img width="70" src="./assets/API-Security-Fundamentals.png" alt="API Security Fundamentals '25" />
+  </a>&nbsp;&nbsp;
+  <a href="https://www.credly.com/badges/b14511e2-ab82-492b-925a-af64128b957a/public_url">
+    <img width="70" src="./assets/AWS-Educate-Introduction-to-Cloud-101.png" alt="AWS Educate Introduction to Cloud 101 - Training Badge" />
   </a>&nbsp;&nbsp;
   <a href="./assets/AWSEBadge.png">
-    <img width="90" src="./assets/AWSEBadge.png" alt="AWS Educate — Emerging Talent Community Member" />
+    <img width="70" src="./assets/AWSEBadge.png" alt="AWS Educate — Emerging Talent Community Member" />
   </a>
 </p>
 
