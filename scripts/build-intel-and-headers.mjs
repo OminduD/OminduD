@@ -27,6 +27,7 @@ const SECTIONS = {
   space: ["05", "chaos_drill", "chaos-monkey inject --cluster"],
   contrib3d: ["06", "commit_mesh", "git log --graph --oneline --all"],
   pets: ["07", "cluster_mesh", "kubectl get pods -A -o wide --watch · self-healing"],
+  certs: ["08", "certs_and_badges", "aws sts get-caller-identity"],
   cases: ["01", "workloads", "kubectl get deployments -o wide"],
   intel: ["01", "runbooks", "cat /etc/credentials/certs.pem"]
 };
@@ -56,7 +57,7 @@ for (const [key, [idx, title, meta]] of Object.entries(SECTIONS)) {
     );
   }
 }
-console.log("Generated: all 18 section headers (dark & light)");
+console.log(`Generated: all ${Object.keys(SECTIONS).length * 2} section headers (dark & light)`);
 
 /* ----------------------------------------------------------------- Whoami Terminal SVG */
 function buildWhoami(stats = null) {

@@ -152,6 +152,23 @@
   <img width="100%" src="./assets/pets.svg" alt="Kubernetes Autonomous Self-Healing Fleet and Reconciler Service Mesh: Ingress Cilium eBPF, Pod Failover, Kubelet Auto-Eviction, and GitOps ArgoCD Sync" />
 </p>
 
+<!-- ========================================================= -->
+<!--                 08 CERTS_AND_BADGES                       -->
+<!-- ========================================================= -->
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: light)" srcset="./assets/head-certs-light.svg">
+    <img src="./assets/head-certs.svg" width="100%" alt="08 certs_and_badges">
+  </picture>
+</p>
+
+<p align="left">
+  <a href="./assets/AWSEBadge.png">
+    <img width="130" src="./assets/AWSEBadge.png" alt="AWS Educate — Emerging Talent Community Member" />
+  </a>
+</p>
+
 <!-- PIPELINE STAGE 5: LIVE -->
 <p align="center">
   <img width="100%" alt="Octocat moving through the CI/CD pipeline - Stage 7: Live" src="./assets/pipeline-7.svg" />
