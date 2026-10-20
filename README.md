@@ -166,6 +166,9 @@
 <p align="left">
   <a href="./assets/AWSEBadge.png">
     <img width="130" src="./assets/AWSEBadge.png" alt="AWS Educate — Emerging Talent Community Member" />
+  </a>&nbsp;&nbsp;
+  <a href="https://www.credly.com/badges/d3435576-6e14-466f-be23-f1a515203407/public_url">
+    <img width="130" src="./assets/MongoDB-AI-Agents.png" alt="Building AI Agents with MongoDB" />
   </a>
 </p>
 
