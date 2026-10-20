@@ -37,7 +37,7 @@
 <text class="m" x="264" y="108" font-size="13" font-weight="700" fill="#E6EDF3">45</text>
 <g transform="translate(42, 128)"><circle cx="7" cy="7" r="2.6" fill="none" stroke="#00ff88" stroke-width="1.6"/><path d="M1 7h3.4M9.6 7H13" stroke="#00ff88" stroke-width="1.6"/></g>
 <text class="s" x="64" y="139" font-size="12" font-weight="500" fill="#8A97A5">Total Commits:</text>
-<text class="m" x="264" y="139" font-size="13" font-weight="700" fill="#E6EDF3">2,017</text>
+<text class="m" x="264" y="139" font-size="13" font-weight="700" fill="#E6EDF3">2,019</text>
 <g transform="translate(42, 159)"><circle cx="3.5" cy="3.5" r="1.8" fill="none" stroke="#38BDF8" stroke-width="1.3"/><circle cx="10.5" cy="10.5" r="1.8" fill="none" stroke="#38BDF8" stroke-width="1.3"/><circle cx="3.5" cy="10.5" r="1.8" fill="none" stroke="#38BDF8" stroke-width="1.3"/><path d="M3.5 5.3v3.4M10.5 5.3v3.4M5.3 3.5h2.6a2.6 2.6 0 0 1 2.6 2.6" fill="none" stroke="#38BDF8" stroke-width="1.3"/></g>
 <text class="s" x="64" y="170" font-size="12" font-weight="500" fill="#8A97A5">Total Pull Requests:</text>
 <text class="m" x="264" y="170" font-size="13" font-weight="700" fill="#E6EDF3">12</text>
@@ -46,7 +46,7 @@
 <text class="m" x="264" y="201" font-size="13" font-weight="700" fill="#E6EDF3">5</text>
 <g transform="translate(42, 221)"><rect x="2" y="2.5" width="10" height="7.5" rx="1.2" fill="none" stroke="#A78BFA" stroke-width="1.3"/><path d="M4.5 12h5M7 10v2" stroke="#A78BFA" stroke-width="1.3"/></g>
 <text class="s" x="64" y="232" font-size="12" font-weight="500" fill="#8A97A5">Contributed to (repos):</text>
-<text class="m" x="264" y="232" font-size="13" font-weight="700" fill="#E6EDF3">21</text>
+<text class="m" x="264" y="232" font-size="13" font-weight="700" fill="#E6EDF3">22</text>
 <circle cx="342" cy="172" r="36" fill="#080B0F" stroke="#2A3542" stroke-width="5"/>
 <circle cx="342" cy="172" r="36" fill="none" stroke="#00ff88" stroke-width="5" stroke-dasharray="192.3 226.2" stroke-linecap="round" transform="rotate(-90 342 172)"/>
 <text class="s" x="342" y="182" text-anchor="middle" font-size="30" font-weight="700" fill="#E6EDF3">A</text>
@@ -59,7 +59,7 @@
 <text class="m" x="798" y="74" text-anchor="end" font-size="10" fill="#55616E">CONTINUOUS</text>
 <line x1="548" y1="104" x2="548" y2="250" stroke="#2A3542" stroke-dasharray="2 2"/>
 <line x1="692" y1="104" x2="692" y2="250" stroke="#2A3542" stroke-dasharray="2 2"/>
-<text class="s" x="488" y="152" text-anchor="middle" font-size="26" font-weight="700" letter-spacing="-0.5" fill="#E6EDF3">2,057</text>
+<text class="s" x="488" y="152" text-anchor="middle" font-size="26" font-weight="700" letter-spacing="-0.5" fill="#E6EDF3">2,060</text>
 <text class="m up" x="488" y="178" text-anchor="middle" font-size="9.5" font-weight="700" letter-spacing="0.8" fill="#55616E">TOTAL CONTRIBS</text>
 <text class="m" x="488" y="196" text-anchor="middle" font-size="9" fill="#8A97A5">2021 – Present</text>
 <defs>
@@ -87,37 +87,37 @@
 <text class="m" x="798" y="314" text-anchor="end" font-size="10" fill="#55616E">8 PRIMARY RUNTIMES</text>
 <g clip-path="url(#lang-bar-clip)">
 <defs><clipPath id="lang-bar-clip"><rect x="46" y="342" width="748" height="10" rx="5"/></clipPath></defs>
-<rect x="46.00" y="342" width="202.83" height="10" fill="#DA5B0B"/>
-<rect x="248.33" y="342" width="199.85" height="10" fill="#3178c6"/>
-<rect x="447.68" y="342" width="148.88" height="10" fill="#3572A5"/>
-<rect x="596.05" y="342" width="59.74" height="10" fill="#663399"/>
-<rect x="655.29" y="342" width="48.50" height="10" fill="#dea584"/>
-<rect x="703.29" y="342" width="37.43" height="10" fill="#f1e05a"/>
-<rect x="740.22" y="342" width="28.59" height="10" fill="#0298c3"/>
-<rect x="768.31" y="342" width="26.19" height="10" fill="#89e051"/>
+<rect x="46.00" y="342" width="199.72" height="10" fill="#DA5B0B"/>
+<rect x="245.22" y="342" width="196.83" height="10" fill="#3178c6"/>
+<rect x="441.55" y="342" width="156.37" height="10" fill="#3572A5"/>
+<rect x="597.42" y="342" width="58.83" height="10" fill="#663399"/>
+<rect x="655.75" y="342" width="47.82" height="10" fill="#dea584"/>
+<rect x="703.08" y="342" width="38.14" height="10" fill="#f1e05a"/>
+<rect x="740.72" y="342" width="28.22" height="10" fill="#0298c3"/>
+<rect x="768.44" y="342" width="26.06" height="10" fill="#89e051"/>
 </g>
 <circle cx="52" cy="372" r="4.5" fill="#DA5B0B"/>
 <text class="s" x="64" y="376" font-size="12" font-weight="600" fill="#E6EDF3">Jupyter Notebook</text>
-<text class="m" x="64" y="392" font-size="10.5" fill="#55616E">24.49%</text>
+<text class="m" x="64" y="392" font-size="10.5" fill="#55616E">24.08%</text>
 <circle cx="239" cy="372" r="4.5" fill="#3178c6"/>
 <text class="s" x="251" y="376" font-size="12" font-weight="600" fill="#E6EDF3">TypeScript</text>
-<text class="m" x="251" y="392" font-size="10.5" fill="#55616E">24.13%</text>
+<text class="m" x="251" y="392" font-size="10.5" fill="#55616E">23.73%</text>
 <circle cx="426" cy="372" r="4.5" fill="#3572A5"/>
 <text class="s" x="438" y="376" font-size="12" font-weight="600" fill="#E6EDF3">Python</text>
-<text class="m" x="438" y="392" font-size="10.5" fill="#55616E">17.96%</text>
+<text class="m" x="438" y="392" font-size="10.5" fill="#55616E">18.84%</text>
 <circle cx="613" cy="372" r="4.5" fill="#663399"/>
 <text class="s" x="625" y="376" font-size="12" font-weight="600" fill="#E6EDF3">CSS</text>
-<text class="m" x="625" y="392" font-size="10.5" fill="#55616E">7.17%</text>
+<text class="m" x="625" y="392" font-size="10.5" fill="#55616E">7.05%</text>
 <circle cx="52" cy="410" r="4.5" fill="#dea584"/>
 <text class="s" x="64" y="414" font-size="12" font-weight="600" fill="#E6EDF3">Rust</text>
-<text class="m" x="64" y="430" font-size="10.5" fill="#55616E">5.81%</text>
+<text class="m" x="64" y="430" font-size="10.5" fill="#55616E">5.72%</text>
 <circle cx="239" cy="410" r="4.5" fill="#f1e05a"/>
 <text class="s" x="251" y="414" font-size="12" font-weight="600" fill="#E6EDF3">JavaScript</text>
-<text class="m" x="251" y="430" font-size="10.5" fill="#55616E">4.47%</text>
+<text class="m" x="251" y="430" font-size="10.5" fill="#55616E">4.55%</text>
 <circle cx="426" cy="410" r="4.5" fill="#0298c3"/>
 <text class="s" x="438" y="414" font-size="12" font-weight="600" fill="#E6EDF3">Perl</text>
-<text class="m" x="438" y="430" font-size="10.5" fill="#55616E">3.40%</text>
+<text class="m" x="438" y="430" font-size="10.5" fill="#55616E">3.35%</text>
 <circle cx="613" cy="410" r="4.5" fill="#89e051"/>
 <text class="s" x="625" y="414" font-size="12" font-weight="600" fill="#E6EDF3">Shell</text>
-<text class="m" x="625" y="430" font-size="10.5" fill="#55616E">3.11%</text>
+<text class="m" x="625" y="430" font-size="10.5" fill="#55616E">3.09%</text>
 </svg>
