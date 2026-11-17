@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-11-17T01:49:37.706Z",
-  "total_repos": 31,
-  "public_repos": 31,
+  "updated_at": "2026-11-17T15:51:16.936Z",
+  "total_repos": 30,
+  "public_repos": 30,
   "private_repos": 0,
   "repositories": [
     {
@@ -233,16 +233,6 @@
       "stars": 0,
       "forks": 0,
       "html_url": "https://github.com/OminduD/agile-final-project"
-    },
-    {
-      "name": "github-final-project",
-      "private": false,
-      "language": "Shell",
-      "created_at": "2026-10-05T05:10:22Z",
-      "updated_at": "2026-10-26T03:06:12Z",
-      "stars": 0,
-      "forks": 0,
-      "html_url": "https://github.com/OminduD/github-final-project"
     },
     {
       "name": "mcino-Introduction-to-Git-and-GitHub",
