@@ -34,7 +34,7 @@
 <text class="m" x="398" y="74" text-anchor="end" font-size="10" fill="#55616E">@OminduD</text>
 <g transform="translate(42, 97)"><polygon points="7,1 8.8,4.8 13,5.4 10,8.3 10.7,12.5 7,10.5 3.3,12.5 4,8.3 1,5.4 5.2,4.8" fill="#E3B341"/></g>
 <text class="s" x="64" y="108" font-size="12" font-weight="500" fill="#8A97A5">Total Stars Earned:</text>
-<text class="m" x="264" y="108" font-size="13" font-weight="700" fill="#E6EDF3">48</text>
+<text class="m" x="264" y="108" font-size="13" font-weight="700" fill="#E6EDF3">50</text>
 <g transform="translate(42, 128)"><circle cx="7" cy="7" r="2.6" fill="none" stroke="#00ff88" stroke-width="1.6"/><path d="M1 7h3.4M9.6 7H13" stroke="#00ff88" stroke-width="1.6"/></g>
 <text class="s" x="64" y="139" font-size="12" font-weight="500" fill="#8A97A5">Total Commits:</text>
 <text class="m" x="264" y="139" font-size="13" font-weight="700" fill="#E6EDF3">2,220</text>
@@ -48,7 +48,7 @@
 <text class="s" x="64" y="232" font-size="12" font-weight="500" fill="#8A97A5">Contributed to (repos):</text>
 <text class="m" x="264" y="232" font-size="13" font-weight="700" fill="#E6EDF3">24</text>
 <circle cx="342" cy="172" r="36" fill="#080B0F" stroke="#2A3542" stroke-width="5"/>
-<circle cx="342" cy="172" r="36" fill="none" stroke="#00ff88" stroke-width="5" stroke-dasharray="208.1 226.2" stroke-linecap="round" transform="rotate(-90 342 172)"/>
+<circle cx="342" cy="172" r="36" fill="none" stroke="#00ff88" stroke-width="5" stroke-dasharray="210.4 226.2" stroke-linecap="round" transform="rotate(-90 342 172)"/>
 <text class="s" x="342" y="182" text-anchor="middle" font-size="26" font-weight="700" fill="#E6EDF3">A+</text>
 <text class="m up" x="342" y="224" text-anchor="middle" font-size="9" font-weight="700" letter-spacing="0.8" fill="#00ff88">GRADE</text>
 <rect x="428" y="54" width="384" height="224" rx="4" fill="#0D1117" stroke="#1C242E"/>
